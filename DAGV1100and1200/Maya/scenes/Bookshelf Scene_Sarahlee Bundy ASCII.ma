@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Two big walls now, bookcase Block ASCII.ma
-//Last modified: Fri, Sep 05, 2025 11:53:38 PM
+//Name: Bookshelf Scene_Sarahlee Bundy ASCII.ma
+//Last modified: Fri, Sep 05, 2025 11:55:12 PM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.3";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "663887C2-43B8-65CE-50AE-87A2A9644F1D";
+fileInfo "UUID" "1F4B1CAC-4E3B-B44F-749B-9495B2674E40";
 createNode transform -s -n "persp";
 	rename -uid "9C1BB6E1-4C7A-AB18-FCDB-D2925FAF057B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -11.038027616440298 14.202505084682917 16.971283064495882 ;
-	setAttr ".r" -type "double3" -19.200000001031796 -2194.3999999994567 9.6367187304519577e-16 ;
+	setAttr ".t" -type "double3" -17.708527633474372 7.3844856698178418 13.156667512872476 ;
+	setAttr ".r" -type "double3" -6.5999999999988761 -2208.3999999994498 -5.9881554245378572e-16 ;
 	setAttr ".rpt" -type "double3" -1.5170865181795236e-15 6.6096445167449886e-16 -2.2411893116570699e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CA5C5966-41E1-2FCE-864A-64B794575ABA";
@@ -6536,4 +6536,4 @@ connectAttr "pasted__groupId36.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId37.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId38.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId39.msg" ":initialShadingGroup.gn" -na;
-// End of Two big walls now, bookcase Block ASCII.ma
+// End of Bookshelf Scene_Sarahlee Bundy ASCII.ma
