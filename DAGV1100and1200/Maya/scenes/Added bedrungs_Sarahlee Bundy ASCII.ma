@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Added Bedframe._Sarahlee Bundy ASCII.ma
-//Last modified: Tue, Sep 23, 2025 10:23:37 PM
+//Name: Added bedrungs_Sarahlee Bundy ASCII.ma
+//Last modified: Tue, Sep 23, 2025 10:24:19 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "4A289592-45D5-8509-0543-368C7881E5BB";
+fileInfo "UUID" "A9BCB439-475B-4C58-5152-62838C700ECE";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "9C1BB6E1-4C7A-AB18-FCDB-D2925FAF057B";
@@ -21742,4 +21742,4 @@ connectAttr "groupId185.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId198.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId200.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId201.msg" ":initialShadingGroup.gn" -na;
-// End of Added Bedframe._Sarahlee Bundy ASCII.ma
+// End of Added bedrungs_Sarahlee Bundy ASCII.ma
