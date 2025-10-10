@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: bookcase UV.ma
-//Last modified: Fri, Oct 10, 2025 05:58:01 PM
+//Last modified: Fri, Oct 10, 2025 05:37:26 PM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.3";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "0A8D5D15-41F5-1A67-A711-4DAA4F92D1DD";
+fileInfo "UUID" "A914C5A6-40E4-7F8F-E0E6-E897338F87C7";
 createNode transform -s -n "persp";
 	rename -uid "4239CFD4-4DE5-A5F8-EE9D-2AAE53911503";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.1788105591691087 9.6182572922161391 13.668273459644599 ;
-	setAttr ".r" -type "double3" -33.938352729606223 -376.99999999995515 1.6629399057311054e-15 ;
+	setAttr ".t" -type "double3" -1.2958780090132631 8.7018254656140712 14.811953421072953 ;
+	setAttr ".r" -type "double3" -30.338352729614325 -364.99999999998124 1.5963519418221747e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4055A7AB-44DF-DFD8-9F9F-8D93B8F69DFC";
 	setAttr -k off ".v" no;
@@ -6605,20 +6605,20 @@ createNode mesh -n "pasted__polySurfaceShape89" -p "|group|pasted__BookShelf";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "0B6E168F-4F44-24CF-F122-AA8B370FA5CF";
+	rename -uid "CC1DA16E-4B26-A417-D739-78B3161D1313";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3C8680B4-4468-AE7F-78D5-7A885FD0CDA9";
+	rename -uid "610BC199-431B-2576-048C-63B14909BE3B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "EEEAAB85-449D-FCCA-A3EE-6DB38AE9B40C";
+	rename -uid "2EAF9DAD-43D3-C9E2-A9FB-6B96A07C0DFB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7160E412-42D6-50EE-2E18-F190BB21C5D4";
+	rename -uid "FD21C3F3-4498-6769-499F-CEB044FF0352";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7A169169-49DD-557A-79A6-20810DE54220";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "AF63594A-4038-1A24-7CD2-AABDBC4C309E";
+	rename -uid "543C7135-4F0D-CE8B-7A47-C986609DCB35";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "059D2305-4D9C-9719-3BE1-419B4E617B06";
 	setAttr ".g" yes;
@@ -6740,7 +6740,6 @@ select -ne :initialShadingGroup;
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";

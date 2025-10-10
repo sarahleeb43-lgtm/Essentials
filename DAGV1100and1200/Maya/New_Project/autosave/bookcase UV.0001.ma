@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: bookcase UV.ma
-//Last modified: Fri, Oct 10, 2025 05:58:01 PM
+//Name: bookcase UV.0001.ma
+//Last modified: Fri, Oct 10, 2025 05:57:42 PM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.3";
@@ -10,7 +10,8 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "0A8D5D15-41F5-1A67-A711-4DAA4F92D1DD";
+fileInfo "UUID" "BAC4A7A5-417A-F260-CE0C-378EF481F6E1";
+fileInfo "exportedFrom" "C:/Autodesk/WI/Essentials/DAGV1100and1200/Maya/scenes/bookcase UV.ma";
 createNode transform -s -n "persp";
 	rename -uid "4239CFD4-4DE5-A5F8-EE9D-2AAE53911503";
 	setAttr ".v" no;
@@ -6784,4 +6785,4 @@ connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "|group|pasted__BookShelf|pasted__BookShelf.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__groupId201.msg" ":initialShadingGroup.gn" -na;
-// End of bookcase UV.ma
+// End of bookcase UV.0001.ma
