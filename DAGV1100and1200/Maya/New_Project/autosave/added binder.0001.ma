@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Added more wall and stiff paper .ma
-//Last modified: Tue, Oct 21, 2025 03:20:02 PM
+//Name: added binder.0001.ma
+//Last modified: Thu, Oct 23, 2025 01:16:17 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,13 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "1CA35439-4874-0747-5E61-6DAAA3CC2776";
+fileInfo "UUID" "4B1F992D-420E-A4FD-8697-10BDDDE4626B";
 fileInfo "license" "education";
+fileInfo "exportedFrom" "C:/Autodesk/WI/Essentials/DAGV1100and1200/Maya/scenes/added binder.ma";
 createNode transform -s -n "persp";
 	rename -uid "9C1BB6E1-4C7A-AB18-FCDB-D2925FAF057B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -16.185930462249615 7.494018006151153 8.4027743627694154 ;
+	setAttr ".t" -type "double3" -7.2607971374386082 6.0424032917738772 0.57598399281759627 ;
 	setAttr ".r" -type "double3" -366.97175323161707 671.24876080858473 -1.8089709432756255e-15 ;
 	setAttr ".rp" -type "double3" -8.8817841970012523e-16 0 0 ;
 	setAttr ".rpt" -type "double3" 1.9387857630352478e-14 2.1769341687643258e-14 4.8110420460680269e-14 ;
@@ -27,7 +28,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 25.427950388818154;
+	setAttr ".coi" 13.468692985458118;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -50784,6 +50785,9 @@ createNode transform -n "nCloth3";
 	setAttr -l on ".s";
 createNode nCloth -n "nClothShape3" -p "nCloth3";
 	rename -uid "B62C7980-4079-AB42-A674-9CA84B0FBA2E";
+	addAttr -ci true -sn "lifespan" -ln "lifespan" -at "double";
+	addAttr -s false -ci true -sn "lifespanPP" -ln "lifespanPP" -dt "doubleArray";
+	addAttr -ci true -h true -sn "lifespanPP0" -ln "lifespanPP0" -dt "doubleArray";
 	setAttr -k off ".v";
 	setAttr ".gf" -type "Int32Array" 0 ;
 	setAttr ".pos0" -type "vectorArray" 0 ;
@@ -50824,6 +50828,8 @@ createNode nCloth -n "nClothShape3" -p "nCloth3";
 	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
 	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
 	setAttr ".lsou" yes;
+	setAttr -k on ".lifespan" 1;
+	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
 createNode transform -n "pCube5";
 	rename -uid "1E782A1F-420D-C5DB-7410-29AFA53D5075";
 	setAttr ".t" -type "double3" -0.71029729570092703 3.6395905395390198 -8.9909454819370769 ;
@@ -62335,15 +62341,15 @@ createNode transform -n "group34";
 	setAttr ".rp" -type "double3" -8.6580115465917373e-08 4.2435680971013925 -1.5543445630594732e-07 ;
 	setAttr ".sp" -type "double3" -8.6580115465917373e-08 4.2435680971013925 -1.5543445630594732e-07 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "71E4EDD5-4E84-B86F-75AC-49895E3D2D6E";
+	rename -uid "08922828-4ED5-DB07-E67D-738E79C570CA";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "CC048FA0-4D4A-8BBB-4140-D48B57CF95EC";
+	rename -uid "4134A03B-49E3-8FE2-AF80-F7A0A52855A5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "17C40D01-4ABB-6A21-E1AF-30A56F185391";
+	rename -uid "FAB9AAD8-40AB-13E2-C90D-54B006077520";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "6D8EAB4A-4482-7506-ADFC-F89059F24906";
+	rename -uid "E541CF3E-458E-D990-8604-C69A8B66E61A";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -62351,7 +62357,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "3D57F5FD-436F-CCB8-7FB6-8E8AF32764FC";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6D0F551E-4793-2281-CB78-F49249C54523";
+	rename -uid "85498C6C-4691-5A78-B7BB-A5BBEFF23DC8";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "59655BFA-4B21-0908-0540-EFBD27643D2F";
 	setAttr ".g" yes;
@@ -73386,10 +73392,6 @@ connectAttr "polyUnite1.out" "groupParts25.ig";
 connectAttr "groupId53.id" "groupParts25.gi";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "groupParts25.og" "polyChipOff1.ip";
 connectAttr "polyChipOff1.out" "polySeparate1.ip";
 connectAttr "polySeparate1.out[20]" "groupParts46.ig";
@@ -75022,4 +75024,4 @@ connectAttr "pasted__pasted__groupId201.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId236.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId237.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId260.msg" ":initialShadingGroup.gn" -na;
-// End of Added more wall and stiff paper .ma
+// End of added binder.0001.ma
