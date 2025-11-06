@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Added cash register and wonky walls.ma
-//Last modified: Tue, Nov 04, 2025 03:27:00 PM
+//Name: Added cash register and wonky walls.0004.ma
+//Last modified: Thu, Nov 06, 2025 02:09:57 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -13,19 +13,21 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "35B894F3-4C26-0E0A-8DA2-02AF7281B2CD";
+fileInfo "UUID" "2C980552-4C06-08E4-9FB6-75A587217DEA";
+fileInfo "exportedFrom" "C:/Autodesk/WI/Essentials/DAGV1100and1200/Maya/scenes/Added cash register and wonky walls.ma";
 createNode transform -s -n "persp";
 	rename -uid "5A53A715-4E51-0260-4A3E-F5834B50BA4F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 42.483463832333086 25.788773302422435 -68.518812757614867 ;
-	setAttr ".r" -type "double3" -377.73835276545287 -2731.8000000005177 0 ;
+	setAttr ".t" -type "double3" 15.385600171098597 11.879049949310607 -27.720788263936029 ;
+	setAttr ".r" -type "double3" -371.13835276452619 -3447.7999999994445 0 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -1.2351231148954867e-15 -1.7763568394002505e-15 ;
 	setAttr ".rpt" -type "double3" 3.0619271707631381e-16 -5.7422276115573939e-16 5.7242032427692958e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FCCB504D-44A0-A956-9135-AAB397363E27";
 	setAttr -k off ".v" no;
+	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 84.644747204752861;
+	setAttr ".coi" 33.412424477832197;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -80,11 +82,11 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "pCube1";
+createNode transform -n "Counter_2";
 	rename -uid "F16FDB33-4A34-98BD-BE49-449291C82957";
 	setAttr ".t" -type "double3" -7.0456855446013513 2.3016466169107863 -0.69773746245768642 ;
 	setAttr ".s" -type "double3" 8.5031283697102644 4.3408679979086973 2.8446585187228468 ;
-createNode mesh -n "pCubeShape1" -p "pCube1";
+createNode mesh -n "Counter_Shape2" -p "Counter_2";
 	rename -uid "AAE05A9C-469B-9D3B-C0B8-5EB2455076C9";
 	setAttr -k off ".v";
 	setAttr -s 4 ".iog[0].og";
@@ -102,51 +104,16 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 		0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 
 		0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 
 		0 0;
-createNode transform -n "group";
-	rename -uid "8F463222-48C1-54AF-39EB-3787062B1207";
-	setAttr ".t" -type "double3" 11.849791277356209 0 0 ;
-createNode transform -n "group1";
-	rename -uid "0B19BAA3-4A21-AE9D-7BB8-479DE257BEE6";
-	setAttr ".t" -type "double3" 14.878226233860023 0 0 ;
-	setAttr ".rp" -type "double3" -4.0642953007959166 0 -5.9756921600062114 ;
-	setAttr ".sp" -type "double3" -4.0642953007959166 0 -5.9756921600062114 ;
-createNode transform -n "group2";
-	rename -uid "C5C94E10-47EE-B5C8-C475-B4937CC901F2";
-	setAttr ".rp" -type "double3" -4.3053374602781975 2.1374491267620757 -0.69773720812539564 ;
-	setAttr ".sp" -type "double3" -4.3053374602781975 2.1374491267620757 -0.69773720812539564 ;
-createNode transform -n "group3";
-	rename -uid "0D03BDD9-4860-D7DC-F50E-46A94C61709F";
-	setAttr ".t" -type "double3" 10.368321128436545 0 0 ;
-	setAttr ".rp" -type "double3" -4.3053374602781975 2.1374491267620757 -0.69773720812539564 ;
-	setAttr ".sp" -type "double3" -4.3053374602781975 2.1374491267620757 -0.69773720812539564 ;
-createNode transform -n "pCube3";
-	rename -uid "D36EF5F9-41AF-6685-5A00-15AB7219DABA";
-	setAttr ".t" -type "double3" 6.8849513337077894 5.721420985666219 -0.89220088655832974 ;
-	setAttr ".s" -type "double3" 6.3421137779631982 2.3954557289200147 2.0643569285610672 ;
-	setAttr ".spt" -type "double3" 1.4194491123503708e-18 4.4306147896971815e-16 -2.9286960438273847e-16 ;
-createNode mesh -n "pCubeShape3" -p "pCube3";
-	rename -uid "65824C34-42CF-225F-C095-86B06D9A1AE1";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.375 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt[2:5]" -type "float3"  0 -0.43599716 -0.047863804 
-		0 -0.43599716 -0.047863804 0 -0.43599716 0.60901922 0 -0.43599716 0.60901922;
-createNode transform -n "group4";
+createNode transform -n "Counter_1";
 	rename -uid "827B86C0-4C7C-8F0E-60BF-9EBE3F776E0B";
 	setAttr ".t" -type "double3" 10.387840563979104 0 0 ;
 	setAttr ".rp" -type "double3" -4.3053374602781975 2.1374491267620757 -0.69773720812539564 ;
 	setAttr ".sp" -type "double3" -4.3053374602781975 2.1374491267620757 -0.69773720812539564 ;
-createNode transform -n "pasted__pCube1" -p "group4";
+createNode transform -n "pasted__pCube1" -p "Counter_1";
 	rename -uid "DDED2740-42D9-BB08-905F-DA899E37385A";
 	setAttr ".t" -type "double3" -6.4983609764906713 2.3016466169107868 -0.69773746245768653 ;
 	setAttr ".s" -type "double3" 8.5031283697102644 4.3408679979086973 2.8446585187228468 ;
-createNode mesh -n "pasted__pCubeShape1" -p "|group4|pasted__pCube1";
+createNode mesh -n "pasted__pCubeShape1" -p "|Counter_1|pasted__pCube1";
 	rename -uid "8E5E9DF2-485C-3450-5D42-B49D202C86F0";
 	setAttr -k off ".v";
 	setAttr -s 4 ".iog[0].og";
@@ -163,12 +130,12 @@ createNode mesh -n "pasted__pCubeShape1" -p "|group4|pasted__pCube1";
 		0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 
 		0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 0 0 0.32227528 
 		0 0;
-createNode transform -n "group5";
+createNode transform -n "Cash_Register";
 	rename -uid "9ECA7794-4DF6-1662-1EBE-A79506EEE8B0";
 	setAttr ".t" -type "double3" -3.6706113956329904 1.5271829949980624 0 ;
 	setAttr ".rp" -type "double3" 0.30389118194580078 2.5619695782661438 -1.0849624059273815 ;
 	setAttr ".sp" -type "double3" 0.30389118194580078 2.5619695782661438 -1.0849624059273815 ;
-createNode transform -n "pasted__group" -p "group5";
+createNode transform -n "pasted__group" -p "Cash_Register";
 	rename -uid "C37F1769-4D23-24DA-1501-6AAE7DDC4BA0";
 	setAttr ".rp" -type "double3" -6.7938640507280441 5.0934232818502814 -0.29370501419848516 ;
 	setAttr ".sp" -type "double3" -6.7938640507280441 5.0934232818502814 -0.29370501419848516 ;
@@ -202,13 +169,13 @@ createNode mesh -n "pasted__pasted__pCubeShape2" -p "pasted__transform6";
 	setAttr ".pt[13]" -type "float3" 0 0 -0.04805541 ;
 	setAttr ".pt[14]" -type "float3" 0 0 0.04805541 ;
 	setAttr ".pt[15]" -type "float3" 0 0 0.04805541 ;
-createNode transform -n "pasted__pCube1" -p "group5";
+createNode transform -n "pasted__pCube1" -p "Cash_Register";
 	rename -uid "20E70834-4711-3F3F-FBB8-90AAA207364B";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform5" -p "|group5|pasted__pCube1";
+createNode transform -n "pasted__transform5" -p "|Cash_Register|pasted__pCube1";
 	rename -uid "682C2DFA-4086-8EF9-8A3E-03AF587FD920";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pCubeShape1" -p "pasted__transform5";
@@ -223,7 +190,7 @@ createNode mesh -n "pasted__pCubeShape1" -p "pasted__transform5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group2" -p "group5";
+createNode transform -n "pasted__group2" -p "Cash_Register";
 	rename -uid "0D87088A-44C1-134E-EA5B-C7859EE0476E";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
@@ -249,7 +216,7 @@ createNode mesh -n "pasted__pasted__pCubeShape1" -p "pasted__transform7";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group3" -p "group5";
+createNode transform -n "pasted__group3" -p "Cash_Register";
 	rename -uid "7E7D19A8-491D-54F2-22FC-82A5C8AE8F74";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
@@ -280,7 +247,7 @@ createNode mesh -n "pasted__pasted__pasted__pCubeShape1" -p "pasted__transform11
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group4" -p "group5";
+createNode transform -n "pasted__group4" -p "Cash_Register";
 	rename -uid "64FA9588-4221-F6E8-7D5D-C89951A7885A";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
@@ -316,7 +283,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pCubeShape1" -p "pasted__tra
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group5" -p "group5";
+createNode transform -n "pasted__group5" -p "Cash_Register";
 	rename -uid "23D7455E-4DE5-372D-9C0E-6791EB0BE805";
 	setAttr ".t" -type "double3" 0.26689892350399474 0 0 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
@@ -326,23 +293,23 @@ createNode transform -n "pasted__pasted__group4" -p "pasted__group5";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group3" -p "|group5|pasted__group5|pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group5|pasted__pasted__group4";
 	rename -uid "0E7647BB-45FD-A9D2-E8F6-A2B0E40DB99C";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3";
 	rename -uid "5115716B-41BF-901A-2960-AA9C47B1333A";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
 	rename -uid "8F0D7312-449B-F63B-0BF0-F285D88EFE71";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform8" -p "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform8" -p "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "0B73E7E3-49F3-E3BC-C681-4DACD3F55A04";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pasted__transform8";
@@ -357,7 +324,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pas
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group6" -p "group5";
+createNode transform -n "pasted__group6" -p "Cash_Register";
 	rename -uid "90DB904D-4119-8CFB-A692-36AB368EC1BB";
 	setAttr ".t" -type "double3" 0.54002748802872191 0 0 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
@@ -367,23 +334,23 @@ createNode transform -n "pasted__pasted__group4" -p "pasted__group6";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group3" -p "|group5|pasted__group6|pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group6|pasted__pasted__group4";
 	rename -uid "0722957F-4150-70B9-152F-D1BE4F1C553E";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3";
 	rename -uid "2E3183B1-4D8A-00A0-8E01-338175CE023D";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
 	rename -uid "34C25BCF-452F-CA9B-1D43-25A639B90565";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform9" -p "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform9" -p "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "2E08FC81-4BE3-EA99-811C-A989407AD1E7";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pasted__transform9";
@@ -398,33 +365,33 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pas
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group7" -p "group5";
+createNode transform -n "pasted__group7" -p "Cash_Register";
 	rename -uid "A578D960-4413-6049-A2E6-A8A99A8A5D50";
 	setAttr ".t" -type "double3" 0.82075537338810722 0 0 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__group4" -p "|group5|pasted__group7";
+createNode transform -n "pasted__pasted__group4" -p "|Cash_Register|pasted__group7";
 	rename -uid "D1D7E5F7-49A6-6E81-D1BE-E9AE95078926";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group3" -p "|group5|pasted__group7|pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group7|pasted__pasted__group4";
 	rename -uid "7BFDEECB-4C28-BD6E-2DCB-4EA9F84DA3C1";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3";
 	rename -uid "117B0C27-4A59-3092-7DD2-19876D2A7C52";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
 	rename -uid "99E20D71-45B1-556A-A647-4DA49C9F6565";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform1" -p "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform1" -p "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "868876B0-4688-9BB6-B766-F0AE12463C6F";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pasted__transform1";
@@ -439,33 +406,33 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pas
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group8" -p "group5";
+createNode transform -n "pasted__group8" -p "Cash_Register";
 	rename -uid "2CEBCF00-4813-EB00-0422-A0A28A12170A";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__group4" -p "|group5|pasted__group8";
+createNode transform -n "pasted__pasted__group4" -p "|Cash_Register|pasted__group8";
 	rename -uid "879E72E8-465F-F3EA-D515-FE88C3CC1A82";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group3" -p "|group5|pasted__group8|pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group8|pasted__pasted__group4";
 	rename -uid "365EC32B-4894-3AE4-558E-E289BF92C84A";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3";
 	rename -uid "95A19A56-497E-2B3B-8133-BE82E0A60577";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
 	rename -uid "EAC3A84C-48C6-C22B-480B-78AD5DDD544A";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform2" -p "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform2" -p "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "BCBE91E2-4B0A-8065-9A7B-2881ADE480E7";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pasted__transform2";
@@ -480,7 +447,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pas
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group9" -p "group5";
+createNode transform -n "pasted__group9" -p "Cash_Register";
 	rename -uid "F2770BF3-4942-AC5B-47FF-A18E9E29E873";
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
@@ -489,23 +456,23 @@ createNode transform -n "pasted__pasted__group4" -p "pasted__group9";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group3" -p "|group5|pasted__group9|pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group9|pasted__pasted__group4";
 	rename -uid "5EC5EAFB-4315-3A56-EF72-6E9C93AE0C83";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3";
 	rename -uid "7581DC31-4A52-9E41-F3C9-B1AF36896F2E";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
 	rename -uid "C6559F4C-4DB1-805F-8F71-05AF1A9D14B5";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform17" -p "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform17" -p "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "CAB668E4-4038-27DA-F811-BA95DAB141D6";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pasted__transform17";
@@ -520,7 +487,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pas
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group10" -p "group5";
+createNode transform -n "pasted__group10" -p "Cash_Register";
 	rename -uid "DBE2C148-4158-EF58-421D-DA81BC60BC03";
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
@@ -529,23 +496,23 @@ createNode transform -n "pasted__pasted__group4" -p "pasted__group10";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group3" -p "|group5|pasted__group10|pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group10|pasted__pasted__group4";
 	rename -uid "77046774-443C-31FA-5AFF-338744D38764";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3";
 	rename -uid "E847AC16-44E5-AC2C-1E02-CFAC26325434";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__pCube1" -p "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2";
 	rename -uid "2DC7269C-4151-6C32-6A20-00AAA2D9037C";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform16" -p "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform16" -p "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "C86AF565-4785-BFBC-F0C1-0B9844DA2C4A";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pasted__transform16";
@@ -560,7 +527,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pCubeShape1" -p "pas
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group11" -p "group5";
+createNode transform -n "pasted__group11" -p "Cash_Register";
 	rename -uid "3DBC3F4B-4976-AE25-87F5-38A4F9D81E2E";
 	setAttr ".t" -type "double3" 0.26231673119510446 0 0 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
@@ -570,29 +537,29 @@ createNode transform -n "pasted__pasted__group8" -p "pasted__group11";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group4" -p "|group5|pasted__group11|pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group11|pasted__pasted__group8";
 	rename -uid "50B935DE-483E-862B-A07F-41B83EA17380";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4";
 	rename -uid "D7A9596E-4785-F528-0100-A4B558155434";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
 	rename -uid "A484EB57-41BF-F7DA-8526-428F7BC5090F";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "12BD7452-4CE5-BA3A-C585-1CBB317BD7DC";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform13" -p "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform13" -p "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "9E7EDAAA-4021-AE11-691E-59922292E5CE";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -608,7 +575,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1"
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group12" -p "group5";
+createNode transform -n "pasted__group12" -p "Cash_Register";
 	rename -uid "6935F0E8-410E-14BB-3E72-ADB99551BEFF";
 	setAttr ".t" -type "double3" 0.53775151331960469 0 0 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
@@ -618,29 +585,29 @@ createNode transform -n "pasted__pasted__group8" -p "pasted__group12";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group4" -p "|group5|pasted__group12|pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group12|pasted__pasted__group8";
 	rename -uid "372761DC-4805-3414-CFFD-4BABBD804DE7";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4";
 	rename -uid "09943F90-4E11-FC23-94ED-03B21884626F";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
 	rename -uid "E08AC662-4D9E-80ED-F8AF-CFB4F467337D";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "1CDDC937-492C-20F3-7C43-DDA44E6A1BB0";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform10" -p "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform10" -p "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "5A19A240-46D8-CDAD-36C7-88AC75FDB040";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -656,7 +623,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1"
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group13" -p "group5";
+createNode transform -n "pasted__group13" -p "Cash_Register";
 	rename -uid "93FFA3C9-4C8A-07CA-7B55-C486DB931C7A";
 	setAttr ".t" -type "double3" 0.81599578437600195 0 0 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
@@ -666,29 +633,29 @@ createNode transform -n "pasted__pasted__group8" -p "pasted__group13";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group4" -p "|group5|pasted__group13|pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group13|pasted__pasted__group8";
 	rename -uid "C47A1930-40F6-C0B7-0A34-72BA01E510DE";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4";
 	rename -uid "36D217D4-4BC7-0A90-F2D6-8A8BE057D344";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
 	rename -uid "42F0E8EB-45DF-0E97-F727-FDA4FE0927BD";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "CE3C293B-4C25-1A18-BFEF-83B209BEF5D3";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform22" -p "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform22" -p "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "74E20A5B-4C53-C90C-4439-0E8FEA3C4221";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -704,7 +671,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1"
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group14" -p "group5";
+createNode transform -n "pasted__group14" -p "Cash_Register";
 	rename -uid "77272A3E-4C96-44E0-CDC7-06999EA98086";
 	setAttr ".t" -type "double3" 1.0973773044652515 0 0 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
@@ -714,29 +681,29 @@ createNode transform -n "pasted__pasted__group8" -p "pasted__group14";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group4" -p "|group5|pasted__group14|pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group14|pasted__pasted__group8";
 	rename -uid "6A4C761F-48CB-69DA-A649-C4AA45F083C8";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4";
 	rename -uid "3EECF640-43E4-7C34-BEE4-DAA52B7A474A";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
 	rename -uid "0C295354-450D-432F-4539-33A10E4F4D5E";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "C87A366A-4963-9653-75AB-B7B8651D4DBB";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform21" -p "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform21" -p "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "09E2F6D2-4512-FC94-0C46-5BA30FC580EC";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -752,7 +719,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1"
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group15" -p "group5";
+createNode transform -n "pasted__group15" -p "Cash_Register";
 	rename -uid "C149C27B-4034-C55A-4479-82A30AD748D3";
 	setAttr ".t" -type "double3" 1.3593395914079853 0 0 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
@@ -762,29 +729,29 @@ createNode transform -n "pasted__pasted__group8" -p "pasted__group15";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group4" -p "|group5|pasted__group15|pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group15|pasted__pasted__group8";
 	rename -uid "48AC18AA-4EE9-E0F7-58CB-0B892E1C8034";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4";
 	rename -uid "C15FA583-41EF-1A06-CE9A-FCAB10B04E66";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
 	rename -uid "C1AE2A9E-4C63-D753-772C-EDB0BB117CDA";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "B48C10A9-46B3-2DA4-5EE4-FA8BA3BE5B85";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform23" -p "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform23" -p "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "BD868760-4F93-86EF-54E9-1B83B1D3F1C9";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -800,7 +767,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1"
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group16" -p "group5";
+createNode transform -n "pasted__group16" -p "Cash_Register";
 	rename -uid "13DE9972-4166-2239-E5AE-2EAC39B35DED";
 	setAttr ".t" -type "double3" 0.15327258986323758 -0.16564517429887982 0.28629754431305177 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
@@ -810,29 +777,29 @@ createNode transform -n "pasted__pasted__group8" -p "pasted__group16";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__group4" -p "|group5|pasted__group16|pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group16|pasted__pasted__group8";
 	rename -uid "B33DD08F-48E0-AA78-36F6-13A18C7F9989";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4";
 	rename -uid "0F621A8D-472D-379C-7325-CBB0FA014265";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group2" -p "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3";
 	rename -uid "86844BE4-4D93-1432-592A-B0AF13737A93";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "0088DF2F-4064-C8D6-25E4-E28B95B57DC3";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform12" -p "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform12" -p "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "48038224-45C5-02D1-E03F-799F90E27605";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -848,7 +815,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1"
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group17" -p "group5";
+createNode transform -n "pasted__group17" -p "Cash_Register";
 	rename -uid "AB7665F7-4362-875D-E905-83B3F2E94A9E";
 	setAttr ".t" -type "double3" 0.2675887100775905 0 0 ;
 	setAttr ".rp" -type "double3" -0.17595001573519167 2.3723221908226879 2.1366905356743646 ;
@@ -858,35 +825,35 @@ createNode transform -n "pasted__pasted__group16" -p "pasted__group17";
 	setAttr ".t" -type "double3" 0.15327258986323758 -0.16564517429887982 0.28629754431305177 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
 	setAttr ".sp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
-createNode transform -n "pasted__pasted__pasted__group8" -p "|group5|pasted__group17|pasted__pasted__group16";
+createNode transform -n "pasted__pasted__pasted__group8" -p "|Cash_Register|pasted__group17|pasted__pasted__group16";
 	rename -uid "331A2F34-439A-54D1-708D-309EE7D3791B";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8";
 	rename -uid "71B2BEF7-4A72-8476-7B3D-BF90B6010925";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
 	rename -uid "BFBAA5C2-4CA5-4A40-946F-0E9BB54FBC15";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__group2" 
-		-p "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
+		-p "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
 	rename -uid "2331F7DE-47B5-2089-922E-B8BEEBCB8F56";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "D7DD4491-493D-A212-8476-C1BA375D4821";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform4" -p "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform4" -p "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "73539A8F-4CB8-5998-BA8B-DAA10FBEEE74";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -902,7 +869,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCub
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group18" -p "group5";
+createNode transform -n "pasted__group18" -p "Cash_Register";
 	rename -uid "216445A6-437F-715D-1AB0-5594C06824A0";
 	setAttr ".t" -type "double3" 0.53175085100035746 0 0 ;
 	setAttr ".rp" -type "double3" -0.17595001573519167 2.3723221908226879 2.1366905356743646 ;
@@ -912,35 +879,35 @@ createNode transform -n "pasted__pasted__group16" -p "pasted__group18";
 	setAttr ".t" -type "double3" 0.15327258986323758 -0.16564517429887982 0.28629754431305177 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
 	setAttr ".sp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
-createNode transform -n "pasted__pasted__pasted__group8" -p "|group5|pasted__group18|pasted__pasted__group16";
+createNode transform -n "pasted__pasted__pasted__group8" -p "|Cash_Register|pasted__group18|pasted__pasted__group16";
 	rename -uid "C9CBDA96-4DF7-9C6D-2168-C098237D8941";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8";
 	rename -uid "6A3AFE01-44A1-5A60-2267-56A6CF6748B4";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
 	rename -uid "DF5976C8-455B-F9FD-3149-48B1CEF5055A";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__group2" 
-		-p "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
+		-p "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
 	rename -uid "84E1BE80-40A8-D3AC-915F-058D8CE44DEE";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "86237A41-4FB7-6AEE-E1F9-9F852CDAC45D";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform18" -p "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform18" -p "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "13D86551-4C79-D681-653D-DD90BEE7C676";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -956,7 +923,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCub
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group19" -p "group5";
+createNode transform -n "pasted__group19" -p "Cash_Register";
 	rename -uid "0A31D954-4B63-B808-9482-8DAB4DEC4885";
 	setAttr ".t" -type "double3" 0.80313020922844336 0 0 ;
 	setAttr ".rp" -type "double3" -0.17595001573519167 2.3723221908226879 2.1366905356743646 ;
@@ -966,35 +933,35 @@ createNode transform -n "pasted__pasted__group16" -p "pasted__group19";
 	setAttr ".t" -type "double3" 0.15327258986323758 -0.16564517429887982 0.28629754431305177 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
 	setAttr ".sp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
-createNode transform -n "pasted__pasted__pasted__group8" -p "|group5|pasted__group19|pasted__pasted__group16";
+createNode transform -n "pasted__pasted__pasted__group8" -p "|Cash_Register|pasted__group19|pasted__pasted__group16";
 	rename -uid "41A99363-41E7-756E-DA24-F8AADD637887";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8";
 	rename -uid "697601B5-4036-6541-BA48-D0AE3F98D698";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
 	rename -uid "CAD5D5B2-4787-699E-C34F-AAB6DEB1BE91";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__group2" 
-		-p "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
+		-p "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
 	rename -uid "F2B3F7D0-449A-C9BB-F6C2-79AC7FFB2135";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "5664ACB4-4FDC-134A-1A42-A4A22D3925F0";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform19" -p "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform19" -p "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "07E1A974-4FDE-A28F-E45D-3B9605A310FB";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -1010,7 +977,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCub
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group20" -p "group5";
+createNode transform -n "pasted__group20" -p "Cash_Register";
 	rename -uid "0ED89095-462A-5A0E-AC1E-2F9ADE0FCF53";
 	setAttr ".t" -type "double3" 1.082202120013666 0 0 ;
 	setAttr ".rp" -type "double3" -0.17595001573519167 2.3723221908226879 2.1366905356743646 ;
@@ -1020,35 +987,35 @@ createNode transform -n "pasted__pasted__group16" -p "pasted__group20";
 	setAttr ".t" -type "double3" 0.15327258986323758 -0.16564517429887982 0.28629754431305177 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
 	setAttr ".sp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
-createNode transform -n "pasted__pasted__pasted__group8" -p "|group5|pasted__group20|pasted__pasted__group16";
+createNode transform -n "pasted__pasted__pasted__group8" -p "|Cash_Register|pasted__group20|pasted__pasted__group16";
 	rename -uid "28FD3F12-421D-FFF6-7D27-81ADAB64E3DE";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8";
 	rename -uid "62102078-477F-B899-A4CE-9B97339E06EF";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
 	rename -uid "FEE3EC50-4B1D-FCE1-87B5-448C3AC8D7D6";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__group2" 
-		-p "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
+		-p "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
 	rename -uid "0A3314BC-45ED-E3F2-A7A7-9A9814545DED";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "DEFAE42D-4152-C080-999C-C9990A308F83";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform20" -p "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform20" -p "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "0273BF89-4AC7-CAD9-77FF-079790681FEC";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -1064,7 +1031,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCub
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group21" -p "group5";
+createNode transform -n "pasted__group21" -p "Cash_Register";
 	rename -uid "858471B6-4BBD-80EE-FAAD-309F1473AD7F";
 	setAttr ".t" -type "double3" -0.25304302689710412 0 0 ;
 	setAttr ".rp" -type "double3" -0.17595001573519167 2.3723221908226879 2.1366905356743646 ;
@@ -1074,35 +1041,35 @@ createNode transform -n "pasted__pasted__group16" -p "pasted__group21";
 	setAttr ".t" -type "double3" 0.15327258986323758 -0.16564517429887982 0.28629754431305177 ;
 	setAttr ".rp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
 	setAttr ".sp" -type "double3" -0.32922260559842925 2.5379673651215677 1.8503929913613129 ;
-createNode transform -n "pasted__pasted__pasted__group8" -p "|group5|pasted__group21|pasted__pasted__group16";
+createNode transform -n "pasted__pasted__pasted__group8" -p "|Cash_Register|pasted__group21|pasted__pasted__group16";
 	rename -uid "687402ED-4D75-1CE4-1D5C-FA8529E9F7B1";
 	setAttr ".t" -type "double3" -0.66609358064518764 -0.14966443455321832 0.23948660867356342 ;
 	setAttr ".rp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.33687097504675839 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8";
+createNode transform -n "pasted__pasted__pasted__pasted__group4" -p "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8";
 	rename -uid "989CBF49-4824-71F8-42DA-D9AD3D2F3586";
 	setAttr ".t" -type "double3" 0.28236432127142685 0 0 ;
 	setAttr ".rp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" 0.054506653775331537 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
+createNode transform -n "pasted__pasted__pasted__pasted__pasted__group3" -p "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4";
 	rename -uid "CB1642E8-4D12-8037-B648-7AA28D2BC986";
 	setAttr ".t" -type "double3" 0.26059933529044799 0 0 ;
 	setAttr ".rp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.20609268151511645 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__group2" 
-		-p "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
+		-p "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3";
 	rename -uid "6C4C3579-4404-DE75-08A4-33BEF4542590";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 createNode transform -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
+		-p "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2";
 	rename -uid "151B6FE9-4E2A-68B3-AB10-8B99557506F5";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
 	setAttr ".s" -type "double3" 0.13958438197293435 0.11301861991633423 0.19421619696079201 ;
 	setAttr ".spt" -type "double3" -2.0663315215203877e-16 -1.8719945832864283e-16 0 ;
-createNode transform -n "pasted__transform14" -p "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
+createNode transform -n "pasted__transform14" -p "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1";
 	rename -uid "5B1690A7-45CB-210B-0A02-80B476B71129";
 	setAttr ".v" no;
 createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1" 
@@ -1118,7 +1085,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCub
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pasted__group22" -p "group5";
+createNode transform -n "pasted__group22" -p "Cash_Register";
 	rename -uid "1B98B56E-47C7-BEB3-199A-C19C62313C52";
 	setAttr ".t" -type "double3" 0.181412091752643 -0.10388001176267236 0.28498650009086379 ;
 	setAttr ".s" -type "double3" 7.8045559282514612 1 1 ;
@@ -1181,9 +1148,9 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pasted__pasted__pasted__past
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pasted__group15_pasted__group8_pasted__pasted__group4_pasted__pasted__pasted__group3_pasted__pasted__pasted__pasted__group2_pasted__pasted__pasted__pasted__pasted__pCube1" 
-		-p "group5";
+		-p "Cash_Register";
 	rename -uid "8D7E0037-4F30-12DA-66B3-36B2495C3E47";
-	setAttr ".t" -type "double3" 0 -0.39759748534000927 -2.4019439195891024 ;
+	setAttr ".t" -type "double3" 10.887911643334203 -0.39759748534000927 -2.4019439195891024 ;
 	setAttr ".rp" -type "double3" 0.30389121743102265 2.526573684644922 1.6333927282597607 ;
 	setAttr ".sp" -type "double3" 0.30389121743102265 2.526573684644922 1.6333927282597607 ;
 createNode mesh -n "pasted__group15_pasted__group8_pasted__pasted__group4_pasted__pasted__pasted__group3_pasted__pasted__pasted__pasted__group2_pasted__pasted__pasted__pasted__pasted__pCube1Shape" 
@@ -1212,9 +1179,9 @@ createNode mesh -n "pCubeShape4" -p "pCube4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "group6";
+createNode transform -n "Floor";
 	rename -uid "56E95AF1-4003-AFEE-873D-CEABC2A04647";
-createNode transform -n "pasted__pCube4" -p "group6";
+createNode transform -n "pasted__pCube4" -p "Floor";
 	rename -uid "140E0590-48E4-6F93-5D5E-C199AFC7D213";
 	setAttr ".s" -type "double3" 24.155295514074314 0.20693463601018025 23.906719859186911 ;
 createNode mesh -n "pasted__pCubeShape4" -p "pasted__pCube4";
@@ -1227,19 +1194,15 @@ createNode mesh -n "pasted__pCubeShape4" -p "pasted__pCube4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "group7";
-	rename -uid "C8228C63-4FF8-E672-6807-11A05C9823CB";
-	setAttr ".t" -type "double3" 0 11.947230768124898 11.953359603881836 ;
-	setAttr ".r" -type "double3" 632.1877432902229 0 0 ;
-createNode transform -n "group8";
+createNode transform -n "Back_Wall";
 	rename -uid "07399670-46A3-2393-F5C4-C4AE7FE46967";
 	setAttr ".rp" -type "double3" 0 11.947230768124896 11.953359603881836 ;
 	setAttr ".sp" -type "double3" 0 11.947230768124896 11.953359603881836 ;
-createNode transform -n "pasted__group7" -p "group8";
+createNode transform -n "pasted__group7" -p "Back_Wall";
 	rename -uid "1AAB4D47-47EF-87FA-6D0A-AB8CCC6DFF40";
 	setAttr ".t" -type "double3" 0 11.947230768124898 11.953359603881836 ;
 	setAttr ".r" -type "double3" 632.1877432902229 0 0 ;
-createNode transform -n "pasted__pasted__pCube4" -p "|group8|pasted__group7";
+createNode transform -n "pasted__pasted__pCube4" -p "|Back_Wall|pasted__group7";
 	rename -uid "2A7C2B89-47D1-1125-5E83-AE99A97AD860";
 	setAttr ".t" -type "double3" 0.27741748103242925 -0.0045989536822071547 -0.12038549794869145 ;
 	setAttr ".s" -type "double3" 24.155295514074314 0.20693463601018025 23.906719859186911 ;
@@ -1290,15 +1253,15 @@ createNode mesh -n "pasted__pasted__pCubeShape4" -p "pasted__pasted__pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "group9";
+createNode transform -n "Wall_with_Window";
 	rename -uid "9749417A-4132-DBB7-102C-97A24773B556";
 	setAttr ".rp" -type "double3" 0 11.947230768124896 11.953359603881836 ;
 	setAttr ".sp" -type "double3" 0 11.947230768124896 11.953359603881836 ;
-createNode transform -n "pasted__group8" -p "group9";
+createNode transform -n "pasted__group8" -p "Wall_with_Window";
 	rename -uid "2007D7B4-4C85-A1A7-FACF-2CB05C21FFE6";
 	setAttr ".rp" -type "double3" 0 11.947230768124896 11.953359603881836 ;
 	setAttr ".sp" -type "double3" 0 11.947230768124896 11.953359603881836 ;
-createNode transform -n "pasted__pasted__group7" -p "|group9|pasted__group8";
+createNode transform -n "pasted__pasted__group7" -p "|Wall_with_Window|pasted__group8";
 	rename -uid "F9390CFE-423D-8E78-CA5E-B195E5A0C612";
 	setAttr ".t" -type "double3" 0 11.947230768124898 11.953359603881836 ;
 	setAttr ".r" -type "double3" 632.1877432902229 0 0 ;
@@ -1367,21 +1330,53 @@ createNode mesh -n "polySurfaceShape1" -p "pasted__pasted__pasted__pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube5";
+	rename -uid "654EC140-4544-5B3B-D202-84A08942356D";
+	setAttr ".t" -type "double3" -4.9233029629924179 5.8052743196607963 -0.71814524038192429 ;
+	setAttr ".s" -type "double3" -6.5271761080713402 -2.6050217228102075 -2.294364131912868 ;
+	setAttr ".spt" -type "double3" 8.2013037522390805e-12 -4.6628813868749499e-15 1.9721522630525295e-31 ;
+createNode mesh -n "pCubeShape5" -p "pCube5";
+	rename -uid "6A0FB042-4BDC-C536-7620-2CBDF847E10C";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube6";
+	rename -uid "1F46996E-47C1-3731-4CA5-76A4541081C5";
+	setAttr ".t" -type "double3" -1.6001516902828632 8.028223427778574 10.723296267219199 ;
+	setAttr ".s" -type "double3" 20.036033482316803 14.538075594564738 1 ;
+	setAttr ".spt" -type "double3" -1.7811259284286742e-16 -2.006372235328717e-16 0 ;
+createNode mesh -n "pCubeShape6" -p "pCube6";
+	rename -uid "73F68300-4F36-E77A-A31C-4FA7C9DC91E4";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.52500000596046448 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "90108A94-43E5-CBCA-C224-A1922E0C7E83";
+	rename -uid "0CFC8161-431A-F846-8833-ADA74719141C";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F098C571-48F6-8CB1-B132-80A48C1DBC2A";
+	rename -uid "D35EB2A5-40B7-4541-DC7B-5CBB9FAA3F7F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B64C036A-486E-4EA8-2BF5-89A2C83693EB";
+	rename -uid "1B08E629-48C3-4295-65EB-029011797BC3";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "FF80FE55-4B59-6A87-EAE3-4AA0C260492B";
+	rename -uid "A9C7A221-4E49-97F3-5505-15A32B8C783C";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "DE50CF46-46C5-C66F-61C7-259151C8CF9C";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "770648DC-4FF9-0CD7-CE89-75B7D6C06B07";
+	rename -uid "301BD1D6-4B65-4029-AE0C-5B8B732954B5";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "839D5717-4051-E596-1308-0CB8679742BC";
 	setAttr ".g" yes;
@@ -1657,9 +1652,6 @@ createNode polyTweakUV -n "polyTweakUV9";
 		 0.2850453 0.1138448 0.28575435 0.11309448 0.28503105 0.11357263 0.28163439 0.11358067
 		 0.28118837 0.11283773 0.28188455 0.12285143 0.28165126 0.12329805 0.28165472 0.12330866
 		 0.2850357 0.12286422 0.28504267 0.12256002 0.28094965 0.12359238 0.28479329;
-createNode polyCube -n "polyCube3";
-	rename -uid "9BE01F80-4FBC-48F1-FEB8-53858B7A4ECC";
-	setAttr ".cuv" 4;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0B473404-4B66-4A54-D4D9-1B89AF5B4C99";
 	setAttr ".b" -type "string" (
@@ -1963,7 +1955,7 @@ createNode displacementShader -n "displacementShader4";
 createNode bump2d -n "bump2d4";
 	rename -uid "7AD79996-40AF-74D2-8EF8-C48F49C6D355";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
+	setAttr ".vc1" -type "float3" 0 2.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	rename -uid "C607C200-4B57-F9E7-130E-438F057AD4CF";
@@ -2395,6 +2387,7 @@ createNode file -n "pasted__file16";
 createNode bump2d -n "pasted__bump2d3";
 	rename -uid "C63B791D-4667-2845-22DE-F8812449E306";
 	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 2.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "pasted__file17";
 	rename -uid "A3E214BE-419E-797F-ED9A-6CB39011D9C6";
@@ -2440,6 +2433,7 @@ createNode file -n "pasted__file21";
 createNode bump2d -n "pasted__bump2d4";
 	rename -uid "7C068AEB-4B1E-DA81-EAD7-CDBF24A19BA9";
 	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 2.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "pasted__file22";
 	rename -uid "007998E1-4A0E-B51F-3A30-F09E11B0B526";
@@ -2884,6 +2878,74 @@ createNode deleteComponent -n "deleteComponent1";
 createNode deleteComponent -n "deleteComponent2";
 	rename -uid "6D0C190A-492D-4446-9715-759093E0D021";
 	setAttr ".dc" -type "componentList" 1 "f[1]";
+createNode polyCube -n "polyCube6";
+	rename -uid "5D8184CA-444A-6AB8-4747-5CAC6421BA8C";
+	setAttr ".cuv" 4;
+createNode polyCube -n "polyCube7";
+	rename -uid "6AF85E2E-441A-0EB3-1539-CB99E2EA6034";
+	setAttr ".cuv" 4;
+createNode polySplit -n "polySplit2";
+	rename -uid "DE1C15F3-436D-B904-20DA-1588F8DA6272";
+	setAttr -s 5 ".e[0:4]"  0.80000001 0.2 0.2 0.80000001 0.80000001;
+	setAttr -s 5 ".d[0:4]"  -2147483644 -2147483640 -2147483639 -2147483643 -2147483644;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit3";
+	rename -uid "42992CED-4C06-3668-7E3D-CB9440FF031A";
+	setAttr -s 5 ".e[0:4]"  0.69999999 0.30000001 0.30000001 0.69999999
+		 0.69999999;
+	setAttr -s 5 ".d[0:4]"  -2147483644 -2147483635 -2147483634 -2147483643 -2147483644;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit4";
+	rename -uid "CA9C158F-496A-5FD7-6F09-B98B7E7EE06B";
+	setAttr -s 5 ".e[0:4]"  0.60000002 0.40000001 0.40000001 0.60000002
+		 0.60000002;
+	setAttr -s 5 ".d[0:4]"  -2147483644 -2147483627 -2147483626 -2147483643 -2147483644;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyExtrudeFace -n "polyExtrudeFace3";
+	rename -uid "20356C8A-4387-1AA8-FB11-708D3EE268ED";
+	setAttr ".ics" -type "componentList" 1 "f[7]";
+	setAttr ".ix" -type "matrix" 20.036033482316803 0 0 0 0 14.538075594564738 0 0 0 0 1 0
+		 -1.6001516902828634 8.028223427778574 10.723296267219199 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -1.6001517 13.843453 10.223296 ;
+	setAttr ".rs" 35414;
+	setAttr ".ls" -type "double3" 0.97841198582918798 0.89715912429993017 1 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -11.618168431441266 12.389646279455363 10.223296267219199 ;
+	setAttr ".cbx" -type "double3" 8.4178650508755375 15.297261225060943 10.223296267219199 ;
+createNode polyExtrudeFace -n "polyExtrudeFace4";
+	rename -uid "8EEC7805-454E-861D-6548-C7B924F88C9A";
+	setAttr ".ics" -type "componentList" 1 "f[7]";
+	setAttr ".ix" -type "matrix" 20.036033482316803 0 0 0 0 14.538075594564738 0 0 0 0 1 0
+		 -1.6001516902828634 8.028223427778574 10.723296267219199 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -1.600152 13.843452 10.223296 ;
+	setAttr ".rs" 43487;
+	setAttr ".lt" -type "double3" 0 9.0409891782041635e-17 -0.73825279129450649 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -11.401900405006101 12.539156811294196 10.223296267219199 ;
+	setAttr ".cbx" -type "double3" 8.2015964273200446 15.147748093611614 10.223296267219199 ;
+createNode deleteComponent -n "deleteComponent3";
+	rename -uid "DDA3E287-4D4C-C589-B88E-F9B2C665025D";
+	setAttr ".dc" -type "componentList" 1 "f[7]";
+createNode deleteComponent -n "deleteComponent4";
+	rename -uid "3234DBD9-40CE-AE0B-CB3A-2FBE11B1C6F5";
+	setAttr ".dc" -type "componentList" 1 "f[8]";
+createNode polyExtrudeFace -n "polyExtrudeFace5";
+	rename -uid "4936A16B-4425-35A9-4DE1-D38CF8A57769";
+	setAttr ".ics" -type "componentList" 1 "f[9]";
+	setAttr ".ix" -type "matrix" 20.036033482316803 0 0 0 0 14.538075594564738 0 0 0 0 1 0
+		 -1.6001516902828634 8.028223427778574 10.723296267219199 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -1.6001517 10.645075 10.223296 ;
+	setAttr ".rs" 52434;
+	setAttr ".ls" -type "double3" 0.98325105742751773 0.90710812895587845 1 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -11.618168431441266 8.9005062650402689 10.223296267219199 ;
+	setAttr ".cbx" -type "double3" 8.4178650508755375 12.389643679844866 10.223296267219199 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2913,7 +2975,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 55 ".dsm";
+	setAttr -s 56 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 49 ".gn";
 select -ne :initialParticleSE;
@@ -2938,27 +3000,26 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "groupParts4.og" "pCubeShape1.i";
-connectAttr "polyTweakUV9.uvtk[0]" "pCubeShape1.uvst[0].uvtw";
-connectAttr "groupId3.id" "pCubeShape1.iog.og[0].gid";
-connectAttr "set3.mwc" "pCubeShape1.iog.og[0].gco";
-connectAttr "groupId6.id" "pCubeShape1.iog.og[1].gid";
-connectAttr "set4.mwc" "pCubeShape1.iog.og[1].gco";
-connectAttr "groupId4.id" "pCubeShape1.ciog.cog[0].cgid";
-connectAttr "polyCube3.out" "pCubeShape3.i";
-connectAttr "pasted__groupParts4.og" "|group4|pasted__pCube1|pasted__pCubeShape1.i"
+connectAttr "groupParts4.og" "Counter_Shape2.i";
+connectAttr "polyTweakUV9.uvtk[0]" "Counter_Shape2.uvst[0].uvtw";
+connectAttr "groupId3.id" "Counter_Shape2.iog.og[0].gid";
+connectAttr "set3.mwc" "Counter_Shape2.iog.og[0].gco";
+connectAttr "groupId6.id" "Counter_Shape2.iog.og[1].gid";
+connectAttr "set4.mwc" "Counter_Shape2.iog.og[1].gco";
+connectAttr "groupId4.id" "Counter_Shape2.ciog.cog[0].cgid";
+connectAttr "pasted__groupParts4.og" "|Counter_1|pasted__pCube1|pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__polyTweakUV9.uvtk[0]" "|group4|pasted__pCube1|pasted__pCubeShape1.uvst[0].uvtw"
+connectAttr "pasted__polyTweakUV9.uvtk[0]" "|Counter_1|pasted__pCube1|pasted__pCubeShape1.uvst[0].uvtw"
 		;
-connectAttr "pasted__groupId3.id" "|group4|pasted__pCube1|pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId3.id" "|Counter_1|pasted__pCube1|pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr "pasted__set3.mwc" "|group4|pasted__pCube1|pasted__pCubeShape1.iog.og[0].gco"
+connectAttr "pasted__set3.mwc" "|Counter_1|pasted__pCube1|pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId6.id" "|group4|pasted__pCube1|pasted__pCubeShape1.iog.og[1].gid"
+connectAttr "pasted__groupId6.id" "|Counter_1|pasted__pCube1|pasted__pCubeShape1.iog.og[1].gid"
 		;
-connectAttr "pasted__set4.mwc" "|group4|pasted__pCube1|pasted__pCubeShape1.iog.og[1].gco"
+connectAttr "pasted__set4.mwc" "|Counter_1|pasted__pCube1|pasted__pCubeShape1.iog.og[1].gco"
 		;
-connectAttr "pasted__groupId4.id" "|group4|pasted__pCube1|pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId4.id" "|Counter_1|pasted__pCube1|pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
 connectAttr "pasted__groupParts20.og" "pasted__pasted__pCubeShape2.i";
 connectAttr "pasted__groupId38.id" "pasted__pasted__pCubeShape2.iog.og[0].gid";
@@ -2966,13 +3027,13 @@ connectAttr ":initialShadingGroup.mwc" "pasted__pasted__pCubeShape2.iog.og[0].gc
 		;
 connectAttr "pasted__groupId39.id" "pasted__pasted__pCubeShape2.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupId40.id" "|group5|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId40.id" "|Cash_Register|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupParts21.og" "|group5|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts21.og" "|Cash_Register|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId41.id" "|group5|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId41.id" "|Cash_Register|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
 connectAttr "pasted__groupParts19.og" "pasted__pasted__pCubeShape1.i";
 connectAttr "pasted__groupId36.id" "pasted__pasted__pCubeShape1.iog.og[0].gid";
@@ -2995,141 +3056,141 @@ connectAttr ":initialShadingGroup.mwc" "pasted__pasted__pasted__pasted__pCubeSha
 		;
 connectAttr "pasted__groupId45.id" "pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts18.og" "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts18.og" "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId34.id" "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId34.id" "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId35.id" "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId35.id" "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts17.og" "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts17.og" "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId32.id" "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId32.id" "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId33.id" "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId33.id" "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts25.og" "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts25.og" "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId48.id" "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId48.id" "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId49.id" "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId49.id" "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts24.og" "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts24.og" "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId46.id" "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId46.id" "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId47.id" "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId47.id" "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts9.og" "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts9.og" "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId16.id" "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId16.id" "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId17.id" "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId17.id" "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts10.og" "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts10.og" "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId18.id" "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId18.id" "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId19.id" "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId19.id" "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts13.og" "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts13.og" "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId24.id" "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId24.id" "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId25.id" "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId25.id" "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts16.og" "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts16.og" "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId30.id" "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId30.id" "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId31.id" "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId31.id" "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts5.og" "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts5.og" "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId7.id" "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId7.id" "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId8.id" "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId8.id" "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts3.og" "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts3.og" "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId5.id" "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId5.id" "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId9.id" "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId9.id" "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts1.og" "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts1.og" "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId1.id" "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId1.id" "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId2.id" "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId2.id" "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts14.og" "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts14.og" "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId26.id" "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId26.id" "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId27.id" "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId27.id" "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts22.og" "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts22.og" "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId42.id" "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId42.id" "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId43.id" "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId43.id" "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts8.og" "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts8.og" "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId14.id" "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId14.id" "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId15.id" "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId15.id" "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts7.og" "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts7.og" "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId12.id" "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId12.id" "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId13.id" "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId13.id" "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts6.og" "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts6.og" "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId10.id" "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId10.id" "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId11.id" "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId11.id" "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
-connectAttr "pasted__groupParts12.og" "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
+connectAttr "pasted__groupParts12.og" "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__groupId22.id" "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
+connectAttr "pasted__groupId22.id" "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gid"
 		;
-connectAttr ":initialShadingGroup.mwc" "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
+connectAttr ":initialShadingGroup.mwc" "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0].gco"
 		;
-connectAttr "pasted__groupId23.id" "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
+connectAttr "pasted__groupId23.id" "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0].cgid"
 		;
 connectAttr "pasted__groupParts11.og" "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.i"
 		;
@@ -3150,6 +3211,8 @@ connectAttr "pasted__groupId51.id" "pasted__group15_pasted__group8_pasted__paste
 connectAttr "polyCube4.out" "pCubeShape4.i";
 connectAttr "pasted__polyCube4.out" "pasted__pCubeShape4.i";
 connectAttr "deleteComponent2.og" "pasted__pasted__pasted__pCubeShape4.i";
+connectAttr "polyCube6.out" "pCubeShape5.i";
+connectAttr "polyExtrudeFace5.out" "pCubeShape6.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "phong1SG.message" ":defaultLightSet.message";
@@ -3177,12 +3240,12 @@ relationship "shadowLink" ":lightLinker1" "pasted__set4.message" ":defaultLightS
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "polySplit1.out" "polyExtrudeFace1.ip";
-connectAttr "pCubeShape1.wm" "polyExtrudeFace1.mp";
+connectAttr "Counter_Shape2.wm" "polyExtrudeFace1.mp";
 connectAttr "polyCube1.out" "polySplit1.ip";
 connectAttr "polyTweak1.out" "polyMapDel1.ip";
 connectAttr "polyExtrudeFace1.out" "polyTweak1.ip";
 connectAttr "polyMapDel1.out" "polyPlanarProj1.ip";
-connectAttr "pCubeShape1.wm" "polyPlanarProj1.mp";
+connectAttr "Counter_Shape2.wm" "polyPlanarProj1.mp";
 connectAttr "polyPlanarProj1.out" "polyMapCut1.ip";
 connectAttr "polyMapCut1.out" "polyTweakUV1.ip";
 connectAttr "polyTweakUV1.out" "polyMapCut2.ip";
@@ -3213,10 +3276,6 @@ connectAttr "groupId1.msg" "phong2SG.gn" -na;
 connectAttr "phong2SG.msg" "materialInfo2.sg";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "standardSurface2SG.msg" "materialInfo3.sg";
 connectAttr "standardSurface3SG.msg" "materialInfo4.sg";
 connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
@@ -3630,7 +3689,7 @@ connectAttr "bump2d3.o" "Counterbase.n";
 connectAttr "file18.oa" "Counterbase.specular_roughness";
 connectAttr "Counterbase.out" "set3.ss";
 connectAttr "displacementShader3.d" "set3.ds";
-connectAttr "pCubeShape1.iog.og[0]" "set3.dsm" -na;
+connectAttr "Counter_Shape2.iog.og[0]" "set3.dsm" -na;
 connectAttr "groupId3.msg" "set3.gn" -na;
 connectAttr "set3.msg" "materialInfo7.sg";
 connectAttr "Counterbase.msg" "materialInfo7.m";
@@ -3754,7 +3813,7 @@ connectAttr "bump2d4.o" "Countertop.n";
 connectAttr "file23.oa" "Countertop.specular_roughness";
 connectAttr "Countertop.out" "set4.ss";
 connectAttr "displacementShader4.d" "set4.ds";
-connectAttr "pCubeShape1.iog.og[1]" "set4.dsm" -na;
+connectAttr "Counter_Shape2.iog.og[1]" "set4.dsm" -na;
 connectAttr "groupId6.msg" "set4.gn" -na;
 connectAttr "set4.msg" "materialInfo8.sg";
 connectAttr "Countertop.msg" "materialInfo8.m";
@@ -3858,17 +3917,17 @@ connectAttr "pasted__polyTweakUV1.out" "pasted__polyMapCut2.ip";
 connectAttr "pasted__polyMapCut1.out" "pasted__polyTweakUV1.ip";
 connectAttr "pasted__polyPlanarProj1.out" "pasted__polyMapCut1.ip";
 connectAttr "pasted__polyMapDel1.out" "pasted__polyPlanarProj1.ip";
-connectAttr "|group4|pasted__pCube1|pasted__pCubeShape1.wm" "pasted__polyPlanarProj1.mp"
+connectAttr "|Counter_1|pasted__pCube1|pasted__pCubeShape1.wm" "pasted__polyPlanarProj1.mp"
 		;
 connectAttr "pasted__polyTweak1.out" "pasted__polyMapDel1.ip";
 connectAttr "pasted__polyExtrudeFace1.out" "pasted__polyTweak1.ip";
 connectAttr "pasted__polySplit1.out" "pasted__polyExtrudeFace1.ip";
-connectAttr "|group4|pasted__pCube1|pasted__pCubeShape1.wm" "pasted__polyExtrudeFace1.mp"
+connectAttr "|Counter_1|pasted__pCube1|pasted__pCubeShape1.wm" "pasted__polyExtrudeFace1.mp"
 		;
 connectAttr "pasted__polyCube1.out" "pasted__polySplit1.ip";
 connectAttr "pasted__Counterbase.out" "pasted__set3.ss";
 connectAttr "pasted__displacementShader3.d" "pasted__set3.ds";
-connectAttr "|group4|pasted__pCube1|pasted__pCubeShape1.iog.og[0]" "pasted__set3.dsm"
+connectAttr "|Counter_1|pasted__pCube1|pasted__pCubeShape1.iog.og[0]" "pasted__set3.dsm"
 		 -na;
 connectAttr "pasted__groupId3.msg" "pasted__set3.gn" -na;
 connectAttr "pasted__set3.msg" "pasted__materialInfo7.sg";
@@ -3993,7 +4052,7 @@ connectAttr "pasted__place2dTexture6.vt3" "pasted__file15.vt3";
 connectAttr "pasted__place2dTexture6.vc1" "pasted__file15.vc1";
 connectAttr "pasted__Countertop.out" "pasted__set4.ss";
 connectAttr "pasted__displacementShader4.d" "pasted__set4.ds";
-connectAttr "|group4|pasted__pCube1|pasted__pCubeShape1.iog.og[1]" "pasted__set4.dsm"
+connectAttr "|Counter_1|pasted__pCube1|pasted__pCubeShape1.iog.og[1]" "pasted__set4.dsm"
 		 -na;
 connectAttr "pasted__groupId6.msg" "pasted__set4.gn" -na;
 connectAttr "pasted__set4.msg" "pasted__materialInfo8.sg";
@@ -4134,92 +4193,92 @@ connectAttr "pasted__group15_pasted__group8_pasted__pasted__group4_pasted__paste
 		;
 connectAttr "pasted__polyUnite1.out" "pasted__groupParts26.ig";
 connectAttr "pasted__groupId50.id" "pasted__groupParts26.gi";
-connectAttr "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[0]"
+connectAttr "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[0]"
 		;
-connectAttr "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[1]"
+connectAttr "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[1]"
 		;
-connectAttr "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[2]"
+connectAttr "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[2]"
 		;
-connectAttr "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[3]"
+connectAttr "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[3]"
 		;
-connectAttr "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[4]"
+connectAttr "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[4]"
 		;
-connectAttr "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[5]"
+connectAttr "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[5]"
 		;
-connectAttr "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[6]"
+connectAttr "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[6]"
 		;
-connectAttr "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[7]"
+connectAttr "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[7]"
 		;
 connectAttr "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[8]"
 		;
-connectAttr "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[9]"
+connectAttr "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[9]"
 		;
-connectAttr "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[10]"
+connectAttr "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[10]"
 		;
-connectAttr "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[11]"
+connectAttr "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[11]"
 		;
 connectAttr "pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[12]";
-connectAttr "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[13]"
+connectAttr "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[13]"
 		;
-connectAttr "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[14]"
+connectAttr "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[14]"
 		;
-connectAttr "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[15]"
+connectAttr "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[15]"
 		;
 connectAttr "pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[16]";
 connectAttr "pasted__pasted__pCubeShape2.o" "pasted__polyUnite1.ip[17]";
-connectAttr "|group5|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.o" "pasted__polyUnite1.ip[18]"
+connectAttr "|Cash_Register|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.o" "pasted__polyUnite1.ip[18]"
 		;
-connectAttr "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[19]"
+connectAttr "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[19]"
 		;
 connectAttr "pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[20]"
 		;
-connectAttr "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[21]"
+connectAttr "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[21]"
 		;
-connectAttr "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[22]"
+connectAttr "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.o" "pasted__polyUnite1.ip[22]"
 		;
-connectAttr "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[0]"
+connectAttr "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[0]"
 		;
-connectAttr "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[1]"
+connectAttr "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[1]"
 		;
-connectAttr "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[2]"
+connectAttr "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[2]"
 		;
-connectAttr "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[3]"
+connectAttr "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[3]"
 		;
-connectAttr "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[4]"
+connectAttr "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[4]"
 		;
-connectAttr "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[5]"
+connectAttr "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[5]"
 		;
-connectAttr "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[6]"
+connectAttr "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[6]"
 		;
-connectAttr "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[7]"
+connectAttr "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[7]"
 		;
 connectAttr "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[8]"
 		;
-connectAttr "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[9]"
+connectAttr "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[9]"
 		;
-connectAttr "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[10]"
+connectAttr "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[10]"
 		;
-connectAttr "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[11]"
+connectAttr "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[11]"
 		;
 connectAttr "pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[12]"
 		;
-connectAttr "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[13]"
+connectAttr "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[13]"
 		;
-connectAttr "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[14]"
+connectAttr "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[14]"
 		;
-connectAttr "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[15]"
+connectAttr "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[15]"
 		;
 connectAttr "pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[16]";
 connectAttr "pasted__pasted__pCubeShape2.wm" "pasted__polyUnite1.im[17]";
-connectAttr "|group5|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.wm" "pasted__polyUnite1.im[18]"
+connectAttr "|Cash_Register|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.wm" "pasted__polyUnite1.im[18]"
 		;
-connectAttr "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[19]"
+connectAttr "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[19]"
 		;
 connectAttr "pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[20]"
 		;
-connectAttr "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[21]"
+connectAttr "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[21]"
 		;
-connectAttr "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[22]"
+connectAttr "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.wm" "pasted__polyUnite1.im[22]"
 		;
 connectAttr "pasted__pasted__pasted__pasted__pasted__pasted__polyCube8.out" "pasted__groupParts1.ig"
 		;
@@ -4296,6 +4355,17 @@ connectAttr "polySurfaceShape1.o" "polyExtrudeFace2.ip";
 connectAttr "pasted__pasted__pasted__pCubeShape4.wm" "polyExtrudeFace2.mp";
 connectAttr "polyExtrudeFace2.out" "deleteComponent1.ig";
 connectAttr "deleteComponent1.og" "deleteComponent2.ig";
+connectAttr "polyCube7.out" "polySplit2.ip";
+connectAttr "polySplit2.out" "polySplit3.ip";
+connectAttr "polySplit3.out" "polySplit4.ip";
+connectAttr "polySplit4.out" "polyExtrudeFace3.ip";
+connectAttr "pCubeShape6.wm" "polyExtrudeFace3.mp";
+connectAttr "polyExtrudeFace3.out" "polyExtrudeFace4.ip";
+connectAttr "pCubeShape6.wm" "polyExtrudeFace4.mp";
+connectAttr "polyExtrudeFace4.out" "deleteComponent3.ig";
+connectAttr "deleteComponent3.og" "deleteComponent4.ig";
+connectAttr "deleteComponent4.og" "polyExtrudeFace5.ip";
+connectAttr "pCubeShape6.wm" "polyExtrudeFace5.mp";
 connectAttr "phong1SG.pa" ":renderPartition.st" -na;
 connectAttr "phong2SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface2SG.pa" ":renderPartition.st" -na;
@@ -4365,73 +4435,72 @@ connectAttr "pasted__file20.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file21.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file22.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file23.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "|group4|pasted__pCube1|pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "Counter_Shape2.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "|Counter_1|pasted__pCube1|pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group15|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform23|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group13|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform22|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group14|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform21|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group20|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform20|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group19|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform19|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group18|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform18|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group9|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform17|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group10|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform16|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group21|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform14|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group11|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform13|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group16|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform12|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group12|pasted__pasted__group8|pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform10|pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group6|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform9|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group5|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform8|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm" -na
 		;
@@ -4441,25 +4510,25 @@ connectAttr "pasted__pasted__pCubeShape2.iog.og[0]" ":initialShadingGroup.dsm" -
 		;
 connectAttr "pasted__pasted__pCubeShape2.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__pCube1|pasted__transform5|pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group17|pasted__pasted__group16|pasted__pasted__pasted__group8|pasted__pasted__pasted__pasted__group4|pasted__pasted__pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform4|pasted__pasted__pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group8|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform2|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|group5|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
+connectAttr "|Cash_Register|pasted__group7|pasted__pasted__group4|pasted__pasted__pasted__group3|pasted__pasted__pasted__pasted__group2|pasted__pasted__pasted__pasted__pasted__pCube1|pasted__transform1|pasted__pasted__pasted__pasted__pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pasted__group15_pasted__group8_pasted__pasted__group4_pasted__pasted__pasted__group3_pasted__pasted__pasted__pasted__group2_pasted__pasted__pasted__pasted__pasted__pCube1Shape.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
@@ -4470,6 +4539,8 @@ connectAttr "pasted__pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pasted__pasted__pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pasted__pasted__pasted__pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
+connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId4.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId1.msg" ":initialShadingGroup.gn" -na;
@@ -4519,4 +4590,4 @@ connectAttr "pasted__groupId47.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId48.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId49.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId50.msg" ":initialShadingGroup.gn" -na;
-// End of Added cash register and wonky walls.ma
+// End of Added cash register and wonky walls.0004.ma
