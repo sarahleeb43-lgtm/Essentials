@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Added table, shelves, glass case etc.ma
-//Last modified: Fri, Nov 07, 2025 11:38:05 PM
+//Name: Added table, shelves, glass case etc.0003.ma
+//Last modified: Fri, Nov 07, 2025 11:45:37 AM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -13,19 +13,21 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "B7DE4051-4B80-7E31-6843-E1AB01F29CC8";
+fileInfo "UUID" "AE0F0420-4D73-FC1E-2780-689EDC9E4F8E";
+fileInfo "exportedFrom" "C:/Autodesk/WI/Essentials/DAGV1100and1200/Maya/scenes/Added table, shelves, glass case etc.ma";
 createNode transform -s -n "persp";
 	rename -uid "5A53A715-4E51-0260-4A3E-F5834B50BA4F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.7518408787515689 6.4656787008194687 -24.815431501693038 ;
-	setAttr ".r" -type "double3" -360.93835276751889 -3442.6000000053823 0 ;
+	setAttr ".t" -type "double3" 7.4792241552482359 5.1914615214395026 -20.181192186729305 ;
+	setAttr ".r" -type "double3" -357.938352763544 -3441.7999999939907 0 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -1.2351231148954867e-15 -1.7763568394002505e-15 ;
 	setAttr ".rpt" -type "double3" 3.0619271707631381e-16 -5.7422276115573939e-16 5.7242032427692958e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FCCB504D-44A0-A956-9135-AAB397363E27";
 	setAttr -k off ".v" no;
+	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 27.870802764589172;
+	setAttr ".coi" 22.732261110670276;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -193,7 +195,7 @@ createNode transform -n "pasted__group2" -p "Cash_Register";
 	setAttr ".t" -type "double3" 0.26026281447424032 0 0 ;
 	setAttr ".rp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
 	setAttr ".sp" -type "double3" -0.46635549598935677 2.687631799674786 1.6109063826877494 ;
-createNode transform -n "pasted__pasted__pCube1" -p "|Cash_Register|pasted__group2";
+createNode transform -n "pasted__pasted__pCube1" -p "pasted__group2";
 	rename -uid "846297FC-4A40-5E17-5CEB-359D5C657966";
 	setAttr ".t" -type "double3" -0.46635549598935655 2.687631799674786 1.6109063826877494 ;
 	setAttr ".r" -type "double3" 27.791758874624705 0 0 ;
@@ -1200,6 +1202,57 @@ createNode transform -n "pasted__group7" -p "Back_Wall";
 	rename -uid "1AAB4D47-47EF-87FA-6D0A-AB8CCC6DFF40";
 	setAttr ".t" -type "double3" 0 11.947230768124898 11.953359603881836 ;
 	setAttr ".r" -type "double3" 632.1877432902229 0 0 ;
+createNode transform -n "pasted__pasted__pCube4" -p "|Back_Wall|pasted__group7";
+	rename -uid "2A7C2B89-47D1-1125-5E83-AE99A97AD860";
+	setAttr ".t" -type "double3" 0.27741748103242925 -0.0045989536822071547 -0.12038549794869145 ;
+	setAttr ".s" -type "double3" 24.155295514074314 0.20693463601018025 23.906719859186911 ;
+createNode mesh -n "pasted__pasted__pCubeShape4" -p "pasted__pasted__pCube4";
+	rename -uid "9F5345E4-43B9-E15E-DC2E-1FB90C47318B";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Wall_with_Window";
 	rename -uid "9749417A-4132-DBB7-102C-97A24773B556";
 	setAttr ".rp" -type "double3" 0 11.947230768124896 11.953359603881836 ;
@@ -1419,100 +1472,21 @@ createNode mesh -n "pasted__pasted__pCubeShape1" -p "|Glass_Case|pasted__group1|
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "group";
-	rename -uid "81289FC1-4A53-98E9-8C71-14A8169F963E";
-	setAttr ".rp" -type "double3" 0.2774167611485252 11.826756760949362 11.953359182274951 ;
-	setAttr ".sp" -type "double3" 0.2774167611485252 11.826756760949362 11.953359182274951 ;
-createNode transform -n "pasted__group2" -p "group";
-	rename -uid "61F4BF23-4B4A-3E13-F1C0-D48E311D16AA";
-	setAttr ".rp" -type "double3" 0.27741748103242969 11.826757457838653 11.953359603881836 ;
-	setAttr ".sp" -type "double3" 0.27741748103242969 11.826757457838653 11.953359603881836 ;
-createNode transform -n "pasted__pasted__Back_Wall" -p "|group|pasted__group2";
-	rename -uid "E0AB03E8-4114-C6A9-705C-66800B28ECB8";
-	setAttr ".rp" -type "double3" 0 11.947230768124896 11.953359603881836 ;
-	setAttr ".sp" -type "double3" 0 11.947230768124896 11.953359603881836 ;
-createNode transform -n "pasted__pasted__pasted__group7" -p "pasted__pasted__Back_Wall";
-	rename -uid "12C3D558-4032-CE65-1CA7-39B535232E33";
-	setAttr ".t" -type "double3" 0 11.947230768124898 11.953359603881836 ;
-	setAttr ".r" -type "double3" 632.1877432902229 0 0 ;
-createNode transform -n "pasted__pasted__pasted__pasted__pCube4" -p "pasted__pasted__pasted__group7";
-	rename -uid "9E9DFF1C-47C2-0D05-0F77-9F80E0977960";
-	setAttr ".t" -type "double3" 0.27741748103242925 -0.41136583192660703 -0.10484623396443109 ;
-	setAttr ".s" -type "double3" 24.155295514074314 0.20693463601018025 23.906719859186911 ;
-createNode mesh -n "pasted__pasted__pasted__pasted__pCubeShape4" -p "pasted__pasted__pasted__pasted__pCube4";
-	rename -uid "6412220A-4C48-BEB8-5A6B-C7975A3A8347";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.47451580606866628 0.4999999925494194 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "pasted__polySurfaceShape1" -p "pasted__pasted__pasted__pasted__pCube4";
-	rename -uid "C2E90F86-415A-9731-489A-17BDC3BC1827";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C8AA4FD5-4924-F3CB-E08A-DB8D57B6510D";
-	setAttr -s 15 ".lnk";
-	setAttr -s 15 ".slnk";
+	rename -uid "E7094847-40E2-E048-AFC9-14BCB5BB8C0E";
+	setAttr -s 14 ".lnk";
+	setAttr -s 14 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "02B6FABB-41F0-EDA0-7CAF-049FAD451DDF";
+	rename -uid "BB8BA645-4707-E58C-564F-40AD7C462CF6";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4B99E85F-46E4-6A1E-A372-D2AF3C903726";
+	rename -uid "5AD76199-42A6-998F-E555-C8AB36DBB419";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0C62927F-4E5D-7A52-325B-AFA24C4746A3";
+	rename -uid "C0D40C56-45B9-82EF-F682-2EBC028542F1";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "DE50CF46-46C5-C66F-61C7-259151C8CF9C";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "D00F27C1-44A8-EA52-8D55-10BE83874084";
+	rename -uid "D232E7CA-4BCF-18E3-1D0F-7EBC4E479EC6";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "839D5717-4051-E596-1308-0CB8679742BC";
 	setAttr ".g" yes;
@@ -2045,6 +2019,7 @@ createNode displacementShader -n "displacementShader3";
 createNode bump2d -n "bump2d3";
 	rename -uid "516A0981-44A7-E8A7-6DF3-2D9572585637";
 	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture7";
 	rename -uid "0D156855-49AE-F14E-70BC-B1AF07E75F6E";
@@ -2090,6 +2065,7 @@ createNode displacementShader -n "displacementShader4";
 createNode bump2d -n "bump2d4";
 	rename -uid "7AD79996-40AF-74D2-8EF8-C48F49C6D355";
 	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	rename -uid "C607C200-4B57-F9E7-130E-438F057AD4CF";
@@ -2521,7 +2497,6 @@ createNode file -n "pasted__file16";
 createNode bump2d -n "pasted__bump2d3";
 	rename -uid "C63B791D-4667-2845-22DE-F8812449E306";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "pasted__file17";
 	rename -uid "A3E214BE-419E-797F-ED9A-6CB39011D9C6";
@@ -3283,81 +3258,6 @@ createNode shadingEngine -n "lambert2SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo9";
 	rename -uid "FB6923C7-4901-058D-3A4E-9CADCB7777BB";
-createNode polyAutoProj -n "pasted__polyAutoProj1";
-	rename -uid "BE2140AF-476C-C45E-7D61-5E90853BA4BD";
-	setAttr ".cch" yes;
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-	setAttr ".ix" -type "matrix" 24.155295514074314 0 0 0 0 0.0078995323029974994 -0.20678380248476833 0
-		 0 23.889294381717693 0.91261622233731898 0 0.27741748103242925 11.826757457838655 11.953359603881836 1;
-	setAttr ".s" -type "double3" 24.155296953842125 24.155296953842125 24.155296953842125 ;
-	setAttr ".ps" 0.20000000298023224;
-	setAttr ".dl" yes;
-createNode polyMapDel -n "pasted__polyMapDel5";
-	rename -uid "1B8B8A98-4D4F-C89E-3A52-EA85B6BC217F";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:3]";
-createNode polyMapDel -n "pasted__polyMapDel4";
-	rename -uid "2125959F-491D-A138-B804-839DED472FE3";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[5]";
-createNode polyMapDel -n "pasted__polyMapDel3";
-	rename -uid "E9AE1928-44C0-6661-3AAC-238A04C94124";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[4]";
-createNode polyPlanarProj -n "pasted__polyPlanarProj2";
-	rename -uid "1C2AEAE5-455F-CF2A-0AC3-FC8317C08B84";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-	setAttr ".ix" -type "matrix" 24.155295514074314 0 0 0 0 0.0078995323029974994 -0.20678380248476833 0
-		 0 23.889294381717693 0.91261622233731898 0 0.27741748103242925 11.826757457838655 11.953359603881836 1;
-	setAttr ".ws" yes;
-	setAttr ".pc" -type "double3" 0.27741718292236328 11.826757431030273 11.953359603881836 ;
-	setAttr ".ro" -type "double3" 0 90 0 ;
-	setAttr ".ps" -type "double2" 1.1194000244140625 23.897193908691406 ;
-	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-createNode polyMapDel -n "pasted__polyMapDel2";
-	rename -uid "65563086-4DF3-A5D3-892D-16926569FA9E";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:5]";
-createNode materialInfo -n "pasted__materialInfo9";
-	rename -uid "33F0CA7C-4455-0282-DEC6-D5A536100FEF";
-createNode shadingEngine -n "pasted__set1";
-	rename -uid "A8A96E79-4F6D-2AD3-BD34-AA8E0D730E33";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode aiStandardSurface -n "pasted__Wall";
-	rename -uid "AC951F48-473A-734A-77CD-A9A94FF81C48";
-	setAttr ".emission" 1;
-	setAttr ".emission_color" -type "float3" 0 0 0 ;
-createNode multiplyDivide -n "pasted__multiplyDivide3";
-	rename -uid "7A600FD9-440E-5053-8E09-53A126FAA7CC";
-createNode file -n "pasted__file1";
-	rename -uid "54AC4548-4717-61B3-7294-0897065401A7";
-	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Wall Textures/Wall_initialShadingGroup_BaseColor.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "pasted__place2dTexture1";
-	rename -uid "4569FBA8-42AF-ACE9-90D0-FF8857221C16";
-createNode file -n "pasted__file3";
-	rename -uid "73697EF6-4FB9-5163-7105-60A589515CAF";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Wall Textures/Wall_initialShadingGroup_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode bump2d -n "pasted__bump2d1";
-	rename -uid "23AD3B19-427D-DF73-49E7-D8BB68A44D29";
-	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
-	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
-createNode file -n "pasted__file4";
-	rename -uid "7D3C7694-4B19-9616-DA58-CF9EC4755F70";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Wall Textures/Wall_initialShadingGroup_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "pasted__file5";
-	rename -uid "CBCA5AE5-4279-9380-5C69-D7B6730C8905";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Wall Textures/Wall_initialShadingGroup_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3369,17 +3269,17 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 15 ".st";
+	setAttr -s 14 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 19 ".s";
+	setAttr -s 18 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 17 ".u";
+	setAttr -s 15 ".u";
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
-	setAttr -s 37 ".tx";
+	setAttr -s 33 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -3387,7 +3287,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 60 ".dsm";
+	setAttr -s 61 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 49 ".gn";
 select -ne :initialParticleSE;
@@ -3635,8 +3535,6 @@ connectAttr "pasted__polyCube5.out" "|Glass_Case|pasted__pCube1|pasted__pCubeSha
 		;
 connectAttr "pasted__pasted__polyCube3.out" "|Glass_Case|pasted__group1|pasted__pasted__pCube1|pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__polyAutoProj1.out" "pasted__pasted__pasted__pasted__pCubeShape4.i"
-		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "phong1SG.message" ":defaultLightSet.message";
@@ -3651,7 +3549,6 @@ relationship "link" ":lightLinker1" "pasted__set3.message" ":defaultLightSet.mes
 relationship "link" ":lightLinker1" "pasted__set4.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "pasted__lambert2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "pasted__set1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "phong1SG.message" ":defaultLightSet.message";
@@ -3666,7 +3563,6 @@ relationship "shadowLink" ":lightLinker1" "pasted__set3.message" ":defaultLightS
 relationship "shadowLink" ":lightLinker1" "pasted__set4.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "pasted__lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "pasted__set1.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "polySplit1.out" "polyExtrudeFace1.ip";
@@ -3706,10 +3602,6 @@ connectAttr "groupId1.msg" "phong2SG.gn" -na;
 connectAttr "phong2SG.msg" "materialInfo2.sg";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "standardSurface2SG.msg" "materialInfo3.sg";
 connectAttr "standardSurface3SG.msg" "materialInfo4.sg";
 connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
@@ -4839,116 +4731,6 @@ connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "pasted__pasted__pCubeShape5.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo9.sg";
 connectAttr "lambert2.msg" "materialInfo9.m";
-connectAttr "pasted__polyMapDel5.out" "pasted__polyAutoProj1.ip";
-connectAttr "pasted__pasted__pasted__pasted__pCubeShape4.wm" "pasted__polyAutoProj1.mp"
-		;
-connectAttr "pasted__polyMapDel4.out" "pasted__polyMapDel5.ip";
-connectAttr "pasted__polyMapDel3.out" "pasted__polyMapDel4.ip";
-connectAttr "pasted__polyPlanarProj2.out" "pasted__polyMapDel3.ip";
-connectAttr "pasted__polyMapDel2.out" "pasted__polyPlanarProj2.ip";
-connectAttr "pasted__pasted__pasted__pasted__pCubeShape4.wm" "pasted__polyPlanarProj2.mp"
-		;
-connectAttr "pasted__polySurfaceShape1.o" "pasted__polyMapDel2.ip";
-connectAttr "pasted__set1.msg" "pasted__materialInfo9.sg";
-connectAttr "pasted__Wall.msg" "pasted__materialInfo9.m";
-connectAttr "pasted__file1.msg" "pasted__materialInfo9.t" -na;
-connectAttr "pasted__Wall.out" "pasted__set1.ss";
-connectAttr "pasted__pasted__pasted__pasted__pCubeShape4.iog" "pasted__set1.dsm"
-		 -na;
-connectAttr "pasted__multiplyDivide3.o" "pasted__Wall.base_color";
-connectAttr "pasted__file3.oa" "pasted__Wall.metalness";
-connectAttr "pasted__bump2d1.o" "pasted__Wall.n";
-connectAttr "pasted__file5.oa" "pasted__Wall.specular_roughness";
-connectAttr "pasted__file1.oc" "pasted__multiplyDivide3.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file1.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file1.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file1.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file1.ws";
-connectAttr "pasted__place2dTexture1.o" "pasted__file1.uv";
-connectAttr "pasted__place2dTexture1.ofs" "pasted__file1.fs";
-connectAttr "pasted__place2dTexture1.c" "pasted__file1.c";
-connectAttr "pasted__place2dTexture1.tf" "pasted__file1.tf";
-connectAttr "pasted__place2dTexture1.rf" "pasted__file1.rf";
-connectAttr "pasted__place2dTexture1.mu" "pasted__file1.mu";
-connectAttr "pasted__place2dTexture1.mv" "pasted__file1.mv";
-connectAttr "pasted__place2dTexture1.s" "pasted__file1.s";
-connectAttr "pasted__place2dTexture1.wu" "pasted__file1.wu";
-connectAttr "pasted__place2dTexture1.wv" "pasted__file1.wv";
-connectAttr "pasted__place2dTexture1.re" "pasted__file1.re";
-connectAttr "pasted__place2dTexture1.of" "pasted__file1.of";
-connectAttr "pasted__place2dTexture1.r" "pasted__file1.ro";
-connectAttr "pasted__place2dTexture1.n" "pasted__file1.n";
-connectAttr "pasted__place2dTexture1.vt1" "pasted__file1.vt1";
-connectAttr "pasted__place2dTexture1.vt2" "pasted__file1.vt2";
-connectAttr "pasted__place2dTexture1.vt3" "pasted__file1.vt3";
-connectAttr "pasted__place2dTexture1.vc1" "pasted__file1.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file3.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file3.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file3.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file3.ws";
-connectAttr "pasted__place2dTexture1.o" "pasted__file3.uv";
-connectAttr "pasted__place2dTexture1.ofs" "pasted__file3.fs";
-connectAttr "pasted__place2dTexture1.c" "pasted__file3.c";
-connectAttr "pasted__place2dTexture1.tf" "pasted__file3.tf";
-connectAttr "pasted__place2dTexture1.rf" "pasted__file3.rf";
-connectAttr "pasted__place2dTexture1.mu" "pasted__file3.mu";
-connectAttr "pasted__place2dTexture1.mv" "pasted__file3.mv";
-connectAttr "pasted__place2dTexture1.s" "pasted__file3.s";
-connectAttr "pasted__place2dTexture1.wu" "pasted__file3.wu";
-connectAttr "pasted__place2dTexture1.wv" "pasted__file3.wv";
-connectAttr "pasted__place2dTexture1.re" "pasted__file3.re";
-connectAttr "pasted__place2dTexture1.of" "pasted__file3.of";
-connectAttr "pasted__place2dTexture1.r" "pasted__file3.ro";
-connectAttr "pasted__place2dTexture1.n" "pasted__file3.n";
-connectAttr "pasted__place2dTexture1.vt1" "pasted__file3.vt1";
-connectAttr "pasted__place2dTexture1.vt2" "pasted__file3.vt2";
-connectAttr "pasted__place2dTexture1.vt3" "pasted__file3.vt3";
-connectAttr "pasted__place2dTexture1.vc1" "pasted__file3.vc1";
-connectAttr "pasted__file4.oa" "pasted__bump2d1.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file4.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file4.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file4.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file4.ws";
-connectAttr "pasted__place2dTexture1.o" "pasted__file4.uv";
-connectAttr "pasted__place2dTexture1.ofs" "pasted__file4.fs";
-connectAttr "pasted__place2dTexture1.c" "pasted__file4.c";
-connectAttr "pasted__place2dTexture1.tf" "pasted__file4.tf";
-connectAttr "pasted__place2dTexture1.rf" "pasted__file4.rf";
-connectAttr "pasted__place2dTexture1.mu" "pasted__file4.mu";
-connectAttr "pasted__place2dTexture1.mv" "pasted__file4.mv";
-connectAttr "pasted__place2dTexture1.s" "pasted__file4.s";
-connectAttr "pasted__place2dTexture1.wu" "pasted__file4.wu";
-connectAttr "pasted__place2dTexture1.wv" "pasted__file4.wv";
-connectAttr "pasted__place2dTexture1.re" "pasted__file4.re";
-connectAttr "pasted__place2dTexture1.of" "pasted__file4.of";
-connectAttr "pasted__place2dTexture1.r" "pasted__file4.ro";
-connectAttr "pasted__place2dTexture1.n" "pasted__file4.n";
-connectAttr "pasted__place2dTexture1.vt1" "pasted__file4.vt1";
-connectAttr "pasted__place2dTexture1.vt2" "pasted__file4.vt2";
-connectAttr "pasted__place2dTexture1.vt3" "pasted__file4.vt3";
-connectAttr "pasted__place2dTexture1.vc1" "pasted__file4.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file5.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file5.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file5.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file5.ws";
-connectAttr "pasted__place2dTexture1.o" "pasted__file5.uv";
-connectAttr "pasted__place2dTexture1.ofs" "pasted__file5.fs";
-connectAttr "pasted__place2dTexture1.c" "pasted__file5.c";
-connectAttr "pasted__place2dTexture1.tf" "pasted__file5.tf";
-connectAttr "pasted__place2dTexture1.rf" "pasted__file5.rf";
-connectAttr "pasted__place2dTexture1.mu" "pasted__file5.mu";
-connectAttr "pasted__place2dTexture1.mv" "pasted__file5.mv";
-connectAttr "pasted__place2dTexture1.s" "pasted__file5.s";
-connectAttr "pasted__place2dTexture1.wu" "pasted__file5.wu";
-connectAttr "pasted__place2dTexture1.wv" "pasted__file5.wv";
-connectAttr "pasted__place2dTexture1.re" "pasted__file5.re";
-connectAttr "pasted__place2dTexture1.of" "pasted__file5.of";
-connectAttr "pasted__place2dTexture1.r" "pasted__file5.ro";
-connectAttr "pasted__place2dTexture1.n" "pasted__file5.n";
-connectAttr "pasted__place2dTexture1.vt1" "pasted__file5.vt1";
-connectAttr "pasted__place2dTexture1.vt2" "pasted__file5.vt2";
-connectAttr "pasted__place2dTexture1.vt3" "pasted__file5.vt3";
-connectAttr "pasted__place2dTexture1.vc1" "pasted__file5.vc1";
 connectAttr "phong1SG.pa" ":renderPartition.st" -na;
 connectAttr "phong2SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface2SG.pa" ":renderPartition.st" -na;
@@ -4961,7 +4743,6 @@ connectAttr "pasted__set3.pa" ":renderPartition.st" -na;
 connectAttr "pasted__set4.pa" ":renderPartition.st" -na;
 connectAttr "pasted__lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
-connectAttr "pasted__set1.pa" ":renderPartition.st" -na;
 connectAttr "displacementShader1.msg" ":defaultShaderList1.s" -na;
 connectAttr "displacementShader2.msg" ":defaultShaderList1.s" -na;
 connectAttr "Counterbase.msg" ":defaultShaderList1.s" -na;
@@ -4974,7 +4755,6 @@ connectAttr "pasted__Countertop.msg" ":defaultShaderList1.s" -na;
 connectAttr "pasted__displacementShader4.msg" ":defaultShaderList1.s" -na;
 connectAttr "pasted__lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
-connectAttr "pasted__Wall.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
@@ -4990,8 +4770,6 @@ connectAttr "pasted__place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "pasted__bump2d3.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "pasted__place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "pasted__bump2d4.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "pasted__place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "pasted__bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
@@ -5026,10 +4804,6 @@ connectAttr "pasted__file20.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file21.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file22.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__file23.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file3.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file4.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file5.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Counter_Shape2.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "|Counter_1|pasted__pCube1|pasted__pCubeShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
 		 -na;
@@ -5131,6 +4905,7 @@ connectAttr "pasted__group15_pasted__group8_pasted__pasted__group4_pasted__paste
 		 -na;
 connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pasted__pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pasted__pasted__pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pasted__pasted__pasted__pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
@@ -5191,4 +4966,4 @@ connectAttr "pasted__groupId47.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId48.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId49.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId50.msg" ":initialShadingGroup.gn" -na;
-// End of Added table, shelves, glass case etc.ma
+// End of Added table, shelves, glass case etc.0003.ma

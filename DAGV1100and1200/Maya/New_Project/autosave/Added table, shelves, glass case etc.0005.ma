@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Added table, shelves, glass case etc.ma
-//Last modified: Fri, Nov 07, 2025 11:38:05 PM
+//Name: Added table, shelves, glass case etc.0005.ma
+//Last modified: Fri, Nov 07, 2025 11:24:23 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -13,19 +13,20 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "B7DE4051-4B80-7E31-6843-E1AB01F29CC8";
+fileInfo "UUID" "918449C0-495D-26A4-80ED-D7A1198BF888";
+fileInfo "exportedFrom" "C:/Autodesk/WI/Essentials/DAGV1100and1200/Maya/scenes/Added table, shelves, glass case etc.ma";
 createNode transform -s -n "persp";
 	rename -uid "5A53A715-4E51-0260-4A3E-F5834B50BA4F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.7518408787515689 6.4656787008194687 -24.815431501693038 ;
-	setAttr ".r" -type "double3" -360.93835276751889 -3442.6000000053823 0 ;
+	setAttr ".t" -type "double3" -4.3146874086106024 -1.5763234535737141 -32.140722878965839 ;
+	setAttr ".r" -type "double3" -347.13835276752354 -3414.2000000054518 0 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -1.2351231148954867e-15 -1.7763568394002505e-15 ;
 	setAttr ".rpt" -type "double3" 3.0619271707631381e-16 -5.7422276115573939e-16 5.7242032427692958e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FCCB504D-44A0-A956-9135-AAB397363E27";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 27.870802764589172;
+	setAttr ".coi" 34.077517160428776;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1444,7 +1445,7 @@ createNode mesh -n "pasted__pasted__pasted__pasted__pCubeShape4" -p "pasted__pas
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.47451580606866628 0.4999999925494194 ;
+	setAttr ".pv" -type "double2" 0.49726145341992378 0.4999999925494194 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -3358,6 +3359,16 @@ createNode file -n "pasted__file5";
 	setAttr ".ail" yes;
 	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Wall Textures/Wall_initialShadingGroup_Roughness.png";
 	setAttr ".cs" -type "string" "Raw";
+createNode polyTweakUV -n "polyTweakUV10";
+	rename -uid "3AB2B4AE-41D9-594D-F58A-21A177791C7D";
+	setAttr ".uopa" yes;
+	setAttr -s 24 ".uvtk[0:23]" -type "float2" -0.61166215 0.22621655 -0.16940033
+		 0.22621495 -0.16940033 0.66847873 -0.61166215 0.66847873 -0.15955225 0.22621524 0.28270978
+		 0.22621691 0.28270978 0.66847903 -0.15955225 0.66847903 -0.1595529 -0.66847903 0.28270912
+		 -0.66847903 0.28270912 -0.22621715 -0.1595529 -0.22621715 -0.23518664 -0.22113138
+		 0.2070754 -0.22113138 0.2070754 0.22113049 -0.23518664 0.22113049 -0.61166179 -0.66847879
+		 -0.16940001 -0.66847879 -0.16940001 -0.22621652 -0.61166179 -0.22621652 0.21489148
+		 -0.22113332 0.65715343 -0.22113332 0.65715343 0.22113109 0.21489148 0.22113109;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3635,7 +3646,8 @@ connectAttr "pasted__polyCube5.out" "|Glass_Case|pasted__pCube1|pasted__pCubeSha
 		;
 connectAttr "pasted__pasted__polyCube3.out" "|Glass_Case|pasted__group1|pasted__pasted__pCube1|pasted__pasted__pCubeShape1.i"
 		;
-connectAttr "pasted__polyAutoProj1.out" "pasted__pasted__pasted__pasted__pCubeShape4.i"
+connectAttr "polyTweakUV10.out" "pasted__pasted__pasted__pasted__pCubeShape4.i";
+connectAttr "polyTweakUV10.uvtk[0]" "pasted__pasted__pasted__pasted__pCubeShape4.uvst[0].uvtw"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -3706,10 +3718,6 @@ connectAttr "groupId1.msg" "phong2SG.gn" -na;
 connectAttr "phong2SG.msg" "materialInfo2.sg";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "standardSurface2SG.msg" "materialInfo3.sg";
 connectAttr "standardSurface3SG.msg" "materialInfo4.sg";
 connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
@@ -4949,6 +4957,7 @@ connectAttr "pasted__place2dTexture1.vt1" "pasted__file5.vt1";
 connectAttr "pasted__place2dTexture1.vt2" "pasted__file5.vt2";
 connectAttr "pasted__place2dTexture1.vt3" "pasted__file5.vt3";
 connectAttr "pasted__place2dTexture1.vc1" "pasted__file5.vc1";
+connectAttr "pasted__polyAutoProj1.out" "polyTweakUV10.ip";
 connectAttr "phong1SG.pa" ":renderPartition.st" -na;
 connectAttr "phong2SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface2SG.pa" ":renderPartition.st" -na;
@@ -5191,4 +5200,4 @@ connectAttr "pasted__groupId47.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId48.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId49.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId50.msg" ":initialShadingGroup.gn" -na;
-// End of Added table, shelves, glass case etc.ma
+// End of Added table, shelves, glass case etc.0005.ma

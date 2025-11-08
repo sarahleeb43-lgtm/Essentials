@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: Added table, shelves, glass case etc.ma
-//Last modified: Fri, Nov 07, 2025 11:38:05 PM
+//Name: Added table, shelves, glass case etc.0006.ma
+//Last modified: Fri, Nov 07, 2025 11:34:23 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,8 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "B7DE4051-4B80-7E31-6843-E1AB01F29CC8";
+fileInfo "UUID" "FF270492-4BE0-F5BA-A028-EBB3E40F1ABC";
+fileInfo "exportedFrom" "C:/Autodesk/WI/Essentials/DAGV1100and1200/Maya/scenes/Added table, shelves, glass case etc.ma";
 createNode transform -s -n "persp";
 	rename -uid "5A53A715-4E51-0260-4A3E-F5834B50BA4F";
 	setAttr ".v" no;
@@ -3706,10 +3707,6 @@ connectAttr "groupId1.msg" "phong2SG.gn" -na;
 connectAttr "phong2SG.msg" "materialInfo2.sg";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "standardSurface2SG.msg" "materialInfo3.sg";
 connectAttr "standardSurface3SG.msg" "materialInfo4.sg";
 connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
@@ -5191,4 +5188,4 @@ connectAttr "pasted__groupId47.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId48.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId49.msg" ":initialShadingGroup.gn" -na;
 connectAttr "pasted__groupId50.msg" ":initialShadingGroup.gn" -na;
-// End of Added table, shelves, glass case etc.ma
+// End of Added table, shelves, glass case etc.0006.ma
