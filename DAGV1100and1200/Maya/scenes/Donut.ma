@@ -1,45 +1,49 @@
 //Maya ASCII 2026 scene
 //Name: Donut.ma
-//Last modified: Thu, Nov 20, 2025 02:57:18 PM
+//Last modified: Mon, Dec 01, 2025 08:59:57 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
-requires "mtoa" "5.5.3";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
+		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.3";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "0E562B84-4B0F-08E9-9973-19A8633D7F43";
+fileInfo "UUID" "E2E725AF-46BC-B959-285F-A190676F87E4";
 createNode transform -s -n "persp";
 	rename -uid "714DD28F-47AE-C804-7308-F89D4500617C";
-	setAttr ".t" -type "double3" 9.2508509167526913 4.5924828038793812 8.7903684241713691 ;
-	setAttr ".r" -type "double3" -385.19999999356509 -1765.999999999754 -9.5911053574763229e-16 ;
-	setAttr ".rpt" -type "double3" 2.1876916458525234e-14 1.5588108703793398e-14 -1.0042433933120727e-14 ;
+	setAttr ".t" -type "double3" -0.56850354635569345 1.9976344814638529 -3.9230333996349707 ;
+	setAttr ".r" -type "double3" 340.80000000238368 190.00000000000571 0 ;
+	setAttr ".rp" -type "double3" -1.1102230246251565e-16 -1.1102230246251565e-16 0 ;
+	setAttr ".rpt" -type "double3" 2.2113022314757898e-14 1.5625710640321582e-14 -1.0102562609560974e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EB3465D0-45E7-CD02-8220-168CB55674B5";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 12.370114505494694;
+	setAttr ".coi" 5.2677303910771949;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 0.27131570324583154 0.21372330188751221 ;
+	setAttr ".tp" -type "double3" 0.49911157856006966 0.71836466878340166 0.65460482733804781 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "7939DA19-4E73-EF88-9A2C-8E9510CEBEFB";
-	setAttr ".t" -type "double3" 0 1000.1 0 ;
-	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".t" -type "double3" 0.49911160629058898 1000.8183647115453 0.6546048273380326 ;
+	setAttr ".r" -type "double3" 90 -1.4032311365636684e-14 180 ;
+	setAttr ".rpt" -type "double3" 9.2574332934479371e-15 -2.9864714591357054e-15 1.5254746486944426e-14 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "6C58F1DA-4FCA-EF66-2DED-B1896E7BB182";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 6.0038758388424771;
+	setAttr ".ow" 5.2696358615982888;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
+	setAttr ".tp" -type "double3" 0.4991116062904758 0.71836471154529136 0.65460482733804781 ;
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
@@ -1098,13 +1102,13 @@ createNode mesh -n "group3_pasted__pSphere1Shape" -p "group3_pasted__pSphere1";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.95238149166107178 0.5499998927116394 ;
+	setAttr ".pv" -type "double2" 0.45688176155090332 0.49999997019767761 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 417 ".pt";
+	setAttr -s 419 ".pt";
 	setAttr ".pt[1910]" -type "float3" 0 -2.2677705e-07 0 ;
 	setAttr ".pt[1911]" -type "float3" 0 1.3271347e-07 0 ;
 	setAttr ".pt[1912]" -type "float3" 0 1.0244548e-08 0 ;
@@ -1522,6 +1526,8 @@ createNode mesh -n "group3_pasted__pSphere1Shape" -p "group3_pasted__pSphere1";
 	setAttr ".pt[3757]" -type "float3" 0 1.010485e-07 0 ;
 	setAttr ".pt[3776]" -type "float3" 0 -4.0163286e-09 0 ;
 	setAttr ".pt[3777]" -type "float3" 0 -2.5494955e-08 0 ;
+	setAttr ".pt[6592]" -type "float3" 0 1.1641532e-10 0 ;
+	setAttr ".pt[6593]" -type "float3" 0 1.1641532e-10 0 ;
 createNode transform -n "pSphere2";
 	rename -uid "FB040172-4387-44D3-2E6A-B68FB17377F9";
 	setAttr ".t" -type "double3" 0.58863301271787594 0.45169410129635856 0 ;
@@ -17014,7 +17020,7 @@ createNode mesh -n "pasted__pCylinderShape7" -p "transform30";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "polySurface2";
 	rename -uid "99F763FE-49EF-9DE5-997D-4493CA8FB0B2";
-	setAttr ".t" -type "double3" 5.6380731813438487 1.5947690512211787 3.5097775140256573 ;
+	setAttr ".t" -type "double3" 5.6380731813438487 1.5947690512211787 -9.1394750594944476 ;
 	setAttr ".s" -type "double3" 2.0076436831091304 2.0076436831091304 2.0076436831091304 ;
 	setAttr ".rp" -type "double3" 0 1.4052309487788213 0.040115626512905178 ;
 	setAttr ".sp" -type "double3" 0 1.4052309487788213 0.040115626512905178 ;
@@ -17031,29 +17037,643 @@ createNode mesh -n "polySurface2Shape" -p "polySurface2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 16 ".pt";
+	setAttr -s 4 ".pt";
 	setAttr ".pt[5]" -type "float3" 0 -2.2351742e-08 0 ;
 	setAttr ".pt[6]" -type "float3" 0 1.1920929e-07 -2.9802322e-08 ;
 	setAttr ".pt[14]" -type "float3" 0 1.1920929e-07 -2.9802322e-08 ;
 	setAttr ".pt[15]" -type "float3" 0 -2.2351742e-08 0 ;
+createNode transform -n "imagePlane1";
+	rename -uid "72F6179A-497E-F44C-3311-048BAE3C0BAE";
+	setAttr ".t" -type "double3" -8.1733327614416496 0 -0.076412527934081265 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
+createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
+	rename -uid "E6B2ABFB-4806-C5C4-EC0F-A6963F7EE9CE";
+	setAttr -k off ".v";
+	setAttr ".fc" 100;
+	setAttr ".imn" -type "string" "C:/Users/sarah/OneDrive/Desktop/11250080-640x480.jpg";
+	setAttr ".cov" -type "short2" 640 480 ;
+	setAttr ".dlc" no;
+	setAttr ".w" 6.4;
+	setAttr ".h" 4.8000000000000007;
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode transform -n "pPlane1";
+	rename -uid "61067A72-4CB2-E1D1-499D-6E8A50184D98";
+	setAttr ".t" -type "double3" -7.9881433770228547 0 -0.63658850893960917 ;
+	setAttr ".s" -type "double3" 1.4910575107235979 1.4910575107235979 1.9963603036189725 ;
+	setAttr ".spt" -type "double3" -4.3160348923286522e-18 0 -2.0113138201819371e-17 ;
+createNode mesh -n "pPlaneShape1" -p "pPlane1";
+	rename -uid "E922F839-456C-195D-1C4B-CDA332718FF2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.46890142140910029 0.038552861660718918 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 359 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 0.048362456 0 ;
+	setAttr ".pt[1]" -type "float3" 0 0.04419015 0 ;
+	setAttr ".pt[2]" -type "float3" 0 0.056373507 0 ;
+	setAttr ".pt[3]" -type "float3" 0 0.049773347 0 ;
+	setAttr ".pt[4]" -type "float3" 0 0.047169793 0 ;
+	setAttr ".pt[5]" -type "float3" 0 0.064998172 0 ;
+	setAttr ".pt[6]" -type "float3" 0 0.032342054 0 ;
+	setAttr ".pt[7]" -type "float3" 0 0.09242104 0 ;
+	setAttr ".pt[8]" -type "float3" 0 0.094306894 0 ;
+	setAttr ".pt[9]" -type "float3" 0 0.08819107 0 ;
+	setAttr ".pt[10]" -type "float3" 0 0.082056515 0 ;
+	setAttr ".pt[11]" -type "float3" 0 0.068394974 0 ;
+	setAttr ".pt[12]" -type "float3" 0 0.012066349 0 ;
+	setAttr ".pt[13]" -type "float3" 0 0.09156213 0 ;
+	setAttr ".pt[14]" -type "float3" 0 0.10142309 0 ;
+	setAttr ".pt[15]" -type "float3" 0 0.10362566 0 ;
+	setAttr ".pt[16]" -type "float3" 0 0.095957719 0 ;
+	setAttr ".pt[17]" -type "float3" 0 0.043767091 0 ;
+	setAttr ".pt[19]" -type "float3" 0 0.069509842 0 ;
+	setAttr ".pt[20]" -type "float3" 0 0.081293397 0 ;
+	setAttr ".pt[21]" -type "float3" 0 0.084793597 0 ;
+	setAttr ".pt[22]" -type "float3" 0 0.077946901 0 ;
+	setAttr ".pt[23]" -type "float3" 0 0.019361127 0 ;
+	setAttr ".pt[25]" -type "float3" 0 0.034343138 0 ;
+	setAttr ".pt[26]" -type "float3" 0 0.040569264 0 ;
+	setAttr ".pt[27]" -type "float3" 0 0.042099115 0 ;
+	setAttr ".pt[28]" -type "float3" 0 0.037411515 0 ;
+	setAttr ".pt[29]" -type "float3" 0 0.0046749869 0 ;
+	setAttr ".pt[30]" -type "float3" 0 0.00064237026 0 ;
+	setAttr ".pt[31]" -type "float3" 0 0.00041596228 0 ;
+	setAttr ".pt[34]" -type "float3" 0 0.00041596228 0 ;
+	setAttr ".pt[35]" -type "float3" 0 0.00064237026 0 ;
+	setAttr ".pt[36]" -type "float3" 0 0.044619173 0 ;
+	setAttr ".pt[37]" -type "float3" 0 0.038322564 0 ;
+	setAttr ".pt[38]" -type "float3" 0 0.008263492 0 ;
+	setAttr ".pt[40]" -type "float3" 0 0.052061487 0 ;
+	setAttr ".pt[41]" -type "float3" 0 0.049665481 0 ;
+	setAttr ".pt[42]" -type "float3" 0 0.033256274 0 ;
+	setAttr ".pt[43]" -type "float3" 0 0.029447613 0 ;
+	setAttr ".pt[44]" -type "float3" 0 0.015165261 0 ;
+	setAttr ".pt[45]" -type "float3" 0 0.010339517 0 ;
+	setAttr ".pt[46]" -type "float3" 0 0.27779949 0 ;
+	setAttr ".pt[47]" -type "float3" 0 0.28479901 0 ;
+	setAttr ".pt[48]" -type "float3" 0 0.27918333 0 ;
+	setAttr ".pt[49]" -type "float3" 0 0.2682876 0 ;
+	setAttr ".pt[50]" -type "float3" 0 0.27278411 0 ;
+	setAttr ".pt[51]" -type "float3" 0 0.29233778 0 ;
+	setAttr ".pt[52]" -type "float3" 0 0.29390439 0 ;
+	setAttr ".pt[53]" -type "float3" 0 0.2792733 0 ;
+	setAttr ".pt[54]" -type "float3" 0 0.21803442 0 ;
+	setAttr ".pt[55]" -type "float3" 0 0.24456902 0 ;
+	setAttr ".pt[56]" -type "float3" 0 0.25495052 0 ;
+	setAttr ".pt[57]" -type "float3" 0 0.24396265 0 ;
+	setAttr ".pt[58]" -type "float3" 0 0.13575439 0 ;
+	setAttr ".pt[59]" -type "float3" 0 0.15714835 0 ;
+	setAttr ".pt[60]" -type "float3" 0 0.16496257 0 ;
+	setAttr ".pt[61]" -type "float3" 0 0.15655112 0 ;
+	setAttr ".pt[62]" -type "float3" 0 0.10738614 0 ;
+	setAttr ".pt[63]" -type "float3" 0 0.10436542 0 ;
+	setAttr ".pt[64]" -type "float3" 0 0.10115152 0 ;
+	setAttr ".pt[65]" -type "float3" 0 0.097759195 0 ;
+	setAttr ".pt[66]" -type "float3" 0 0.094204001 0 ;
+	setAttr ".pt[67]" -type "float3" 0 0.069116659 0 ;
+	setAttr ".pt[68]" -type "float3" 0 0.072029427 0 ;
+	setAttr ".pt[69]" -type "float3" 0 0.07481467 0 ;
+	setAttr ".pt[70]" -type "float3" 0 0.077458464 0 ;
+	setAttr ".pt[71]" -type "float3" 0 0.079947658 0 ;
+	setAttr ".pt[72]" -type "float3" 0 0.12582558 0 ;
+	setAttr ".pt[73]" -type "float3" 0 0.12582558 0 ;
+	setAttr ".pt[74]" -type "float3" 0 0.1252441 0 ;
+	setAttr ".pt[75]" -type "float3" 0 0.12444754 0 ;
+	setAttr ".pt[76]" -type "float3" 0 0.12351099 0 ;
+	setAttr ".pt[77]" -type "float3" 0 0.09329883 0 ;
+	setAttr ".pt[78]" -type "float3" 0 0.094151862 0 ;
+	setAttr ".pt[79]" -type "float3" 0 0.094906166 0 ;
+	setAttr ".pt[80]" -type "float3" 0 0.095383562 0 ;
+	setAttr ".pt[81]" -type "float3" 0 0.095569469 0 ;
+	setAttr ".pt[82]" -type "float3" 0 0.10582274 0 ;
+	setAttr ".pt[83]" -type "float3" 0 0.11115323 0 ;
+	setAttr ".pt[84]" -type "float3" 0 0.11628401 0 ;
+	setAttr ".pt[85]" -type "float3" 0 0.12118021 0 ;
+	setAttr ".pt[86]" -type "float3" 0 0.12580952 0 ;
+	setAttr ".pt[87]" -type "float3" 0 0.18869391 0 ;
+	setAttr ".pt[88]" -type "float3" 0 0.18170324 0 ;
+	setAttr ".pt[89]" -type "float3" 0 0.17415637 0 ;
+	setAttr ".pt[90]" -type "float3" 0 0.16610704 0 ;
+	setAttr ".pt[91]" -type "float3" 0 0.15761788 0 ;
+	setAttr ".pt[92]" -type "float3" 0 0.150813 0 ;
+	setAttr ".pt[93]" -type "float3" 0 0.15296066 0 ;
+	setAttr ".pt[94]" -type "float3" 0 0.15507679 0 ;
+	setAttr ".pt[95]" -type "float3" 0 0.15654238 0 ;
+	setAttr ".pt[96]" -type "float3" 0 0.15741329 0 ;
+	setAttr ".pt[97]" -type "float3" 0 0.24012953 0 ;
+	setAttr ".pt[98]" -type "float3" 0 0.23643178 0 ;
+	setAttr ".pt[99]" -type "float3" 0 0.23155205 0 ;
+	setAttr ".pt[100]" -type "float3" 0 0.22609282 0 ;
+	setAttr ".pt[101]" -type "float3" 0 0.22116888 0 ;
+	setAttr ".pt[102]" -type "float3" 0 0.19010007 0 ;
+	setAttr ".pt[103]" -type "float3" 0 0.18295039 0 ;
+	setAttr ".pt[104]" -type "float3" 0 0.17518263 0 ;
+	setAttr ".pt[105]" -type "float3" 0 0.16684973 0 ;
+	setAttr ".pt[106]" -type "float3" 0 0.15801348 0 ;
+	setAttr ".pt[107]" -type "float3" 0 0.23821375 0 ;
+	setAttr ".pt[108]" -type "float3" 0 0.23514831 0 ;
+	setAttr ".pt[109]" -type "float3" 0 0.23103566 0 ;
+	setAttr ".pt[110]" -type "float3" 0 0.22642022 0 ;
+	setAttr ".pt[111]" -type "float3" 0 0.22195339 0 ;
+	setAttr ".pt[112]" -type "float3" 0 0.18035959 0 ;
+	setAttr ".pt[113]" -type "float3" 0 0.17342199 0 ;
+	setAttr ".pt[114]" -type "float3" 0 0.16590881 0 ;
+	setAttr ".pt[115]" -type "float3" 0 0.15787372 0 ;
+	setAttr ".pt[116]" -type "float3" 0 0.14937861 0 ;
+	setAttr ".pt[117]" -type "float3" 0 0.22376734 0 ;
+	setAttr ".pt[118]" -type "float3" 0 0.22174832 0 ;
+	setAttr ".pt[119]" -type "float3" 0 0.21877202 0 ;
+	setAttr ".pt[120]" -type "float3" 0 0.21535361 0 ;
+	setAttr ".pt[121]" -type "float3" 0 0.21182317 0 ;
+	setAttr ".pt[122]" -type "float3" 0 0.14526683 0 ;
+	setAttr ".pt[123]" -type "float3" 0 0.14109285 0 ;
+	setAttr ".pt[124]" -type "float3" 0 0.13666545 0 ;
+	setAttr ".pt[125]" -type "float3" 0 0.13196228 0 ;
+	setAttr ".pt[126]" -type "float3" 0 0.12713037 0 ;
+	setAttr ".pt[127]" -type "float3" 0 0.17260055 0 ;
+	setAttr ".pt[128]" -type "float3" 0 0.17201774 0 ;
+	setAttr ".pt[129]" -type "float3" 0 0.17092103 0 ;
+	setAttr ".pt[130]" -type "float3" 0 0.16939124 0 ;
+	setAttr ".pt[131]" -type "float3" 0 0.16777074 0 ;
+	setAttr ".pt[132]" -type "float3" 0 0.03452161 0 ;
+	setAttr ".pt[133]" -type "float3" 0 0.036413312 0 ;
+	setAttr ".pt[134]" -type "float3" 0 0.038232941 0 ;
+	setAttr ".pt[135]" -type "float3" 0 0.039969385 0 ;
+	setAttr ".pt[136]" -type "float3" 0 0.041612051 0 ;
+	setAttr ".pt[137]" -type "float3" 0 0.050538726 0 ;
+	setAttr ".pt[138]" -type "float3" 0 0.051845342 0 ;
+	setAttr ".pt[139]" -type "float3" 0 0.053238232 0 ;
+	setAttr ".pt[140]" -type "float3" 0 0.054459553 0 ;
+	setAttr ".pt[141]" -type "float3" 0 0.055356026 0 ;
+	setAttr ".pt[142]" -type "float3" 0 0.14595167 0 ;
+	setAttr ".pt[143]" -type "float3" 0 0.15207729 0 ;
+	setAttr ".pt[144]" -type "float3" 0 0.15792382 0 ;
+	setAttr ".pt[145]" -type "float3" 0 0.16346143 0 ;
+	setAttr ".pt[146]" -type "float3" 0 0.16866262 0 ;
+	setAttr ".pt[147]" -type "float3" 0 0.12012423 0 ;
+	setAttr ".pt[148]" -type "float3" 0 0.11619677 0 ;
+	setAttr ".pt[149]" -type "float3" 0 0.1119922 0 ;
+	setAttr ".pt[150]" -type "float3" 0 0.10753395 0 ;
+	setAttr ".pt[151]" -type "float3" 0 0.10284751 0 ;
+	setAttr ".pt[152]" -type "float3" 0 0.19624221 0 ;
+	setAttr ".pt[153]" -type "float3" 0 0.19786426 0 ;
+	setAttr ".pt[154]" -type "float3" 0 0.19920364 0 ;
+	setAttr ".pt[155]" -type "float3" 0 0.2002631 0 ;
+	setAttr ".pt[156]" -type "float3" 0 0.20041418 0 ;
+	setAttr ".pt[157]" -type "float3" 0 0.14465983 0 ;
+	setAttr ".pt[158]" -type "float3" 0 0.14395902 0 ;
+	setAttr ".pt[159]" -type "float3" 0 0.14270577 0 ;
+	setAttr ".pt[160]" -type "float3" 0 0.14136069 0 ;
+	setAttr ".pt[161]" -type "float3" 0 0.13987817 0 ;
+	setAttr ".pt[162]" -type "float3" 0 0.0050932411 0 ;
+	setAttr ".pt[163]" -type "float3" 0 0.0057261931 0 ;
+	setAttr ".pt[164]" -type "float3" 0 0.0062635462 0 ;
+	setAttr ".pt[165]" -type "float3" 0 0.0069681737 0 ;
+	setAttr ".pt[166]" -type "float3" 0 0.0075629004 0 ;
+	setAttr ".pt[167]" -type "float3" 0 0.01099226 0 ;
+	setAttr ".pt[168]" -type "float3" 0 0.01183309 0 ;
+	setAttr ".pt[169]" -type "float3" 0 0.013441958 0 ;
+	setAttr ".pt[170]" -type "float3" 0 0.015138337 0 ;
+	setAttr ".pt[171]" -type "float3" 0 0.016690644 0 ;
+	setAttr ".pt[172]" -type "float3" 0 0.06145864 0 ;
+	setAttr ".pt[173]" -type "float3" 0 0.058784701 0 ;
+	setAttr ".pt[174]" -type "float3" 0 0.056078725 0 ;
+	setAttr ".pt[175]" -type "float3" 0 0.053206034 0 ;
+	setAttr ".pt[176]" -type "float3" 0 0.050020754 0 ;
+	setAttr ".pt[177]" -type "float3" 0 0.088304125 0 ;
+	setAttr ".pt[178]" -type "float3" 0 0.085498467 0 ;
+	setAttr ".pt[179]" -type "float3" 0 0.082109876 0 ;
+	setAttr ".pt[180]" -type "float3" 0 0.078764088 0 ;
+	setAttr ".pt[181]" -type "float3" 0 0.075910605 0 ;
+	setAttr ".pt[182]" -type "float3" 0 0.0028577487 0 ;
+	setAttr ".pt[183]" -type "float3" 0 0.0034847937 0 ;
+	setAttr ".pt[184]" -type "float3" 0 0.0043186094 0 ;
+	setAttr ".pt[185]" -type "float3" 0 0.0047803535 0 ;
+	setAttr ".pt[186]" -type "float3" 0 0.0054258672 0 ;
+	setAttr ".pt[187]" -type "float3" 0 0.009376131 0 ;
+	setAttr ".pt[188]" -type "float3" 0 0.011478418 0 ;
+	setAttr ".pt[189]" -type "float3" 0 0.014234116 0 ;
+	setAttr ".pt[190]" -type "float3" 0 0.017146364 0 ;
+	setAttr ".pt[191]" -type "float3" 0 0.019898949 0 ;
+	setAttr ".pt[192]" -type "float3" 0 0.033849213 0 ;
+	setAttr ".pt[193]" -type "float3" 0 0.031917632 0 ;
+	setAttr ".pt[194]" -type "float3" 0 0.029894164 0 ;
+	setAttr ".pt[195]" -type "float3" 0 0.027797803 0 ;
+	setAttr ".pt[196]" -type "float3" 0 0.025648735 0 ;
+	setAttr ".pt[197]" -type "float3" 0 0.060981479 0 ;
+	setAttr ".pt[198]" -type "float3" 0 0.057078712 0 ;
+	setAttr ".pt[199]" -type "float3" 0 0.052538261 0 ;
+	setAttr ".pt[200]" -type "float3" 0 0.048082624 0 ;
+	setAttr ".pt[201]" -type "float3" 0 0.044401228 0 ;
+	setAttr ".pt[202]" -type "float3" 0 0.012098299 0 ;
+	setAttr ".pt[203]" -type "float3" 0 0.013441407 0 ;
+	setAttr ".pt[204]" -type "float3" 0 0.014765477 0 ;
+	setAttr ".pt[205]" -type "float3" 0 0.016056411 0 ;
+	setAttr ".pt[206]" -type "float3" 0 0.017300721 0 ;
+	setAttr ".pt[207]" -type "float3" 0 0.018812411 0 ;
+	setAttr ".pt[208]" -type "float3" 0 0.01750635 0 ;
+	setAttr ".pt[209]" -type "float3" 0 0.016056411 0 ;
+	setAttr ".pt[210]" -type "float3" 0 0.014765477 0 ;
+	setAttr ".pt[211]" -type "float3" 0 0.01333801 0 ;
+	setAttr ".pt[212]" -type "float3" 0 0.024788154 0 ;
+	setAttr ".pt[213]" -type "float3" 0 0.028498376 0 ;
+	setAttr ".pt[214]" -type "float3" 0 0.0331879 0 ;
+	setAttr ".pt[215]" -type "float3" 0 0.038199067 0 ;
+	setAttr ".pt[216]" -type "float3" 0 0.042634137 0 ;
+	setAttr ".pt[217]" -type "float3" 0 0.04338697 0 ;
+	setAttr ".pt[218]" -type "float3" 0 0.039096735 0 ;
+	setAttr ".pt[219]" -type "float3" 0 0.034296695 0 ;
+	setAttr ".pt[220]" -type "float3" 0 0.029832678 0 ;
+	setAttr ".pt[221]" -type "float3" 0 0.026240727 0 ;
+	setAttr ".pt[222]" -type "float3" 0 0.010439193 0 ;
+	setAttr ".pt[223]" -type "float3" 0 0.011678401 0 ;
+	setAttr ".pt[224]" -type "float3" 0 0.012903939 0 ;
+	setAttr ".pt[225]" -type "float3" 0 0.014225643 0 ;
+	setAttr ".pt[226]" -type "float3" 0 0.015333693 0 ;
+	setAttr ".pt[227]" -type "float3" 0 0.02348564 0 ;
+	setAttr ".pt[228]" -type "float3" 0 0.027289907 0 ;
+	setAttr ".pt[229]" -type "float3" 0 0.032092001 0 ;
+	setAttr ".pt[230]" -type "float3" 0 0.037197512 0 ;
+	setAttr ".pt[231]" -type "float3" 0 0.041748121 0 ;
+	setAttr ".pt[232]" -type "float3" 0 0.01065717 0 ;
+	setAttr ".pt[233]" -type "float3" 0 0.012110341 0 ;
+	setAttr ".pt[234]" -type "float3" 0 0.013513283 0 ;
+	setAttr ".pt[235]" -type "float3" 0 0.014921357 0 ;
+	setAttr ".pt[236]" -type "float3" 0 0.016179953 0 ;
+	setAttr ".pt[237]" -type "float3" 0 0.028654322 0 ;
+	setAttr ".pt[238]" -type "float3" 0 0.025346946 0 ;
+	setAttr ".pt[239]" -type "float3" 0 0.029407887 0 ;
+	setAttr ".pt[240]" -type "float3" 0 0.034510035 0 ;
+	setAttr ".pt[241]" -type "float3" 0 0.039910935 0 ;
+	setAttr ".pt[242]" -type "float3" 0 0.0447076 0 ;
+	setAttr ".pt[243]" -type "float3" 0 0.013113452 0 ;
+	setAttr ".pt[244]" -type "float3" 0 0.014749623 0 ;
+	setAttr ".pt[245]" -type "float3" 0 0.016440725 0 ;
+	setAttr ".pt[246]" -type "float3" 0 0.01808754 0 ;
+	setAttr ".pt[247]" -type "float3" 0 0.01972501 0 ;
+	setAttr ".pt[248]" -type "float3" 0 0.023067221 0 ;
+	setAttr ".pt[249]" -type "float3" 0 0.021204559 0 ;
+	setAttr ".pt[250]" -type "float3" 0 0.019224936 0 ;
+	setAttr ".pt[251]" -type "float3" 0 0.017429017 0 ;
+	setAttr ".pt[252]" -type "float3" 0 0.015474837 0 ;
+	setAttr ".pt[253]" -type "float3" 0 0.056969151 0 ;
+	setAttr ".pt[254]" -type "float3" 0 0.051596992 0 ;
+	setAttr ".pt[255]" -type "float3" 0 0.045472033 0 ;
+	setAttr ".pt[256]" -type "float3" 0 0.039671239 0 ;
+	setAttr ".pt[257]" -type "float3" 0 0.034854062 0 ;
+	setAttr ".pt[258]" -type "float3" 0 0.047041256 0 ;
+	setAttr ".pt[259]" -type "float3" 0 0.040728062 0 ;
+	setAttr ".pt[260]" -type "float3" 0 0.034876149 0 ;
+	setAttr ".pt[261]" -type "float3" 0 0.030195907 0 ;
+	setAttr ".pt[262]" -type "float3" 0 0.031250536 0 ;
+	setAttr ".pt[263]" -type "float3" 0 0.052340887 0 ;
+	setAttr ".pt[264]" -type "float3" 0 0.10115152 0 ;
+	setAttr ".pt[265]" -type "float3" 0 0.098201483 0 ;
+	setAttr ".pt[266]" -type "float3" 0 0.095114149 0 ;
+	setAttr ".pt[267]" -type "float3" 0 0.091856599 0 ;
+	setAttr ".pt[268]" -type "float3" 0 0.088444084 0 ;
+	setAttr ".pt[269]" -type "float3" 0 0.11908985 0 ;
+	setAttr ".pt[270]" -type "float3" 0 0.11891053 0 ;
+	setAttr ".pt[271]" -type "float3" 0 0.11839971 0 ;
+	setAttr ".pt[272]" -type "float3" 0 0.11756749 0 ;
+	setAttr ".pt[273]" -type "float3" 0 0.11661367 0 ;
+	setAttr ".pt[274]" -type "float3" 0 0.081625707 0 ;
+	setAttr ".pt[275]" -type "float3" 0 0.08514303 0 ;
+	setAttr ".pt[276]" -type "float3" 0 0.088857651 0 ;
+	setAttr ".pt[277]" -type "float3" 0 0.092272557 0 ;
+	setAttr ".pt[278]" -type "float3" 0 0.09554854 0 ;
+	setAttr ".pt[279]" -type "float3" 0 0.11495087 0 ;
+	setAttr ".pt[280]" -type "float3" 0 0.11598103 0 ;
+	setAttr ".pt[281]" -type "float3" 0 0.11675154 0 ;
+	setAttr ".pt[282]" -type "float3" 0 0.1173633 0 ;
+	setAttr ".pt[283]" -type "float3" 0 0.11736668 0 ;
+	setAttr ".pt[284]" -type "float3" 0 0.033346534 0 ;
+	setAttr ".pt[285]" -type "float3" 0 0.031914487 0 ;
+	setAttr ".pt[286]" -type "float3" 0 0.030403662 0 ;
+	setAttr ".pt[287]" -type "float3" 0 0.028823972 0 ;
+	setAttr ".pt[288]" -type "float3" 0 0.027185839 0 ;
+	setAttr ".pt[289]" -type "float3" 0 0.046962868 0 ;
+	setAttr ".pt[290]" -type "float3" 0 0.045804806 0 ;
+	setAttr ".pt[291]" -type "float3" 0 0.044302724 0 ;
+	setAttr ".pt[292]" -type "float3" 0 0.042660914 0 ;
+	setAttr ".pt[293]" -type "float3" 0 0.041170638 0 ;
+	setAttr ".pt[294]" -type "float3" 0 0.0078796381 0 ;
+	setAttr ".pt[295]" -type "float3" 0 0.0072945347 0 ;
+	setAttr ".pt[296]" -type "float3" 0 0.0066037895 0 ;
+	setAttr ".pt[297]" -type "float3" 0 0.0059061279 0 ;
+	setAttr ".pt[298]" -type "float3" 0 0.0052094585 0 ;
+	setAttr ".pt[299]" -type "float3" 0 0.022661338 0 ;
+	setAttr ".pt[300]" -type "float3" 0 0.020108778 0 ;
+	setAttr ".pt[301]" -type "float3" 0 0.017197266 0 ;
+	setAttr ".pt[302]" -type "float3" 0 0.014499018 0 ;
+	setAttr ".pt[303]" -type "float3" 0 0.012236626 0 ;
+	setAttr ".pt[304]" -type "float3" 0 0.12308504 0 ;
+	setAttr ".pt[305]" -type "float3" 0 0.11939368 0 ;
+	setAttr ".pt[306]" -type "float3" 0 0.11547265 0 ;
+	setAttr ".pt[307]" -type "float3" 0 0.11134075 0 ;
+	setAttr ".pt[308]" -type "float3" 0 0.10701798 0 ;
+	setAttr ".pt[309]" -type "float3" 0 0.14627916 0 ;
+	setAttr ".pt[310]" -type "float3" 0 0.14600715 0 ;
+	setAttr ".pt[311]" -type "float3" 0 0.14530684 0 ;
+	setAttr ".pt[312]" -type "float3" 0 0.14419936 0 ;
+	setAttr ".pt[313]" -type "float3" 0 0.14294632 0 ;
+	setAttr ".pt[314]" -type "float3" 0 0.11187445 0 ;
+	setAttr ".pt[315]" -type "float3" 0 0.11698197 0 ;
+	setAttr ".pt[316]" -type "float3" 0 0.12193146 0 ;
+	setAttr ".pt[317]" -type "float3" 0 0.12663725 0 ;
+	setAttr ".pt[318]" -type "float3" 0 0.13109393 0 ;
+	setAttr ".pt[319]" -type "float3" 0 0.15597282 0 ;
+	setAttr ".pt[320]" -type "float3" 0 0.15794146 0 ;
+	setAttr ".pt[321]" -type "float3" 0 0.15993141 0 ;
+	setAttr ".pt[322]" -type "float3" 0 0.16141243 0 ;
+	setAttr ".pt[323]" -type "float3" 0 0.16229631 0 ;
+	setAttr ".pt[324]" -type "float3" 0 0.08961916 0 ;
+	setAttr ".pt[325]" -type "float3" 0 0.086614288 0 ;
+	setAttr ".pt[326]" -type "float3" 0 0.083428949 0 ;
+	setAttr ".pt[327]" -type "float3" 0 0.080079861 0 ;
+	setAttr ".pt[328]" -type "float3" 0 0.076584727 0 ;
+	setAttr ".pt[329]" -type "float3" 0 0.11523822 0 ;
+	setAttr ".pt[330]" -type "float3" 0 0.11348032 0 ;
+	setAttr ".pt[331]" -type "float3" 0 0.1111903 0 ;
+	setAttr ".pt[332]" -type "float3" 0 0.10840151 0 ;
+	setAttr ".pt[333]" -type "float3" 0 0.10587788 0 ;
+	setAttr ".pt[334]" -type "float3" 0 0.072908416 0 ;
+	setAttr ".pt[335]" -type "float3" 0 0.076708317 0 ;
+	setAttr ".pt[336]" -type "float3" 0 0.080203444 0 ;
+	setAttr ".pt[337]" -type "float3" 0 0.083606221 0 ;
+	setAttr ".pt[338]" -type "float3" 0 0.086899064 0 ;
+	setAttr ".pt[339]" -type "float3" 0 0.10603268 0 ;
+	setAttr ".pt[340]" -type "float3" 0 0.10795484 0 ;
+	setAttr ".pt[341]" -type "float3" 0 0.11014224 0 ;
+	setAttr ".pt[342]" -type "float3" 0 0.11191567 0 ;
+	setAttr ".pt[343]" -type "float3" 0 0.11309792 0 ;
+	setAttr ".pt[344]" -type "float3" 0 0.054121267 0 ;
+	setAttr ".pt[345]" -type "float3" 0 0.052061487 0 ;
+	setAttr ".pt[346]" -type "float3" 0 0.049629413 0 ;
+	setAttr ".pt[347]" -type "float3" 0 0.047214333 0 ;
+	setAttr ".pt[348]" -type "float3" 0 0.044706266 0 ;
+	setAttr ".pt[349]" -type "float3" 0 0.084348641 0 ;
+	setAttr ".pt[350]" -type "float3" 0 0.080251731 0 ;
+	setAttr ".pt[351]" -type "float3" 0 0.075330861 0 ;
+	setAttr ".pt[352]" -type "float3" 0 0.070334181 0 ;
+	setAttr ".pt[353]" -type "float3" 0 0.066070095 0 ;
+	setAttr ".pt[354]" -type "float3" 0 0.043428738 0 ;
+	setAttr ".pt[355]" -type "float3" 0 0.041521907 0 ;
+	setAttr ".pt[356]" -type "float3" 0 0.039512392 0 ;
+	setAttr ".pt[357]" -type "float3" 0 0.037413571 0 ;
+	setAttr ".pt[358]" -type "float3" 0 0.035239484 0 ;
+	setAttr ".pt[359]" -type "float3" 0 0.071788706 0 ;
+	setAttr ".pt[360]" -type "float3" 0 0.067682251 0 ;
+	setAttr ".pt[361]" -type "float3" 0 0.062831029 0 ;
+	setAttr ".pt[362]" -type "float3" 0 0.05798756 0 ;
+	setAttr ".pt[363]" -type "float3" 0 0.053914987 0 ;
+createNode transform -n "group22";
+	rename -uid "BC1DD2FD-458F-C964-CDA8-ECBA5C922448";
+	setAttr ".t" -type "double3" -7.7981079112659764 -3.5124191120739745 17.984321533104247 ;
+	setAttr ".rp" -type "double3" 8.2972195175565737 4.2307838236193112 -17.329716705766199 ;
+	setAttr ".sp" -type "double3" 8.2972195175565737 4.2307838236193112 -17.329716705766199 ;
+createNode transform -n "pasted__pCube7" -p "group22";
+	rename -uid "BE765550-46EE-CF67-6749-49A9086C8D83";
+	setAttr ".t" -type "double3" 8.2972190738681224 3.6103039173464779 -17.329716705766199 ;
+	setAttr ".s" -type "double3" 1.8609642483955449 0.042201542597833215 1.6367957222681333 ;
+	setAttr ".spt" -type "double3" 0 1.7337681011616159e-16 -1.9353673411986018e-16 ;
+createNode mesh -n "pasted__pCubeShape7" -p "pasted__pCube7";
+	rename -uid "673F3C3E-4B8E-5DDA-C836-579C1BBA291A";
+	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.60798439383506775 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 155 ".pt";
+	setAttr ".pt[154]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[155]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[156]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[157]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[158]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[159]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[185]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[186]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[187]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[188]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[189]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[190]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[191]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[192]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[216]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[228]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[229]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[230]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[231]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[232]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[233]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[234]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[235]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[236]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[237]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[242]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[243]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[244]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[245]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[246]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[248]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[276]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[277]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[278]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[286]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[287]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[288]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[289]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[290]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[292]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[316]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[317]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[319]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[320]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[321]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[322]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[338]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[339]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[341]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[342]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[343]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[344]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[352]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[353]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[354]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[355]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[356]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[357]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[373]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[374]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[375]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[376]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[377]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[378]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[379]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[380]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[414]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[426]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[427]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[428]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[429]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[430]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[431]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[432]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[433]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[434]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[435]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[446]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[447]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[450]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[451]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[452]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[453]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[454]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[455]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[456]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[457]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[458]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[495]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[496]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[498]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[499]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[500]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[501]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[502]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[503]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[506]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[507]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[526]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[527]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[530]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[531]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[532]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[533]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[575]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[576]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[578]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[579]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[582]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[583]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[586]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[587]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[624]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[625]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[632]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[633]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[645]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[646]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[649]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[650]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[651]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[652]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[653]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[654]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[655]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[656]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[657]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[693]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[694]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[695]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[696]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[697]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[698]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[699]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[700]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[701]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[704]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[705]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[733]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[734]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[738]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[739]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[740]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[741]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[744]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[745]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[765]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[766]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[769]" -type "float3" 0 4.7683716e-07 0 ;
+	setAttr ".pt[770]" -type "float3" 0 4.7683716e-07 0 ;
+createNode transform -n "imagePlane2";
+	rename -uid "2DD031F5-4DBB-1BA8-EF4C-A1BDC2748F25";
+	setAttr ".t" -type "double3" -1.6673541850881071 0.13145278345130601 0.61970865653900176 ;
+	setAttr ".r" -type "double3" 90 -1.4032311365636684e-14 180 ;
+	setAttr ".s" -type "double3" 0.1915164288452009 0.1915164288452009 0.1915164288452009 ;
+	setAttr ".spt" -type "double3" 3.0092617812825439e-18 -5.4166712063088452e-18 2.6727613733630429e-34 ;
+createNode imagePlane -n "imagePlaneShape2" -p "imagePlane2";
+	rename -uid "BE52131F-4915-C204-677B-068A47C26A2B";
+	setAttr -k off ".v";
+	setAttr ".fc" 100;
+	setAttr ".imn" -type "string" "C:/Users/sarah/OneDrive/Desktop/d2c01a75c4a64105ec946a61280c8c92.png";
+	setAttr ".cov" -type "short2" 1092 622 ;
+	setAttr ".dlc" no;
+	setAttr ".w" 10.92;
+	setAttr ".h" 6.22;
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode transform -n "pCube5";
+	rename -uid "477AABDA-4DA0-4E48-FB68-8D96DFB05665";
+	setAttr ".t" -type "double3" 5.134399886202182 0 0.16697562041156544 ;
+createNode mesh -n "pCubeShape4" -p "pCube5";
+	rename -uid "811BD897-4F94-02FA-6466-1D9DE496F615";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "group23";
+	rename -uid "35DDC7A2-45B3-6720-80DB-208BC94230DE";
+	setAttr ".t" -type "double3" 0 0 26.072642983522307 ;
+	setAttr ".rp" -type "double3" 5.4672511030842417 3.5221700140716563 -15.233386759637837 ;
+	setAttr ".sp" -type "double3" 5.4672511030842417 3.5221700140716563 -15.233386759637837 ;
+createNode transform -n "pasted__pSphere1" -p "group23";
+	rename -uid "E1E5AD61-4F05-78FB-5A23-31A4DF568E18";
+	setAttr ".t" -type "double3" 5.4672516877929276 -1.2980341427175583 -30.840695863052716 ;
+	setAttr ".s" -type "double3" 4.9048919541071756 0.066714434966503894 7.8858301689679955 ;
+	setAttr ".spt" -type "double3" 1.0891192587408853e-16 -3.1633155659861466e-16 0 ;
+createNode mesh -n "pasted__pSphereShape1" -p "|group23|pasted__pSphere1";
+	rename -uid "15BBACB5-4A09-C4E7-ABA4-F79FA3BCDAB4";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.22186048328876495 0.29820156097412109 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C1FC9164-44DD-920D-A07C-2E807978D708";
-	setAttr -s 6 ".lnk";
-	setAttr -s 6 ".slnk";
+	rename -uid "ED7B53B9-4713-1B81-E0B3-3E83A58E6164";
+	setAttr -s 9 ".lnk";
+	setAttr -s 9 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B3315E14-4AC8-A7B8-270F-3EA657AF6E0E";
+	rename -uid "BFA73BB0-4F29-DE80-EE32-21B85E7DE7F3";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F2CC0B48-42EE-3D5D-E4DD-D98076E77C93";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "417EA130-4EB7-6ACB-9D40-6A9678007EE2";
+	rename -uid "4BCAAB6F-4FF2-A293-E649-B48AD8A8CCE5";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "7C08A454-456A-2DD1-F9A0-D6B987615702";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B231387F-4EDC-BF7E-8F23-41B78BAE9CF0";
+	rename -uid "FCF3E4E0-48FD-5651-199E-9E96FAACAD42";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "CF1166FC-4CDD-FFAD-D97F-17A5FDA36F9F";
+	rename -uid "6C205B5F-4A18-B352-1C1F-99BFD7C65E3E";
 createNode polyTorus -n "polyTorus1";
 	rename -uid "BB10AC24-4583-FF52-B731-68B1F441955D";
 createNode polyTorus -n "pasted__polyTorus1";
@@ -17074,17 +17694,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 322\n            -height 363\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 322\n            -height 362\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 322\n            -height 362\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 663\n            -height 772\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 832\n            -height 684\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
 		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n"
 		+ "            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
@@ -17111,8 +17731,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n"
 		+ "            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap true\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 663\\n    -height 772\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 663\\n    -height 772\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 832\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 832\\n    -height 684\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -17446,11 +18066,6 @@ createNode groupParts -n "groupParts25";
 createNode groupId -n "groupId50";
 	rename -uid "F34C1169-4B98-7131-7E3F-8785C4E0C52D";
 	setAttr ".ihi" 0;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "B64EE75B-45A8-43FA-8A95-19814B1EC02C";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -613.09521373302312 ;
-	setAttr ".tgi[0].vh" -type "double2" 604.76188073082676 44.047617297323995 ;
 createNode lambert -n "Glass_Jar";
 	rename -uid "B26866BB-45E2-66ED-F3EC-308F8C861FF8";
 	setAttr ".c" -type "float3" 0.36579999 0.39210001 0.5043 ;
@@ -18090,73 +18705,193 @@ createNode polyMapCut -n "polyMapCut1";
 createNode polyTweakUV -n "polyTweakUV2";
 	rename -uid "85C7ABDE-4F91-A977-5EEE-21901CA2C63E";
 	setAttr ".uopa" yes;
-	setAttr -s 442 ".uvtk";
-	setAttr ".uvtk[16:265]" -type "float2" 0.57511079 -0.027275801 0.57670641
-		 -0.055419326 -0.00046214461 -0.001116395 9.894371e-05 -0.0010220408 0.57939565 -0.077962816
-		 -0.00095778704 -0.0011105537 0.58291733 -0.092684865 -0.001337707 -0.00099128485
-		 0.58691972 -0.098132849 -0.0015715063 -0.00075793266 0.59099895 -0.09376806 -0.0016486943
-		 -0.00042778254 0.59474182 -0.080020547 -0.0015752614 -3.6716461e-05 0.59777331 -0.058247507
-		 -0.0013679266 0.00036627054 0.59979439 -0.030593455 -0.0010487437 0.0007276535 0.60061443
-		 0.00022244453 -0.00064197183 0.00099998713 0.60016561 0.031178653 -0.00017493963
-		 0.0011512041 0.5985049 0.059247613 0.00032004714 0.0011700392 0.5958041 0.081693351
-		 0.00080385804 0.0010653734 0.59232926 0.096331775 0.0012309551 0.00086146593 0.58841372
-		 0.10174209 0.001552701 0.00059008598 0.58442873 0.097399831 0.001725018 0.00028330088
-		 0.5807507 0.08372736 0.0017178357 -3.2186508e-05 0.57773095 0.062051833 0.0015223622
-		 -0.00033628941 0.57566303 0.034481525 0.0011560619 -0.00061297417 0.57475609 0.0037033558
-		 0.00066134334 -0.00084745884 0.58767319 0.0019629002 -2.4437904e-06 7.6174736e-05
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-		 0 0 0 0 0 0;
-	setAttr ".uvtk[298:441]" -0.0078405142 -0.028127789 -0.0071965456 -0.05618763
-		 0.62156254 -0.0020160675 0.62203473 -0.0020573735 -0.0053480268 -0.078417838 0.62113696
-		 -0.0017864108 -0.00247401 -0.092628002 0.62080163 -0.0013769865 0.0011376739 -0.097414911
-		 0.62058312 -0.00081598759 0.0051214099 -0.092304945 0.62048978 -0.00015211105 0.0090739727
-		 -0.077801824 0.62051773 0.0005453229 0.012599051 -0.055335701 0.62065405 0.0011979938
-		 0.015349567 -0.027119994 0.62088352 0.001727581 0.017062545 0.0040715337 0.62119055
-		 0.0020700693 0.017582715 0.035180211 0.62155801 0.0021868944 0.016872644 0.063164294
-		 0.62196279 0.0020698309 0.015011132 0.085295916 0.62237525 0.0017409921 0.012182355
-		 0.099421561 0.62275636 0.0012469292 0.0086563826 0.10417122 0.62306285 0.00064772367
-		 0.0047665238 0.099084616 0.62325162 7.4505806e-06 0.00088006258 0.084657013 0.62329102
-		 -0.00061452389 -0.0026319623 0.062289536 0.62316799 -0.001167953 -0.0054273605 0.03415823
-		 0.62289238 -0.0016126633 -0.0072261095 0.0030043125 0.6224975 -0.0019171834 0.0049064159
-		 0.0035364032 0.62183213 7.6472759e-05 0.49866712 -0.030813873 0.50360829 -0.033405244
-		 -0.0027794167 -0.0018250346 -0.0023482367 -0.0018413663 0.51738465 -0.032717824 -0.0031716451
-		 -0.0016389489 0.53864908 -0.028804541 -0.0034841821 -0.0012873411 0.56531346 -0.022036731
-		 -0.0036935434 -0.0007930994 0.59475529 -0.013071537 -0.0037918016 -0.00019836426
-		 0.62407959 -0.0027890801 -0.0037823841 0.00043469667 0.65040618 0.0077927113 -0.0036759898
-		 0.0010332465 0.67115664 0.017624736 -0.0034848675 0.0015253425 0.68430609 0.025732219
-		 -0.0032209978 0.001850009 0.68857974 0.031316638 -0.0028977916 0.0019705296 0.68357313
-		 0.033834338 -0.0025330707 0.0018786192 0.66978514 0.033049643 -0.0021535382 0.0015936494
-		 0.64856744 0.029053092 -0.0017944798 0.0011577606 0.62198997 0.022247493 -0.0014974698
-		 0.00062537193 0.59264225 0.013304293 -0.0013042614 5.4121017e-05 0.5633837 0.0030961037
-		 -0.0012470111 -0.00050348043 0.53706872 -0.0073888898 -0.0013407394 -0.0010033846
-		 0.51627171 -0.017137468 -0.0015784428 -0.0014107823 0.50303537 -0.025207102 -0.0019298121
-		 -0.0016977787 0.59365833 0.00026249886 -0.0025875792 7.6293945e-05 0.48156339 -0.035827518
-		 0.47477072 -0.036645114 0.49865502 -0.03155601 0.52435946 -0.024242938 0.55615354
-		 -0.014592767 0.59092659 -0.003536582 0.62528479 0.0078539848 0.65587819 0.018467128
-		 0.67972517 0.027258694 0.6944977 0.03335613 0.69874799 0.036148727 0.69205099 0.035352647
-		 0.67504841 0.031042516 0.64939183 0.023645163 0.61758631 0.013897538 0.58274662 0.0027671456
-		 0.54829305 -0.0086455941 0.51761073 -0.019219995 0.493716 -0.02792722 0.47895497
-		 -0.033926785 0.0023813844 0.0020498037 0.0007674098 -0.034625351 0.0034876466 0.038790405
-		 0.0039656162 0.072005451 0.0037620068 0.09845674 0.0028987527 0.11556816 0.0014697909
-		 0.12167633 -0.00037205219 0.11618614 -0.0024337173 0.09962976 -0.0045073032 0.073615789
-		 -0.0063911676 0.040676832 -0.0079109073 0.0040256381 -0.0089307427 -0.032752991 -0.0093637109
-		 -0.066054165 -0.0091736913 -0.092605829 -0.0083773136 -0.10979444 -0.0070426464 -0.11592686
-		 -0.0052869916 -0.11039859 -0.0032697916 -0.093756497 -0.0011831522 -0.067641675 0.58574986
-		 0.003672123 0.58540773 -0.032799482 0.58569121 0.039896965 0.58522552 0.072333992
-		 0.58439159 0.097821057 0.58327293 0.11387634 0.58198833 0.11893964 0.58067667 0.11251843
-		 0.57947898 0.095235765 0.57851923 0.068771124 0.5778898 0.035701692 0.57764268 -0.00074696541
-		 0.57778943 -0.037010014 0.57830262 -0.069532216 0.57912499 -0.095117986 0.58017766
-		 -0.11124879 0.58136725 -0.11633509 0.58259076 -0.10987562 0.58374107 -0.092508018
-		 0.58471227 -0.065944552;
+	setAttr -s 186 ".uvtk";
+	setAttr ".uvtk[16]" -type "float2" 0.57511079 -0.027275801 ;
+	setAttr ".uvtk[17]" -type "float2" 0.57670641 -0.055419326 ;
+	setAttr ".uvtk[18]" -type "float2" -0.00046214461 -0.001116395 ;
+	setAttr ".uvtk[19]" -type "float2" 9.894371e-05 -0.0010220408 ;
+	setAttr ".uvtk[20]" -type "float2" 0.57939565 -0.077962816 ;
+	setAttr ".uvtk[21]" -type "float2" -0.00095778704 -0.0011105537 ;
+	setAttr ".uvtk[22]" -type "float2" 0.58291733 -0.092684865 ;
+	setAttr ".uvtk[23]" -type "float2" -0.001337707 -0.00099128485 ;
+	setAttr ".uvtk[24]" -type "float2" 0.58691972 -0.098132849 ;
+	setAttr ".uvtk[25]" -type "float2" -0.0015715063 -0.00075793266 ;
+	setAttr ".uvtk[26]" -type "float2" 0.59099895 -0.09376806 ;
+	setAttr ".uvtk[27]" -type "float2" -0.0016486943 -0.00042778254 ;
+	setAttr ".uvtk[28]" -type "float2" 0.59474182 -0.080020547 ;
+	setAttr ".uvtk[29]" -type "float2" -0.0015752614 -3.6716461e-05 ;
+	setAttr ".uvtk[30]" -type "float2" 0.59777331 -0.058247507 ;
+	setAttr ".uvtk[31]" -type "float2" -0.0013679266 0.00036627054 ;
+	setAttr ".uvtk[32]" -type "float2" 0.59979439 -0.030593455 ;
+	setAttr ".uvtk[33]" -type "float2" -0.0010487437 0.0007276535 ;
+	setAttr ".uvtk[34]" -type "float2" 0.60061443 0.00022244453 ;
+	setAttr ".uvtk[35]" -type "float2" -0.00064197183 0.00099998713 ;
+	setAttr ".uvtk[36]" -type "float2" 0.60016561 0.031178653 ;
+	setAttr ".uvtk[37]" -type "float2" -0.00017493963 0.0011512041 ;
+	setAttr ".uvtk[38]" -type "float2" 0.5985049 0.059247613 ;
+	setAttr ".uvtk[39]" -type "float2" 0.00032004714 0.0011700392 ;
+	setAttr ".uvtk[40]" -type "float2" 0.5958041 0.081693351 ;
+	setAttr ".uvtk[41]" -type "float2" 0.00080385804 0.0010653734 ;
+	setAttr ".uvtk[42]" -type "float2" 0.59232926 0.096331775 ;
+	setAttr ".uvtk[43]" -type "float2" 0.0012309551 0.00086146593 ;
+	setAttr ".uvtk[44]" -type "float2" 0.58841372 0.10174209 ;
+	setAttr ".uvtk[45]" -type "float2" 0.001552701 0.00059008598 ;
+	setAttr ".uvtk[46]" -type "float2" 0.58442873 0.097399831 ;
+	setAttr ".uvtk[47]" -type "float2" 0.001725018 0.00028330088 ;
+	setAttr ".uvtk[48]" -type "float2" 0.5807507 0.08372736 ;
+	setAttr ".uvtk[49]" -type "float2" 0.0017178357 -3.2186508e-05 ;
+	setAttr ".uvtk[50]" -type "float2" 0.57773095 0.062051833 ;
+	setAttr ".uvtk[51]" -type "float2" 0.0015223622 -0.00033628941 ;
+	setAttr ".uvtk[52]" -type "float2" 0.57566303 0.034481525 ;
+	setAttr ".uvtk[53]" -type "float2" 0.0011560619 -0.00061297417 ;
+	setAttr ".uvtk[54]" -type "float2" 0.57475609 0.0037033558 ;
+	setAttr ".uvtk[55]" -type "float2" 0.00066134334 -0.00084745884 ;
+	setAttr ".uvtk[56]" -type "float2" 0.58767319 0.0019629002 ;
+	setAttr ".uvtk[57]" -type "float2" -2.4437904e-06 7.6174736e-05 ;
+	setAttr ".uvtk[298]" -type "float2" -0.0078405142 -0.028127789 ;
+	setAttr ".uvtk[299]" -type "float2" -0.0071965456 -0.05618763 ;
+	setAttr ".uvtk[300]" -type "float2" 0.62156254 -0.0020160675 ;
+	setAttr ".uvtk[301]" -type "float2" 0.62203473 -0.0020573735 ;
+	setAttr ".uvtk[302]" -type "float2" -0.0053480268 -0.078417838 ;
+	setAttr ".uvtk[303]" -type "float2" 0.62113696 -0.0017864108 ;
+	setAttr ".uvtk[304]" -type "float2" -0.00247401 -0.092628002 ;
+	setAttr ".uvtk[305]" -type "float2" 0.62080163 -0.0013769865 ;
+	setAttr ".uvtk[306]" -type "float2" 0.0011376739 -0.097414911 ;
+	setAttr ".uvtk[307]" -type "float2" 0.62058312 -0.00081598759 ;
+	setAttr ".uvtk[308]" -type "float2" 0.0051214099 -0.092304945 ;
+	setAttr ".uvtk[309]" -type "float2" 0.62048978 -0.00015211105 ;
+	setAttr ".uvtk[310]" -type "float2" 0.0090739727 -0.077801824 ;
+	setAttr ".uvtk[311]" -type "float2" 0.62051773 0.0005453229 ;
+	setAttr ".uvtk[312]" -type "float2" 0.012599051 -0.055335701 ;
+	setAttr ".uvtk[313]" -type "float2" 0.62065405 0.0011979938 ;
+	setAttr ".uvtk[314]" -type "float2" 0.015349567 -0.027119994 ;
+	setAttr ".uvtk[315]" -type "float2" 0.62088352 0.001727581 ;
+	setAttr ".uvtk[316]" -type "float2" 0.017062545 0.0040715337 ;
+	setAttr ".uvtk[317]" -type "float2" 0.62119055 0.0020700693 ;
+	setAttr ".uvtk[318]" -type "float2" 0.017582715 0.035180211 ;
+	setAttr ".uvtk[319]" -type "float2" 0.62155801 0.0021868944 ;
+	setAttr ".uvtk[320]" -type "float2" 0.016872644 0.063164294 ;
+	setAttr ".uvtk[321]" -type "float2" 0.62196279 0.0020698309 ;
+	setAttr ".uvtk[322]" -type "float2" 0.015011132 0.085295916 ;
+	setAttr ".uvtk[323]" -type "float2" 0.62237525 0.0017409921 ;
+	setAttr ".uvtk[324]" -type "float2" 0.012182355 0.099421561 ;
+	setAttr ".uvtk[325]" -type "float2" 0.62275636 0.0012469292 ;
+	setAttr ".uvtk[326]" -type "float2" 0.0086563826 0.10417122 ;
+	setAttr ".uvtk[327]" -type "float2" 0.62306285 0.00064772367 ;
+	setAttr ".uvtk[328]" -type "float2" 0.0047665238 0.099084616 ;
+	setAttr ".uvtk[329]" -type "float2" 0.62325162 7.4505806e-06 ;
+	setAttr ".uvtk[330]" -type "float2" 0.00088006258 0.084657013 ;
+	setAttr ".uvtk[331]" -type "float2" 0.62329102 -0.00061452389 ;
+	setAttr ".uvtk[332]" -type "float2" -0.0026319623 0.062289536 ;
+	setAttr ".uvtk[333]" -type "float2" 0.62316799 -0.001167953 ;
+	setAttr ".uvtk[334]" -type "float2" -0.0054273605 0.03415823 ;
+	setAttr ".uvtk[335]" -type "float2" 0.62289238 -0.0016126633 ;
+	setAttr ".uvtk[336]" -type "float2" -0.0072261095 0.0030043125 ;
+	setAttr ".uvtk[337]" -type "float2" 0.6224975 -0.0019171834 ;
+	setAttr ".uvtk[338]" -type "float2" 0.0049064159 0.0035364032 ;
+	setAttr ".uvtk[339]" -type "float2" 0.62183213 7.6472759e-05 ;
+	setAttr ".uvtk[340]" -type "float2" 0.49866712 -0.030813873 ;
+	setAttr ".uvtk[341]" -type "float2" 0.50360829 -0.033405244 ;
+	setAttr ".uvtk[342]" -type "float2" -0.0027794167 -0.0018250346 ;
+	setAttr ".uvtk[343]" -type "float2" -0.0023482367 -0.0018413663 ;
+	setAttr ".uvtk[344]" -type "float2" 0.51738465 -0.032717824 ;
+	setAttr ".uvtk[345]" -type "float2" -0.0031716451 -0.0016389489 ;
+	setAttr ".uvtk[346]" -type "float2" 0.53864908 -0.028804541 ;
+	setAttr ".uvtk[347]" -type "float2" -0.0034841821 -0.0012873411 ;
+	setAttr ".uvtk[348]" -type "float2" 0.56531346 -0.022036731 ;
+	setAttr ".uvtk[349]" -type "float2" -0.0036935434 -0.0007930994 ;
+	setAttr ".uvtk[350]" -type "float2" 0.59475529 -0.013071537 ;
+	setAttr ".uvtk[351]" -type "float2" -0.0037918016 -0.00019836426 ;
+	setAttr ".uvtk[352]" -type "float2" 0.62407959 -0.0027890801 ;
+	setAttr ".uvtk[353]" -type "float2" -0.0037823841 0.00043469667 ;
+	setAttr ".uvtk[354]" -type "float2" 0.65040618 0.0077927113 ;
+	setAttr ".uvtk[355]" -type "float2" -0.0036759898 0.0010332465 ;
+	setAttr ".uvtk[356]" -type "float2" 0.67115664 0.017624736 ;
+	setAttr ".uvtk[357]" -type "float2" -0.0034848675 0.0015253425 ;
+	setAttr ".uvtk[358]" -type "float2" 0.68430609 0.025732219 ;
+	setAttr ".uvtk[359]" -type "float2" -0.0032209978 0.001850009 ;
+	setAttr ".uvtk[360]" -type "float2" 0.68857974 0.031316638 ;
+	setAttr ".uvtk[361]" -type "float2" -0.0028977916 0.0019705296 ;
+	setAttr ".uvtk[362]" -type "float2" 0.68357313 0.033834338 ;
+	setAttr ".uvtk[363]" -type "float2" -0.0025330707 0.0018786192 ;
+	setAttr ".uvtk[364]" -type "float2" 0.66978514 0.033049643 ;
+	setAttr ".uvtk[365]" -type "float2" -0.0021535382 0.0015936494 ;
+	setAttr ".uvtk[366]" -type "float2" 0.64856744 0.029053092 ;
+	setAttr ".uvtk[367]" -type "float2" -0.0017944798 0.0011577606 ;
+	setAttr ".uvtk[368]" -type "float2" 0.62198997 0.022247493 ;
+	setAttr ".uvtk[369]" -type "float2" -0.0014974698 0.00062537193 ;
+	setAttr ".uvtk[370]" -type "float2" 0.59264225 0.013304293 ;
+	setAttr ".uvtk[371]" -type "float2" -0.0013042614 5.4121017e-05 ;
+	setAttr ".uvtk[372]" -type "float2" 0.5633837 0.0030961037 ;
+	setAttr ".uvtk[373]" -type "float2" -0.0012470111 -0.00050348043 ;
+	setAttr ".uvtk[374]" -type "float2" 0.53706872 -0.0073888898 ;
+	setAttr ".uvtk[375]" -type "float2" -0.0013407394 -0.0010033846 ;
+	setAttr ".uvtk[376]" -type "float2" 0.51627171 -0.017137468 ;
+	setAttr ".uvtk[377]" -type "float2" -0.0015784428 -0.0014107823 ;
+	setAttr ".uvtk[378]" -type "float2" 0.50303537 -0.025207102 ;
+	setAttr ".uvtk[379]" -type "float2" -0.0019298121 -0.0016977787 ;
+	setAttr ".uvtk[380]" -type "float2" 0.59365833 0.00026249886 ;
+	setAttr ".uvtk[381]" -type "float2" -0.0025875792 7.6293945e-05 ;
+	setAttr ".uvtk[382]" -type "float2" 0.48156339 -0.035827518 ;
+	setAttr ".uvtk[383]" -type "float2" 0.47477072 -0.036645114 ;
+	setAttr ".uvtk[384]" -type "float2" 0.49865502 -0.03155601 ;
+	setAttr ".uvtk[385]" -type "float2" 0.52435946 -0.024242938 ;
+	setAttr ".uvtk[386]" -type "float2" 0.55615354 -0.014592767 ;
+	setAttr ".uvtk[387]" -type "float2" 0.59092659 -0.003536582 ;
+	setAttr ".uvtk[388]" -type "float2" 0.62528479 0.0078539848 ;
+	setAttr ".uvtk[389]" -type "float2" 0.65587819 0.018467128 ;
+	setAttr ".uvtk[390]" -type "float2" 0.67972517 0.027258694 ;
+	setAttr ".uvtk[391]" -type "float2" 0.6944977 0.03335613 ;
+	setAttr ".uvtk[392]" -type "float2" 0.69874799 0.036148727 ;
+	setAttr ".uvtk[393]" -type "float2" 0.69205099 0.035352647 ;
+	setAttr ".uvtk[394]" -type "float2" 0.67504841 0.031042516 ;
+	setAttr ".uvtk[395]" -type "float2" 0.64939183 0.023645163 ;
+	setAttr ".uvtk[396]" -type "float2" 0.61758631 0.013897538 ;
+	setAttr ".uvtk[397]" -type "float2" 0.58274662 0.0027671456 ;
+	setAttr ".uvtk[398]" -type "float2" 0.54829305 -0.0086455941 ;
+	setAttr ".uvtk[399]" -type "float2" 0.51761073 -0.019219995 ;
+	setAttr ".uvtk[400]" -type "float2" 0.493716 -0.02792722 ;
+	setAttr ".uvtk[401]" -type "float2" 0.47895497 -0.033926785 ;
+	setAttr ".uvtk[402]" -type "float2" 0.0023813844 0.0020498037 ;
+	setAttr ".uvtk[403]" -type "float2" 0.0007674098 -0.034625351 ;
+	setAttr ".uvtk[404]" -type "float2" 0.0034876466 0.038790405 ;
+	setAttr ".uvtk[405]" -type "float2" 0.0039656162 0.072005451 ;
+	setAttr ".uvtk[406]" -type "float2" 0.0037620068 0.09845674 ;
+	setAttr ".uvtk[407]" -type "float2" 0.0028987527 0.11556816 ;
+	setAttr ".uvtk[408]" -type "float2" 0.0014697909 0.12167633 ;
+	setAttr ".uvtk[409]" -type "float2" -0.00037205219 0.11618614 ;
+	setAttr ".uvtk[410]" -type "float2" -0.0024337173 0.09962976 ;
+	setAttr ".uvtk[411]" -type "float2" -0.0045073032 0.073615789 ;
+	setAttr ".uvtk[412]" -type "float2" -0.0063911676 0.040676832 ;
+	setAttr ".uvtk[413]" -type "float2" -0.0079109073 0.0040256381 ;
+	setAttr ".uvtk[414]" -type "float2" -0.0089307427 -0.032752991 ;
+	setAttr ".uvtk[415]" -type "float2" -0.0093637109 -0.066054165 ;
+	setAttr ".uvtk[416]" -type "float2" -0.0091736913 -0.092605829 ;
+	setAttr ".uvtk[417]" -type "float2" -0.0083773136 -0.10979444 ;
+	setAttr ".uvtk[418]" -type "float2" -0.0070426464 -0.11592686 ;
+	setAttr ".uvtk[419]" -type "float2" -0.0052869916 -0.11039859 ;
+	setAttr ".uvtk[420]" -type "float2" -0.0032697916 -0.093756497 ;
+	setAttr ".uvtk[421]" -type "float2" -0.0011831522 -0.067641675 ;
+	setAttr ".uvtk[422]" -type "float2" 0.58574986 0.003672123 ;
+	setAttr ".uvtk[423]" -type "float2" 0.58540773 -0.032799482 ;
+	setAttr ".uvtk[424]" -type "float2" 0.58569121 0.039896965 ;
+	setAttr ".uvtk[425]" -type "float2" 0.58522552 0.072333992 ;
+	setAttr ".uvtk[426]" -type "float2" 0.58439159 0.097821057 ;
+	setAttr ".uvtk[427]" -type "float2" 0.58327293 0.11387634 ;
+	setAttr ".uvtk[428]" -type "float2" 0.58198833 0.11893964 ;
+	setAttr ".uvtk[429]" -type "float2" 0.58067667 0.11251843 ;
+	setAttr ".uvtk[430]" -type "float2" 0.57947898 0.095235765 ;
+	setAttr ".uvtk[431]" -type "float2" 0.57851923 0.068771124 ;
+	setAttr ".uvtk[432]" -type "float2" 0.5778898 0.035701692 ;
+	setAttr ".uvtk[433]" -type "float2" 0.57764268 -0.00074696541 ;
+	setAttr ".uvtk[434]" -type "float2" 0.57778943 -0.037010014 ;
+	setAttr ".uvtk[435]" -type "float2" 0.57830262 -0.069532216 ;
+	setAttr ".uvtk[436]" -type "float2" 0.57912499 -0.095117986 ;
+	setAttr ".uvtk[437]" -type "float2" 0.58017766 -0.11124879 ;
+	setAttr ".uvtk[438]" -type "float2" 0.58136725 -0.11633509 ;
+	setAttr ".uvtk[439]" -type "float2" 0.58259076 -0.10987562 ;
+	setAttr ".uvtk[440]" -type "float2" 0.58374107 -0.092508018 ;
+	setAttr ".uvtk[441]" -type "float2" 0.58471227 -0.065944552 ;
 createNode polyMapCut -n "polyMapCut2";
 	rename -uid "25962572-4AE7-E117-4B89-799CFEA26893";
 	setAttr ".uopa" yes;
@@ -18184,7 +18919,7 @@ createNode polyMapCut -n "polyMapCut7";
 createNode polyTweakUV -n "polyTweakUV3";
 	rename -uid "40F30246-41BA-F639-7D59-04AD27F37E8B";
 	setAttr ".uopa" yes;
-	setAttr -s 339 ".uvtk";
+	setAttr -s 44 ".uvtk";
 	setAttr ".uvtk[41]" -type "float2" 2.9802322e-08 0 ;
 	setAttr ".uvtk[298]" -type "float2" 0.001159668 0.0032151937 ;
 	setAttr ".uvtk[299]" -type "float2" 0.001159668 0.0032151341 ;
@@ -18228,9 +18963,4267 @@ createNode polyTweakUV -n "polyTweakUV3";
 	setAttr ".uvtk[419]" -type "float2" 0.001159668 0.0032151341 ;
 	setAttr ".uvtk[420]" -type "float2" 0.001159668 0.0032151341 ;
 	setAttr ".uvtk[421]" -type "float2" 0.0011597276 0.0032151341 ;
+createNode polyTweakUV -n "polyTweakUV4";
+	rename -uid "8A2DFCB8-47BD-A1DA-8147-BD89599D82BF";
+	setAttr ".uopa" yes;
+	setAttr -s 7499 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404;
+	setAttr ".uvtk[250:499]" 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404
+		 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0 -1.13675404 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817;
+	setAttr ".uvtk[500:749]" 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817;
+	setAttr ".uvtk[750:999]" 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979298 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979298 1.14708829 0.19979322
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829;
+	setAttr ".uvtk[1000:1249]" 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829;
+	setAttr ".uvtk[1250:1499]" 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979298 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979298 1.14708829 0.19979322 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817;
+	setAttr ".uvtk[1500:1749]" 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979298 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829;
+	setAttr ".uvtk[1750:1999]" 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979298 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805;
+	setAttr ".uvtk[2000:2249]" 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979298 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979298 1.14708829 0.19979322 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817;
+	setAttr ".uvtk[2250:2499]" 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817;
+	setAttr ".uvtk[2500:2749]" 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979298 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979298 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829;
+	setAttr ".uvtk[2750:2999]" 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829;
+	setAttr ".uvtk[3000:3249]" 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979298
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979298
+		 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817;
+	setAttr ".uvtk[3250:3499]" 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979298 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829;
+	setAttr ".uvtk[3500:3749]" 0.19979322 1.14708829 0.19979316 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979298 1.14708829 0.19979322
+		 1.14708829 0.19979322 1.14708829 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693;
+	setAttr ".uvtk[3750:3999]" 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693 0 -0.027557693
+		 0 -0.027557693 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664 0 -0.027557664
+		 0 -0.027557664 0 -0.027557664 0 -0.027557664 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0;
+	setAttr ".uvtk[4000:4249]" 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385
+		 0 1.61212385 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212409 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385 0 1.61212397 0 1.61212397
+		 0 1.61212397 0;
+	setAttr ".uvtk[4250:4499]" 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212385
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212409 0 1.61212397 0 1.61212397 0 1.61212397
+		 0 1.61212397 0 1.61212397 0 1.61212397 0 1.61212397 0 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817;
+	setAttr ".uvtk[4500:4749]" 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805;
+	setAttr ".uvtk[4750:4999]" 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979298 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979298 1.14708829 0.19979322 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817;
+	setAttr ".uvtk[5000:5249]" 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817;
+	setAttr ".uvtk[5250:5499]" 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979298 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979298 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829;
+	setAttr ".uvtk[5500:5749]" 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979298 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979298 1.14708829 0.19979322 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817;
+	setAttr ".uvtk[5750:5999]" 0.19979313 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319
+		 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817;
+	setAttr ".uvtk[6000:6249]" 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979298 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979298 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817;
+	setAttr ".uvtk[6250:6499]" 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805;
+	setAttr ".uvtk[6500:6749]" 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979298
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979298
+		 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817;
+	setAttr ".uvtk[6750:6999]" 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319
+		 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817;
+	setAttr ".uvtk[7000:7249]" 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979298 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979298 1.14708829 0.19979322
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979319 1.14708829 0.19979313 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708829 0.19979322 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708805 0.19979316 1.14708805 0.19979319 1.14708805 0.19979313
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.19979316 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.19979322 1.14708805 0.1997931
+		 1.14708805 0.1997931 1.14708805 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708829;
+	setAttr ".uvtk[7250:7498]" 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979319 1.14708805 0.19979313 1.14708805 0.19979322 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.19979316
+		 1.14708805 0.19979322 1.14708805 0.19979316 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708805 0.19979322 1.14708805 0.1997931 1.14708805 0.1997931 1.14708805 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979319 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708817 0.19979322 1.14708817 0.1997931 1.14708817 0.1997931
+		 1.14708817 0.1997931 1.14708829 0.19979316 1.14708829 0.19979319 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708829 0.19979322 1.14708829 0.1997931
+		 1.14708829 0.1997931 1.14708829 0.1997931 1.14708817 0.19979316 1.14708817 0.19979319
+		 1.14708817 0.19979313 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979322
+		 1.14708817 0.1997931 1.14708817 0.1997931 1.14708817 0.19979313 1.14708817 0.19979322
+		 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979313
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.19979322 1.14708817 0.19979316
+		 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979316 1.14708817 0.19979322
+		 1.14708817 0.19979322 1.14708817 0.19979316 1.14708817 0.1997931 1.14708817 0.19979298
+		 1.14708817 0.19979322 1.14708817 0.19979322 1.14708817 0.19979313 1.14708829 0.19979322
+		 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979313
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.19979322 1.14708829 0.19979316
+		 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979316 1.14708829 0.19979322
+		 1.14708829 0.19979322 1.14708829 0.19979316 1.14708829 0.1997931 1.14708829 0.19979298
+		 1.14708829 0.19979322 1.14708829 0.19979322 1.14708829;
+createNode polyMapDel -n "polyMapDel3";
+	rename -uid "32F2262E-48B9-48D5-4E4F-3A827B025C95";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+createNode polyMapDel -n "polyMapDel4";
+	rename -uid "BF8E29D3-4121-865C-689F-D89E69FC9D73";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[400:6819]";
+createNode polyPlanarProj -n "polyPlanarProj2";
+	rename -uid "599648BA-465C-1245-9FA7-4EBFB8199531";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:6819]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -9.3046985667954676 0 3.5501847092170919 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -9.2903985977172852 0.18423795700073242 3.573000431060791 ;
+	setAttr ".ro" -type "double3" 106.79999964612253 49.999999755689167 179.99999871112234 ;
+	setAttr ".ps" -type "double2" 2.9972064758148034 2.8711799440633374 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.2498648166656494 -1.2246236801147461 -0.22141562402248383 -0.22141119837760925
+		 1.8237565649005847e-16 0.48265564441680908 -0.95733863115310669 -0.95731949806213379
+		 -1.4895309209823608 1.0275812149047852 0.18578977882862091 0.18578605353832245 -6.264014720916748 -15.122364044189453 0.89290416240692139 1.0928843021392822;
+	setAttr ".prgt" 663;
+	setAttr ".ptop" 772;
+createNode polyMapCut -n "polyMapCut8";
+	rename -uid "D5C535EE-4AF7-42A0-ABAB-F3BD98C2BCE7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 21 "e[7142:7161]" "e[7541]" "e[7561]" "e[7581]" "e[7601]" "e[7621]" "e[7641]" "e[7661]" "e[7681]" "e[7701]" "e[7721]" "e[7741]" "e[7761]" "e[7781]" "e[7801]" "e[7821]" "e[7841]" "e[7861]" "e[7881]" "e[7901]" "e[7921]";
+createNode polyTweakUV -n "polyTweakUV5";
+	rename -uid "F6D314A9-4AF5-BB1E-3759-419BAD97AB94";
+	setAttr ".uopa" yes;
+	setAttr -s 441 ".uvtk";
+	setAttr ".uvtk[3518]" -type "float2" 1.7824925 -0.06576401 ;
+	setAttr ".uvtk[3519]" -type "float2" 1.8693398 -0.11448368 ;
+	setAttr ".uvtk[3520]" -type "float2" 1.2433293 -0.58579123 ;
+	setAttr ".uvtk[3521]" -type "float2" 1.1706676 -0.520832 ;
+	setAttr ".uvtk[3522]" -type "float2" 1.6948541 -0.026130319 ;
+	setAttr ".uvtk[3523]" -type "float2" 1.0877337 -0.4703339 ;
+	setAttr ".uvtk[3524]" -type "float2" 1.6120043 0.0032300949 ;
+	setAttr ".uvtk[3525]" -type "float2" 1.0033952 -0.43450749 ;
+	setAttr ".uvtk[3526]" -type "float2" 1.538399 0.022868663 ;
+	setAttr ".uvtk[3527]" -type "float2" 0.92501962 -0.41113794 ;
+	setAttr ".uvtk[3528]" -type "float2" 1.4769098 0.035071909 ;
+	setAttr ".uvtk[3529]" -type "float2" 0.86171502 -0.39495981 ;
+	setAttr ".uvtk[3530]" -type "float2" 1.4298749 0.04393822 ;
+	setAttr ".uvtk[3531]" -type "float2" 0.81372619 -0.38341191 ;
+	setAttr ".uvtk[3532]" -type "float2" 1.3980411 0.053752005 ;
+	setAttr ".uvtk[3533]" -type "float2" 0.78142726 -0.37155104 ;
+	setAttr ".uvtk[3534]" -type "float2" 1.3807282 0.068368495 ;
+	setAttr ".uvtk[3535]" -type "float2" 0.76298523 -0.35416117 ;
+	setAttr ".uvtk[3536]" -type "float2" 1.3696297 0.092306972 ;
+	setAttr ".uvtk[3537]" -type "float2" 0.74997723 -0.32664052 ;
+	setAttr ".uvtk[3538]" -type "float2" 1.3611958 0.13060629 ;
+	setAttr ".uvtk[3539]" -type "float2" 0.74224728 -0.28803307 ;
+	setAttr ".uvtk[3540]" -type "float2" 1.3612628 0.18189508 ;
+	setAttr ".uvtk[3541]" -type "float2" 0.74786484 -0.24013731 ;
+	setAttr ".uvtk[3542]" -type "float2" 1.3605868 0.24328238 ;
+	setAttr ".uvtk[3543]" -type "float2" 0.75986886 -0.17969653 ;
+	setAttr ".uvtk[3544]" -type "float2" 1.3645527 0.31633985 ;
+	setAttr ".uvtk[3545]" -type "float2" 0.76487708 -0.10830951 ;
+	setAttr ".uvtk[3546]" -type "float2" 1.3637233 0.39992309 ;
+	setAttr ".uvtk[3547]" -type "float2" 0.76624572 -0.024502575 ;
+	setAttr ".uvtk[3548]" -type "float2" 1.3642308 0.49211252 ;
+	setAttr ".uvtk[3549]" -type "float2" 0.76071334 0.074233055 ;
+	setAttr ".uvtk[3550]" -type "float2" 1.3544683 0.58726853 ;
+	setAttr ".uvtk[3551]" -type "float2" 0.73889875 0.17924583 ;
+	setAttr ".uvtk[3552]" -type "float2" 1.3261719 0.68239301 ;
+	setAttr ".uvtk[3553]" -type "float2" 0.69657075 0.27944586 ;
+	setAttr ".uvtk[3554]" -type "float2" 1.2873044 0.77384794 ;
+	setAttr ".uvtk[3555]" -type "float2" 0.6363132 0.36636585 ;
+	setAttr ".uvtk[3556]" -type "float2" 1.9490339 -0.17023233 ;
+	setAttr ".uvtk[3557]" -type "float2" 0.55974197 0.43277398 ;
+	setAttr ".uvtk[3558]" -type "float2" 1.2927655 -0.56586778 ;
+	setAttr ".uvtk[3559]" -type "float2" 1.2086309 -0.49301606 ;
+	setAttr ".uvtk[3560]" -type "float2" 1.1141793 -0.43923652 ;
+	setAttr ".uvtk[3561]" -type "float2" 1.0200239 -0.40473318 ;
+	setAttr ".uvtk[3562]" -type "float2" 0.93497789 -0.38660154 ;
+	setAttr ".uvtk[3563]" -type "float2" 0.86710817 -0.37838426 ;
+	setAttr ".uvtk[3564]" -type "float2" 0.81783712 -0.37517726 ;
+	setAttr ".uvtk[3565]" -type "float2" 0.78710556 -0.37136436 ;
+	setAttr ".uvtk[3566]" -type "float2" 0.77339232 -0.36173722 ;
+	setAttr ".uvtk[3567]" -type "float2" 0.77042502 -0.34143636 ;
+	setAttr ".uvtk[3568]" -type "float2" 0.77108806 -0.30554289 ;
+	setAttr ".uvtk[3569]" -type "float2" 0.78271317 -0.2557371 ;
+	setAttr ".uvtk[3570]" -type "float2" 0.7957809 -0.19084233 ;
+	setAttr ".uvtk[3571]" -type "float2" 0.80592519 -0.11317605 ;
+	setAttr ".uvtk[3572]" -type "float2" 0.81304336 -0.021287739 ;
+	setAttr ".uvtk[3573]" -type "float2" 0.81363213 0.084648132 ;
+	setAttr ".uvtk[3574]" -type "float2" 0.79323637 0.19554037 ;
+	setAttr ".uvtk[3575]" -type "float2" 0.74803019 0.30469513 ;
+	setAttr ".uvtk[3576]" -type "float2" 0.68081951 0.40317845 ;
+	setAttr ".uvtk[3577]" -type "float2" 0.59307301 0.47979462 ;
+	setAttr ".uvtk[3578]" -type "float2" 1.3521188 -0.53248638 ;
+	setAttr ".uvtk[3579]" -type "float2" 1.250725 -0.44954267 ;
+	setAttr ".uvtk[3580]" -type "float2" 1.1392561 -0.39246032 ;
+	setAttr ".uvtk[3581]" -type "float2" 1.0305698 -0.36084655 ;
+	setAttr ".uvtk[3582]" -type "float2" 0.93472803 -0.35056651 ;
+	setAttr ".uvtk[3583]" -type "float2" 0.86016798 -0.35356104 ;
+	setAttr ".uvtk[3584]" -type "float2" 0.80907238 -0.36258021 ;
+	setAttr ".uvtk[3585]" -type "float2" 0.78068388 -0.37061647 ;
+	setAttr ".uvtk[3586]" -type "float2" 0.77270496 -0.37121239 ;
+	setAttr ".uvtk[3587]" -type "float2" 0.78131855 -0.35952798 ;
+	setAttr ".uvtk[3588]" -type "float2" 0.79688346 -0.3296642 ;
+	setAttr ".uvtk[3589]" -type "float2" 0.81848013 -0.28006169 ;
+	setAttr ".uvtk[3590]" -type "float2" 0.83940983 -0.21102762 ;
+	setAttr ".uvtk[3591]" -type "float2" 0.85959649 -0.12667036 ;
+	setAttr ".uvtk[3592]" -type "float2" 0.87565935 -0.026527703 ;
+	setAttr ".uvtk[3593]" -type "float2" 0.88185596 0.088627994 ;
+	setAttr ".uvtk[3594]" -type "float2" 0.86225164 0.2129702 ;
+	setAttr ".uvtk[3595]" -type "float2" 0.81385422 0.33808285 ;
+	setAttr ".uvtk[3596]" -type "float2" 0.7377466 0.45383182 ;
+	setAttr ".uvtk[3597]" -type "float2" 0.63429618 0.5459764 ;
+	setAttr ".uvtk[3598]" -type "float2" 1.4184769 -0.48540372 ;
+	setAttr ".uvtk[3599]" -type "float2" 1.2953057 -0.39078009 ;
+	setAttr ".uvtk[3600]" -type "float2" 1.1627362 -0.33067006 ;
+	setAttr ".uvtk[3601]" -type "float2" 1.0360776 -0.30345672 ;
+	setAttr ".uvtk[3602]" -type "float2" 0.92703003 -0.3033829 ;
+	setAttr ".uvtk[3603]" -type "float2" 0.84421599 -0.3207922 ;
+	setAttr ".uvtk[3604]" -type "float2" 0.79157269 -0.34466746 ;
+	setAttr ".uvtk[3605]" -type "float2" 0.76636362 -0.36712158 ;
+	setAttr ".uvtk[3606]" -type "float2" 0.76551771 -0.38006905 ;
+	setAttr ".uvtk[3607]" -type "float2" 0.78479838 -0.37712848 ;
+	setAttr ".uvtk[3608]" -type "float2" 0.81543064 -0.35582811 ;
+	setAttr ".uvtk[3609]" -type "float2" 0.852642 -0.30868468 ;
+	setAttr ".uvtk[3610]" -type "float2" 0.88933933 -0.23832154 ;
+	setAttr ".uvtk[3611]" -type "float2" 0.92387402 -0.14725399 ;
+	setAttr ".uvtk[3612]" -type "float2" 0.94961643 -0.037843406 ;
+	setAttr ".uvtk[3613]" -type "float2" 0.96065277 0.090977371 ;
+	setAttr ".uvtk[3614]" -type "float2" 0.94165552 0.2325092 ;
+	setAttr ".uvtk[3615]" -type "float2" 0.8908729 0.37770641 ;
+	setAttr ".uvtk[3616]" -type "float2" 0.80522114 0.51518393 ;
+	setAttr ".uvtk[3617]" -type "float2" 0.68352401 0.62808299 ;
+	setAttr ".uvtk[3618]" -type "float2" 1.4875433 -0.42725223 ;
+	setAttr ".uvtk[3619]" -type "float2" 1.3404322 -0.320548 ;
+	setAttr ".uvtk[3620]" -type "float2" 1.1850218 -0.25806457 ;
+	setAttr ".uvtk[3621]" -type "float2" 1.0390329 -0.23641799 ;
+	setAttr ".uvtk[3622]" -type "float2" 0.9158116 -0.24795777 ;
+	setAttr ".uvtk[3623]" -type "float2" 0.82344699 -0.28180078 ;
+	setAttr ".uvtk[3624]" -type "float2" 0.77079082 -0.32138973 ;
+	setAttr ".uvtk[3625]" -type "float2" 0.74979329 -0.35898101 ;
+	setAttr ".uvtk[3626]" -type "float2" 0.7568326 -0.38508749 ;
+	setAttr ".uvtk[3627]" -type "float2" 0.78668082 -0.39211112 ;
+	setAttr ".uvtk[3628]" -type "float2" 0.83076698 -0.37690121 ;
+	setAttr ".uvtk[3629]" -type "float2" 0.88384563 -0.33519399 ;
+	setAttr ".uvtk[3630]" -type "float2" 0.9382695 -0.26506191 ;
+	setAttr ".uvtk[3631]" -type "float2" 0.98754567 -0.16881591 ;
+	setAttr ".uvtk[3632]" -type "float2" 1.0237951 -0.048435926 ;
+	setAttr ".uvtk[3633]" -type "float2" 1.0402454 0.096060753 ;
+	setAttr ".uvtk[3634]" -type "float2" 1.0255888 0.25529766 ;
+	setAttr ".uvtk[3635]" -type "float2" 0.97333413 0.42143753 ;
+	setAttr ".uvtk[3636]" -type "float2" 0.87883651 0.58260107 ;
+	setAttr ".uvtk[3637]" -type "float2" 0.73899913 0.71991211 ;
+	setAttr ".uvtk[3638]" -type "float2" 1.5544274 -0.36368191 ;
+	setAttr ".uvtk[3639]" -type "float2" 1.3843172 -0.24579749 ;
+	setAttr ".uvtk[3640]" -type "float2" 1.2071803 -0.18180487 ;
+	setAttr ".uvtk[3641]" -type "float2" 1.0429225 -0.16618246 ;
+	setAttr ".uvtk[3642]" -type "float2" 0.90684599 -0.18895593 ;
+	setAttr ".uvtk[3643]" -type "float2" 0.80542648 -0.23871933 ;
+	setAttr ".uvtk[3644]" -type "float2" 0.75367785 -0.29300097 ;
+	setAttr ".uvtk[3645]" -type "float2" 0.7370187 -0.34496245 ;
+	setAttr ".uvtk[3646]" -type "float2" 0.75173813 -0.38326517 ;
+	setAttr ".uvtk[3647]" -type "float2" 0.79164648 -0.39946756 ;
+	setAttr ".uvtk[3648]" -type "float2" 0.84817195 -0.389487 ;
+	setAttr ".uvtk[3649]" -type "float2" 0.91444218 -0.35000157 ;
+	setAttr ".uvtk[3650]" -type "float2" 0.98267257 -0.28000075 ;
+	setAttr ".uvtk[3651]" -type "float2" 1.0450712 -0.17944813 ;
+	setAttr ".uvtk[3652]" -type "float2" 1.0919551 -0.049922526 ;
+	setAttr ".uvtk[3653]" -type "float2" 1.1163951 0.10652971 ;
+	setAttr ".uvtk[3654]" -type "float2" 1.106492 0.28135735 ;
+	setAttr ".uvtk[3655]" -type "float2" 1.0537595 0.46678787 ;
+	setAttr ".uvtk[3656]" -type "float2" 0.95222521 0.65066469 ;
+	setAttr ".uvtk[3657]" -type "float2" 0.79695714 0.81337863 ;
+	setAttr ".uvtk[3658]" -type "float2" 1.6146491 -0.3020609 ;
+	setAttr ".uvtk[3659]" -type "float2" 1.4256132 -0.17502078 ;
+	setAttr ".uvtk[3660]" -type "float2" 1.2306051 -0.11034556 ;
+	setAttr ".uvtk[3661]" -type "float2" 1.0513859 -0.10019017 ;
+	setAttr ".uvtk[3662]" -type "float2" 0.90615106 -0.13191876 ;
+	setAttr ".uvtk[3663]" -type "float2" 0.79900843 -0.19398543 ;
+	setAttr ".uvtk[3664]" -type "float2" 0.74706924 -0.26070178 ;
+	setAttr ".uvtk[3665]" -type "float2" 0.7333442 -0.32482842 ;
+	setAttr ".uvtk[3666]" -type "float2" 0.75442278 -0.37279198 ;
+	setAttr ".uvtk[3667]" -type "float2" 0.80239618 -0.39627618 ;
+	setAttr ".uvtk[3668]" -type "float2" 0.86864793 -0.39051351 ;
+	setAttr ".uvtk[3669]" -type "float2" 0.94522369 -0.35268718 ;
+	setAttr ".uvtk[3670]" -type "float2" 1.0240864 -0.28182149 ;
+	setAttr ".uvtk[3671]" -type "float2" 1.0965255 -0.17810428 ;
+	setAttr ".uvtk[3672]" -type "float2" 1.1517165 -0.042747915 ;
+	setAttr ".uvtk[3673]" -type "float2" 1.18288 0.12324196 ;
+	setAttr ".uvtk[3674]" -type "float2" 1.177294 0.31026614 ;
+	setAttr ".uvtk[3675]" -type "float2" 1.1248059 0.5111925 ;
+	setAttr ".uvtk[3676]" -type "float2" 1.0186514 0.71407992 ;
+	setAttr ".uvtk[3677]" -type "float2" 0.85265017 0.90007347 ;
+	setAttr ".uvtk[3678]" -type "float2" 1.6654751 -0.24911579 ;
+	setAttr ".uvtk[3679]" -type "float2" 1.4636155 -0.11595198 ;
+	setAttr ".uvtk[3680]" -type "float2" 1.2565691 -0.051222578 ;
+	setAttr ".uvtk[3681]" -type "float2" 1.067459 -0.044959895 ;
+	setAttr ".uvtk[3682]" -type "float2" 0.91694105 -0.082299501 ;
+	setAttr ".uvtk[3683]" -type "float2" 0.80860442 -0.15121339 ;
+	setAttr ".uvtk[3684]" -type "float2" 0.75459808 -0.22701639 ;
+	setAttr ".uvtk[3685]" -type "float2" 0.74237347 -0.29917565 ;
+	setAttr ".uvtk[3686]" -type "float2" 0.76757467 -0.35321787 ;
+	setAttr ".uvtk[3687]" -type "float2" 0.82061636 -0.38134095 ;
+	setAttr ".uvtk[3688]" -type "float2" 0.89276922 -0.37834656 ;
+	setAttr ".uvtk[3689]" -type "float2" 0.97562653 -0.34163761 ;
+	setAttr ".uvtk[3690]" -type "float2" 1.0610015 -0.2702989 ;
+	setAttr ".uvtk[3691]" -type "float2" 1.1396695 -0.16468394 ;
+	setAttr ".uvtk[3692]" -type "float2" 1.2043806 -0.023809612 ;
+	setAttr ".uvtk[3693]" -type "float2" 1.2354174 0.14638019 ;
+	setAttr ".uvtk[3694]" -type "float2" 1.2329882 0.34119225 ;
+	setAttr ".uvtk[3695]" -type "float2" 1.1810725 0.55242705 ;
+	setAttr ".uvtk[3696]" -type "float2" 1.0728558 0.76864237 ;
+	setAttr ".uvtk[3697]" -type "float2" 0.90189004 0.97303754 ;
+	setAttr ".uvtk[3698]" -type "float2" 1.7141745 -0.20227519 ;
+	setAttr ".uvtk[3699]" -type "float2" 1.4982249 -0.074153721 ;
+	setAttr ".uvtk[3700]" -type "float2" 1.2859473 -0.009193318 ;
+	setAttr ".uvtk[3701]" -type "float2" 1.096097 -0.003070347 ;
+	setAttr ".uvtk[3702]" -type "float2" 0.93989092 -0.044201374 ;
+	setAttr ".uvtk[3703]" -type "float2" 0.83353013 -0.11427657 ;
+	setAttr ".uvtk[3704]" -type "float2" 0.77704871 -0.19434494 ;
+	setAttr ".uvtk[3705]" -type "float2" 0.76566362 -0.26905587 ;
+	setAttr ".uvtk[3706]" -type "float2" 0.79229444 -0.32519478 ;
+	setAttr ".uvtk[3707]" -type "float2" 0.84700537 -0.35500798 ;
+	setAttr ".uvtk[3708]" -type "float2" 0.92078114 -0.35318488 ;
+	setAttr ".uvtk[3709]" -type "float2" 1.0055451 -0.31697673 ;
+	setAttr ".uvtk[3710]" -type "float2" 1.0930021 -0.24556011 ;
+	setAttr ".uvtk[3711]" -type "float2" 1.1738012 -0.13938361 ;
+	setAttr ".uvtk[3712]" -type "float2" 1.2477446 0.0059638023 ;
+	setAttr ".uvtk[3713]" -type "float2" 1.2732179 0.17532349 ;
+	setAttr ".uvtk[3714]" -type "float2" 1.2715403 0.37317836 ;
+	setAttr ".uvtk[3715]" -type "float2" 1.2201972 0.58896375 ;
+	setAttr ".uvtk[3716]" -type "float2" 1.1123341 0.81187558 ;
+	setAttr ".uvtk[3717]" -type "float2" 0.94237298 1.0280346 ;
+	setAttr ".uvtk[3718]" -type "float2" 1.759528 -0.16608533 ;
+	setAttr ".uvtk[3719]" -type "float2" 1.5304685 -0.050149232 ;
+	setAttr ".uvtk[3720]" -type "float2" 1.3191853 0.014630878 ;
+	setAttr ".uvtk[3721]" -type "float2" 1.137991 0.024456747 ;
+	setAttr ".uvtk[3722]" -type "float2" 0.97653955 -0.017840177 ;
+	setAttr ".uvtk[3723]" -type "float2" 0.87196648 -0.08513847 ;
+	setAttr ".uvtk[3724]" -type "float2" 0.81501353 -0.16317818 ;
+	setAttr ".uvtk[3725]" -type "float2" 0.80304533 -0.23560432 ;
+	setAttr ".uvtk[3726]" -type "float2" 0.82843232 -0.29000342 ;
+	setAttr ".uvtk[3727]" -type "float2" 0.88155377 -0.31863412 ;
+	setAttr ".uvtk[3728]" -type "float2" 0.95280218 -0.31645387 ;
+	setAttr ".uvtk[3729]" -type "float2" 1.0353496 -0.28012925 ;
+	setAttr ".uvtk[3730]" -type "float2" 1.1207145 -0.20898336 ;
+	setAttr ".uvtk[3731]" -type "float2" 1.2002257 -0.10323012 ;
+	setAttr ".uvtk[3732]" -type "float2" 1.2774754 0.042893589 ;
+	setAttr ".uvtk[3733]" -type "float2" 1.2969998 0.20912117 ;
+	setAttr ".uvtk[3734]" -type "float2" 1.2937857 0.40540278 ;
+	setAttr ".uvtk[3735]" -type "float2" 1.2429444 0.62010646 ;
+	setAttr ".uvtk[3736]" -type "float2" 1.1376294 0.84309083 ;
+	setAttr ".uvtk[3737]" -type "float2" 0.97420883 1.0637956 ;
+	setAttr ".uvtk[3738]" -type "float2" 1.7928269 -0.14664005 ;
+	setAttr ".uvtk[3739]" -type "float2" 1.5614924 -0.041124322 ;
+	setAttr ".uvtk[3740]" -type "float2" 1.3575183 0.022294816 ;
+	setAttr ".uvtk[3741]" -type "float2" 1.1885054 0.03812623 ;
+	setAttr ".uvtk[3742]" -type "float2" 1.0264632 -0.0016897172 ;
+	setAttr ".uvtk[3743]" -type "float2" 0.9237926 -0.062637419 ;
+	setAttr ".uvtk[3744]" -type "float2" 0.86704856 -0.13371336 ;
+	setAttr ".uvtk[3745]" -type "float2" 0.85316527 -0.1998187 ;
+	setAttr ".uvtk[3746]" -type "float2" 0.87498981 -0.24917093 ;
+	setAttr ".uvtk[3747]" -type "float2" 0.92352509 -0.27417713 ;
+	setAttr ".uvtk[3748]" -type "float2" 0.98893321 -0.2702617 ;
+	setAttr ".uvtk[3749]" -type "float2" 1.06563 -0.23343921 ;
+	setAttr ".uvtk[3750]" -type "float2" 1.145546 -0.1626752 ;
+	setAttr ".uvtk[3751]" -type "float2" 1.2204287 -0.058330238 ;
+	setAttr ".uvtk[3752]" -type "float2" 1.291921 0.084213793 ;
+	setAttr ".uvtk[3753]" -type "float2" 1.3087333 0.24668497 ;
+	setAttr ".uvtk[3754]" -type "float2" 1.3026958 0.43736899 ;
+	setAttr ".uvtk[3755]" -type "float2" 1.2522867 0.64603025 ;
+	setAttr ".uvtk[3756]" -type "float2" 1.151396 0.86333364 ;
+	setAttr ".uvtk[3757]" -type "float2" 1.0007414 1.0802579 ;
+	setAttr ".uvtk[3758]" -type "float2" 1.8106196 -0.14713027 ;
+	setAttr ".uvtk[3759]" -type "float2" 1.5919626 -0.044115521 ;
+	setAttr ".uvtk[3760]" -type "float2" 1.3996117 0.017969411 ;
+	setAttr ".uvtk[3761]" -type "float2" 1.2412241 0.038882345 ;
+	setAttr ".uvtk[3762]" -type "float2" 1.0865686 0.0062348992 ;
+	setAttr ".uvtk[3763]" -type "float2" 0.98742712 -0.045067251 ;
+	setAttr ".uvtk[3764]" -type "float2" 0.93069935 -0.10599208 ;
+	setAttr ".uvtk[3765]" -type "float2" 0.91391319 -0.16268742 ;
+	setAttr ".uvtk[3766]" -type "float2" 0.93039483 -0.20438391 ;
+	setAttr ".uvtk[3767]" -type "float2" 0.97187752 -0.22392166 ;
+	setAttr ".uvtk[3768]" -type "float2" 1.0289714 -0.21699095 ;
+	setAttr ".uvtk[3769]" -type "float2" 1.0948658 -0.18234408 ;
+	setAttr ".uvtk[3770]" -type "float2" 1.1687608 -0.10922712 ;
+	setAttr ".uvtk[3771]" -type "float2" 1.235846 -0.0071106553 ;
+	setAttr ".uvtk[3772]" -type "float2" 1.295872 0.12915707 ;
+	setAttr ".uvtk[3773]" -type "float2" 1.3117561 0.28644568 ;
+	setAttr ".uvtk[3774]" -type "float2" 1.3025391 0.46821404 ;
+	setAttr ".uvtk[3775]" -type "float2" 1.2527314 0.66665757 ;
+	setAttr ".uvtk[3776]" -type "float2" 1.1580985 0.87347287 ;
+	setAttr ".uvtk[3777]" -type "float2" 1.0230352 1.0805451 ;
+	setAttr ".uvtk[3778]" -type "float2" 1.8188814 -0.15875164 ;
+	setAttr ".uvtk[3779]" -type "float2" 1.6207273 -0.055163834 ;
+	setAttr ".uvtk[3780]" -type "float2" 1.4437505 0.0056113973 ;
+	setAttr ".uvtk[3781]" -type "float2" 1.2931776 0.029377252 ;
+	setAttr ".uvtk[3782]" -type "float2" 1.1533599 0.0081452727 ;
+	setAttr ".uvtk[3783]" -type "float2" 1.0589131 -0.031537801 ;
+	setAttr ".uvtk[3784]" -type "float2" 1.0027609 -0.079988271 ;
+	setAttr ".uvtk[3785]" -type "float2" 0.98251921 -0.12520736 ;
+	setAttr ".uvtk[3786]" -type "float2" 0.99250972 -0.15741834 ;
+	setAttr ".uvtk[3787]" -type "float2" 1.025265 -0.17011964 ;
+	setAttr ".uvtk[3788]" -type "float2" 1.0720758 -0.15952474 ;
+	setAttr ".uvtk[3789]" -type "float2" 1.1273004 -0.12396455 ;
+	setAttr ".uvtk[3790]" -type "float2" 1.1897084 -0.055085182 ;
+	setAttr ".uvtk[3791]" -type "float2" 1.2491035 0.047725558 ;
+	setAttr ".uvtk[3792]" -type "float2" 1.2961136 0.17681557 ;
+	setAttr ".uvtk[3793]" -type "float2" 1.3101979 0.32666719 ;
+	setAttr ".uvtk[3794]" -type "float2" 1.2974815 0.49702227 ;
+	setAttr ".uvtk[3795]" -type "float2" 1.2487115 0.68205595 ;
+	setAttr ".uvtk[3796]" -type "float2" 1.1619346 0.87383634 ;
+	setAttr ".uvtk[3797]" -type "float2" 1.0443386 1.0672905 ;
+	setAttr ".uvtk[3798]" -type "float2" 1.8225923 -0.16712935 ;
+	setAttr ".uvtk[3799]" -type "float2" 1.6474319 -0.069104992 ;
+	setAttr ".uvtk[3800]" -type "float2" 1.4878337 -0.010287106 ;
+	setAttr ".uvtk[3801]" -type "float2" 1.3474411 0.015528664 ;
+	setAttr ".uvtk[3802]" -type "float2" 1.2234392 0.0065392256 ;
+	setAttr ".uvtk[3803]" -type "float2" 1.1348686 -0.020572126 ;
+	setAttr ".uvtk[3804]" -type "float2" 1.0795269 -0.055735022 ;
+	setAttr ".uvtk[3805]" -type "float2" 1.0557083 -0.088471949 ;
+	setAttr ".uvtk[3806]" -type "float2" 1.0587046 -0.11016262 ;
+	setAttr ".uvtk[3807]" -type "float2" 1.0818226 -0.11511314 ;
+	setAttr ".uvtk[3808]" -type "float2" 1.1188998 -0.097866178 ;
+	setAttr ".uvtk[3809]" -type "float2" 1.1637034 -0.05904603 ;
+	setAttr ".uvtk[3810]" -type "float2" 1.2127835 0.0038765073 ;
+	setAttr ".uvtk[3811]" -type "float2" 1.261982 0.10300297 ;
+	setAttr ".uvtk[3812]" -type "float2" 1.2976886 0.22485918 ;
+	setAttr ".uvtk[3813]" -type "float2" 1.3073593 0.36522222 ;
+	setAttr ".uvtk[3814]" -type "float2" 1.2911201 0.52272499 ;
+	setAttr ".uvtk[3815]" -type "float2" 1.2440462 0.69224536 ;
+	setAttr ".uvtk[3816]" -type "float2" 1.1660683 0.86634755 ;
+	setAttr ".uvtk[3817]" -type "float2" 1.0678897 1.0411769 ;
+	setAttr ".uvtk[3818]" -type "float2" 1.8244141 -0.16752329 ;
+	setAttr ".uvtk[3819]" -type "float2" 1.6729941 -0.082663275 ;
+	setAttr ".uvtk[3820]" -type "float2" 1.5315553 -0.026181892 ;
+	setAttr ".uvtk[3821]" -type "float2" 1.4037929 0.0021950155 ;
+	setAttr ".uvtk[3822]" -type "float2" 1.293999 0.0038802624 ;
+	setAttr ".uvtk[3823]" -type "float2" 1.2112676 -0.011282712 ;
+	setAttr ".uvtk[3824]" -type "float2" 1.1570386 -0.033412963 ;
+	setAttr ".uvtk[3825]" -type "float2" 1.129894 -0.0536699 ;
+	setAttr ".uvtk[3826]" -type "float2" 1.1260183 -0.064608276 ;
+	setAttr ".uvtk[3827]" -type "float2" 1.1394534 -0.061385155 ;
+	setAttr ".uvtk[3828]" -type "float2" 1.1661967 -0.036701739 ;
+	setAttr ".uvtk[3829]" -type "float2" 1.2006036 0.0060061812 ;
+	setAttr ".uvtk[3830]" -type "float2" 1.2387929 0.068742216 ;
+	setAttr ".uvtk[3831]" -type "float2" 1.276141 0.15952736 ;
+	setAttr ".uvtk[3832]" -type "float2" 1.3021766 0.27085692 ;
+	setAttr ".uvtk[3833]" -type "float2" 1.3055459 0.40048742 ;
+	setAttr ".uvtk[3834]" -type "float2" 1.286335 0.54427946 ;
+	setAttr ".uvtk[3835]" -type "float2" 1.2417061 0.6972664 ;
+	setAttr ".uvtk[3836]" -type "float2" 1.1732087 0.85285503 ;
+	setAttr ".uvtk[3837]" -type "float2" 1.092376 1.0051996 ;
+	setAttr ".uvtk[3838]" -type "float2" 1.8275751 -0.16567019 ;
+	setAttr ".uvtk[3839]" -type "float2" 1.6975498 -0.092232317 ;
+	setAttr ".uvtk[3840]" -type "float2" 1.5727279 -0.0392856 ;
+	setAttr ".uvtk[3841]" -type "float2" 1.4588096 -0.0085258484 ;
+	setAttr ".uvtk[3842]" -type "float2" 1.3608842 0.0015208423 ;
+	setAttr ".uvtk[3843]" -type "float2" 1.2841406 -0.0029771328 ;
+	setAttr ".uvtk[3844]" -type "float2" 1.2313222 -0.013286561 ;
+	setAttr ".uvtk[3845]" -type "float2" 1.2014074 -0.02202338 ;
+	setAttr ".uvtk[3846]" -type "float2" 1.191409 -0.022794724 ;
+	setAttr ".uvtk[3847]" -type "float2" 1.1961218 -0.011683166 ;
+	setAttr ".uvtk[3848]" -type "float2" 1.2113732 0.020657837 ;
+	setAttr ".uvtk[3849]" -type "float2" 1.2352937 0.065534651 ;
+	setAttr ".uvtk[3850]" -type "float2" 1.2639831 0.12799048 ;
+	setAttr ".uvtk[3851]" -type "float2" 1.2908388 0.21061921 ;
+	setAttr ".uvtk[3852]" -type "float2" 1.3097068 0.31238878 ;
+	setAttr ".uvtk[3853]" -type "float2" 1.3067412 0.43092901 ;
+	setAttr ".uvtk[3854]" -type "float2" 1.285409 0.56093776 ;
+	setAttr ".uvtk[3855]" -type "float2" 1.2438774 0.69740301 ;
+	setAttr ".uvtk[3856]" -type "float2" 1.1846567 0.8341555 ;
+	setAttr ".uvtk[3857]" -type "float2" 1.1181709 0.96465701 ;
+	setAttr ".uvtk[3858]" -type "float2" 1.8323163 -0.16021681 ;
+	setAttr ".uvtk[3859]" -type "float2" 1.7197893 -0.096463904 ;
+	setAttr ".uvtk[3860]" -type "float2" 1.6099977 -0.047393143 ;
+	setAttr ".uvtk[3861]" -type "float2" 1.5086691 -0.015352875 ;
+	setAttr ".uvtk[3862]" -type "float2" 1.4208894 0.00083133578 ;
+	setAttr ".uvtk[3863]" -type "float2" 1.3498279 0.0049715638 ;
+	setAttr ".uvtk[3864]" -type "float2" 1.2986294 0.0043986142 ;
+	setAttr ".uvtk[3865]" -type "float2" 1.2667348 0.0052886605 ;
+	setAttr ".uvtk[3866]" -type "float2" 1.2520299 0.013348579 ;
+	setAttr ".uvtk[3867]" -type "float2" 1.2488236 0.031561971 ;
+	setAttr ".uvtk[3868]" -type "float2" 1.2527027 0.06824702 ;
+	setAttr ".uvtk[3869]" -type "float2" 1.2664927 0.11426085 ;
+	setAttr ".uvtk[3870]" -type "float2" 1.289578 0.17429143 ;
+	setAttr ".uvtk[3871]" -type "float2" 1.3077673 0.25182194 ;
+	setAttr ".uvtk[3872]" -type "float2" 1.3198766 0.3465215 ;
+	setAttr ".uvtk[3873]" -type "float2" 1.3126414 0.45517886 ;
+	setAttr ".uvtk[3874]" -type "float2" 1.2902085 0.57250696 ;
+	setAttr ".uvtk[3875]" -type "float2" 1.2521242 0.69371617 ;
+	setAttr ".uvtk[3876]" -type "float2" 1.201077 0.81302041 ;
+	setAttr ".uvtk[3877]" -type "float2" 1.1452231 0.92389482 ;
+	setAttr ".uvtk[3878]" -type "float2" 1.839074 -0.1501811 ;
+	setAttr ".uvtk[3879]" -type "float2" 1.7404672 -0.094168976 ;
+	setAttr ".uvtk[3880]" -type "float2" 1.6427083 -0.048911452 ;
+	setAttr ".uvtk[3881]" -type "float2" 1.5514445 -0.016719639 ;
+	setAttr ".uvtk[3882]" -type "float2" 1.4715086 0.0031856894 ;
+	setAttr ".uvtk[3883]" -type "float2" 1.405226 0.013269603 ;
+	setAttr ".uvtk[3884]" -type "float2" 1.355692 0.019546837 ;
+	setAttr ".uvtk[3885]" -type "float2" 1.3227434 0.027196348 ;
+	setAttr ".uvtk[3886]" -type "float2" 1.3045251 0.04109174 ;
+	setAttr ".uvtk[3887]" -type "float2" 1.2957094 0.065437376 ;
+	setAttr ".uvtk[3888]" -type "float2" 1.290801 0.10336506 ;
+	setAttr ".uvtk[3889]" -type "float2" 1.2969127 0.15016663 ;
+	setAttr ".uvtk[3890]" -type "float2" 1.3140572 0.20943207 ;
+	setAttr ".uvtk[3891]" -type "float2" 1.328192 0.28433079 ;
+	setAttr ".uvtk[3892]" -type "float2" 1.3331001 0.3731432 ;
+	setAttr ".uvtk[3893]" -type "float2" 1.3248674 0.47300416 ;
+	setAttr ".uvtk[3894]" -type "float2" 1.3023708 0.57965803 ;
+	setAttr ".uvtk[3895]" -type "float2" 1.2676566 0.68819928 ;
+	setAttr ".uvtk[3896]" -type "float2" 1.2229627 0.79317188 ;
+	setAttr ".uvtk[3897]" -type "float2" 1.1737329 0.88838673 ;
+	setAttr ".uvtk[3898]" -type "float2" 1.8505632 -0.13535808 ;
+	setAttr ".uvtk[3899]" -type "float2" 1.7608818 -0.084415406 ;
+	setAttr ".uvtk[3900]" -type "float2" 1.6708411 -0.042402983 ;
+	setAttr ".uvtk[3901]" -type "float2" 1.5860173 -0.011135578 ;
+	setAttr ".uvtk[3902]" -type "float2" 1.5110006 0.0099873841 ;
+	setAttr ".uvtk[3903]" -type "float2" 1.4480276 0.0228526 ;
+	setAttr ".uvtk[3904]" -type "float2" 1.3999821 0.032422125 ;
+	setAttr ".uvtk[3905]" -type "float2" 1.3670797 0.043187618 ;
+	setAttr ".uvtk[3906]" -type "float2" 1.3482635 0.059399247 ;
+	setAttr ".uvtk[3907]" -type "float2" 1.3380071 0.085532129 ;
+	setAttr ".uvtk[3908]" -type "float2" 1.3299937 0.12406963 ;
+	setAttr ".uvtk[3909]" -type "float2" 1.33145 0.1734814 ;
+	setAttr ".uvtk[3910]" -type "float2" 1.3363523 0.23268169 ;
+	setAttr ".uvtk[3911]" -type "float2" 1.3427911 0.30551755 ;
+	setAttr ".uvtk[3912]" -type "float2" 1.3458707 0.39087111 ;
+	setAttr ".uvtk[3913]" -type "float2" 1.3411973 0.48515642 ;
+	setAttr ".uvtk[3914]" -type "float2" 1.3234649 0.5840345 ;
+	setAttr ".uvtk[3915]" -type "float2" 1.2917404 0.68358016 ;
+	setAttr ".uvtk[3916]" -type "float2" 1.2511532 0.77888733 ;
+	setAttr ".uvtk[3917]" -type "float2" 1.2046527 0.86393714 ;
+	setAttr ".uvtk[6592]" -type "float2" 1.9338011 -0.19130549 ;
+	setAttr ".uvtk[6593]" -type "float2" 1.2399567 0.85546827 ;
+	setAttr ".uvtk[6594]" -type "float2" 1.932541 -0.21078357 ;
+	setAttr ".uvtk[6595]" -type "float2" 1.9410232 -0.23033863 ;
+	setAttr ".uvtk[6596]" -type "float2" 1.9544755 -0.25035954 ;
+	setAttr ".uvtk[6597]" -type "float2" 1.9685603 -0.27057531 ;
+	setAttr ".uvtk[6598]" -type "float2" 1.9793526 -0.29052809 ;
+	setAttr ".uvtk[6599]" -type "float2" 1.9833795 -0.30983332 ;
+	setAttr ".uvtk[6600]" -type "float2" 1.978459 -0.32752144 ;
+	setAttr ".uvtk[6601]" -type "float2" 1.9642302 -0.34712225 ;
+	setAttr ".uvtk[6602]" -type "float2" 1.9393954 -0.37170365 ;
+	setAttr ".uvtk[6603]" -type "float2" 1.9019881 -0.4031952 ;
+	setAttr ".uvtk[6604]" -type "float2" 1.8483746 -0.44029936 ;
+	setAttr ".uvtk[6605]" -type "float2" 1.7787546 -0.48355865 ;
+	setAttr ".uvtk[6606]" -type "float2" 1.6958191 -0.52941716 ;
+	setAttr ".uvtk[6607]" -type "float2" 1.6050539 -0.57301068 ;
+	setAttr ".uvtk[6608]" -type "float2" 1.5135981 -0.6097517 ;
+	setAttr ".uvtk[6609]" -type "float2" 1.428545 -0.63683748 ;
+	setAttr ".uvtk[6610]" -type "float2" 1.3553816 -0.65394193 ;
+	setAttr ".uvtk[6611]" -type "float2" 1.2823524 0.86455727 ;
+	setAttr ".uvtk[6612]" -type "float2" 1.9795593 -0.14402905 ;
+	setAttr ".uvtk[6613]" -type "float2" 1.2970006 -0.66253942 ;
+	setAttr ".uvtk[6614]" -type "float2" 1.8965107 -0.085027754 ;
+	setAttr ".uvtk[6615]" -type "float2" 1.3334992 0.77982557 ;
+	setAttr ".uvtk[6616]" -type "float2" 1.3738265 0.68627214 ;
+	setAttr ".uvtk[6617]" -type "float2" 1.399897 0.58943343 ;
+	setAttr ".uvtk[6618]" -type "float2" 1.4039464 0.49454331 ;
+	setAttr ".uvtk[6619]" -type "float2" 1.3974152 0.40224636 ;
+	setAttr ".uvtk[6620]" -type "float2" 1.3947444 0.31655669 ;
+	setAttr ".uvtk[6621]" -type "float2" 1.3928437 0.24183059 ;
+	setAttr ".uvtk[6622]" -type "float2" 1.3869412 0.17757702 ;
+	setAttr ".uvtk[6623]" -type "float2" 1.3860409 0.12425512 ;
+	setAttr ".uvtk[6624]" -type "float2" 1.392779 0.08791405 ;
+	setAttr ".uvtk[6625]" -type "float2" 1.4003391 0.069818377 ;
+	setAttr ".uvtk[6626]" -type "float2" 1.4144406 0.060727 ;
+	setAttr ".uvtk[6627]" -type "float2" 1.4445769 0.05597496 ;
+	setAttr ".uvtk[6628]" -type "float2" 1.4914057 0.052060843 ;
+	setAttr ".uvtk[6629]" -type "float2" 1.5542682 0.044539779 ;
+	setAttr ".uvtk[6630]" -type "float2" 1.6299399 0.028552353 ;
+	setAttr ".uvtk[6631]" -type "float2" 1.7155777 0.0021247864 ;
+	setAttr ".uvtk[6632]" -type "float2" 1.8063658 -0.0359281 ;
+createNode polyMapCut -n "polyMapCut9";
+	rename -uid "7B877F0E-4ADB-2E21-ABE0-3398CF8237DF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 10 "e[6726]" "e[6768]" "e[6810]" "e[6852]" "e[6894]" "e[6936]" "e[6978]" "e[7020]" "e[7062]" "e[7104]";
+createNode polyTweakUV -n "polyTweakUV6";
+	rename -uid "CC0AD38C-4DF6-A912-82D8-A884CD4F815D";
+	setAttr ".uopa" yes;
+	setAttr -s 6644 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673;
+	setAttr ".uvtk[250:499]" 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673;
+	setAttr ".uvtk[500:749]" 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673;
+	setAttr ".uvtk[750:999]" 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673;
+	setAttr ".uvtk[1000:1249]" 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676;
+	setAttr ".uvtk[1250:1499]" 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676;
+	setAttr ".uvtk[1500:1749]" 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673;
+	setAttr ".uvtk[1750:1999]" 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319673 0 0.33319676
+		 0 0.33319673 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679
+		 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676
+		 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676;
+	setAttr ".uvtk[2000:2249]" 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676
+		 0 0.33319676 0 0.33319673 0 0.33319679 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319679
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319673
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319673
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319679 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319673 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676;
+	setAttr ".uvtk[2250:2499]" 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319679 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673;
+	setAttr ".uvtk[2500:2749]" 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673;
+	setAttr ".uvtk[2750:2999]" 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673;
+	setAttr ".uvtk[3000:3249]" 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 -0.03954494 -0.51449251 -0.05490157 -0.52628577
+		 -0.047922045 -0.56216735 -0.034531176 -0.54942536 -0.024431318 -0.50505662 -0.021572173
+		 -0.5396812 -0.0084059238 -0.49998444 -0.0094982088 -0.53318757 0.0097998381 -0.49185306
+		 0.0059096217 -0.53319633 0.026584268 -0.47903273 0.022673786 -0.52454138 0.044082463
+		 -0.46880382 0.042296112 -0.51889563 0.061901152 -0.46392304 0.062385499 -0.51843876
+		 0.033324778 -0.46608639 0.034355581 -0.51365852 0.040597439 -0.48347747 0.039399087
+		 -0.53189284 0.061390519 -0.5038259 0.055158913 -0.55088425 0.011716604 -0.52523506
+		 0.02269423 -0.56975555 0.019469559 -0.54605865 0.027775407 -0.58876264 0.026900232
+		 -0.56621349 0.035030425 -0.60912776 0.034601986 -0.58775824 0.051161468 -0.63216853
+		 0.036595643 -0.58923799 0.051685214 -0.6218999 0.043371379 -0.58419496 0.066239417
+		 -0.60292131 0.030983031 -0.58214754 0.065317512 -0.57381266 0.015584111 -0.63366878
+		 0.063744724 -0.61471277 0.028305054 -0.60918933 0.082466125 -0.58345288 0.043984532
+		 -0.57865483 0.10062033 -0.55111659 0.06115973 -0.55417019 0.11731982 -0.52918416
+		 0.077511728 -0.52581632 0.13096124 -0.50690073 0.11032063 -0.49813837 0.14494199
+		 -0.48893845 -0.13343897 -0.47784168 0.19124854 -0.4690572 -0.12694812 -0.47924602
+		 -0.15668905 -0.49421185 -0.11735561 -0.45054924 -0.16449696 -0.47173774 -0.11434427
+		 -0.48140645 -0.13644409 -0.50277007 -0.089825273 -0.5103811 -0.11109519 -0.53175956
+		 -0.068675339 -0.53743291 -0.08960706 -0.55765224 -0.051207066 -0.55821735 -0.071257383
+		 -0.57616305 -0.036337763 -0.58520621 -0.055159271 -0.60216624 -0.023735464 -0.59996212
+		 -0.041404575 -0.61603779 -0.013742894 -0.6134575 -0.030372798 -0.62865084 -0.0067792237
+		 -0.64352751 -0.022555739 -0.6577239 -0.0032769442 -0.57755214 -0.018477529 -0.6850028
+		 -0.0035895705 -0.57479101 -0.018577725 -0.60779732 0.0077970922 -0.56911963 -0.0052511096
+		 -0.60295236 0.014112234 -0.56114435 0.0024704039 -0.59562343 0.018221647 -0.55311668
+		 0.0080622435 -0.58801007 0.020307899 -0.55822587 0.011557728 -0.59693635 -0.075679332
+		 -0.54096019 -0.066916257 -0.57814753 -0.031992644 -0.58599794 -0.022957712 -0.57089174
+		 -0.014625818 -0.56002975 -0.0081765354 -0.55337965 -0.0026502609 -0.55065536 0.0037933588
+		 -0.55477941 0.01608789 -0.56175834 0.031508029 -0.54000998 -0.00066357851 -0.5596624
+		 -0.00072282553 -0.58009648 0.0097907782 -0.60082316 0.010070205 -0.62269682 0.016720057
+		 -0.64705235 0.027673364 -0.6742003 0.043168426 -0.65911013 0.060509682 -0.66384166
+		 0.077877462 -0.72468495 0.086426914 -0.68037432 0.085280836 -0.62105775 0.11483318
+		 -0.58085239 0.13923508 -0.54557854 0.15781355 -0.52711338 0.17098677 -0.51278317
+		 0.20422649 -0.50709337 0.24764633 -0.49973714 -0.20211583 -0.53230441 -0.19417053
+		 -0.50834489 -0.16470706 -0.53719854 -0.13862827 -0.56501579 -0.11452755 -0.59089035
+		 -0.09255743 -0.60886669 -0.073536664 -0.63217223 -0.057210237 -0.64302593 -0.044065148
+		 -0.65220481 -0.03474167 -0.67734009 -0.029914647 -0.70016682 -0.030124038 -0.640284
+		 -0.0046872199 -0.63253629 0.0041415691 -0.62375456 0.010445416 -0.61458391 0.014226288
+		 -0.62712967 -0.047091573 -0.60491866 -0.0077948868 -0.59166789 -0.0052676797 -0.57294321
+		 -0.0039880276 -0.55945909 -0.004930526 -0.55162513 -0.0072951913 -0.54968214 -0.012295842
+		 -0.55341184 -0.015096366 -0.56260377 -0.014039218 -0.57811451 -0.055940807 -0.59800708
+		 -0.060667574 -0.62186521 -0.051771104 -0.65155429 0.003899157 -0.68424833 -0.003970921
+		 -0.66805547 0.010768533 -0.68119234 0.029211938 -0.69249386 0.037188232 -0.70172256
+		 0.051043332 -0.75513792 0.079994559 -0.7226851 0.11776525 -0.66865522 0.15544748
+		 -0.62941861 0.18741864 -0.59470123 0.21143693 -0.57963687 0.22555065 -0.57202655
+		 0.27161515 -0.57482177 0.31623769 -0.56846684 -0.26527297 -0.58926356 -0.23065056
+		 -0.55724442 -0.19792049 -0.58488059 -0.16679378 -0.61095053 -0.13738002 -0.63441187
+		 -0.10999434 -0.65091354 -0.085777536 -0.67240363 -0.065684304 -0.67799336 -0.049658552
+		 -0.68097198 -0.038540944 -0.69903392 -0.033136591 -0.71415734 -0.0052919239 -0.66830522
+		 0.0076819658 -0.65738839 0.017472059 -0.64532775 0.023938835 -0.63278371 0.027089536
+		 -0.62042791 -0.017106444 -0.61507565 0.022639275 -0.60308176 0.017086357 -0.57972705
+		 0.0095638633 -0.56287766 -0.0006377995 -0.55307597 -0.012428224 -0.5506438 -0.026854932
+		 -0.55566144 -0.039016902 -0.56796324 -0.043186247 -0.58120954 -0.084587514 -0.59323132
+		 -0.091713011 -0.61764228 -0.090367794 -0.65994883 -0.045274973 -0.66676456 -0.03071928
+		 -0.68971419 -0.014239907 -0.70751351 0.0066337585 -0.72331291 0.057006359 -0.73658246
+		 0.070614398 -0.77929628 0.093756318 -0.76755607 0.13059086 -0.72946292 0.17200494
+		 -0.7004388 0.2097497 -0.67444861 0.24110454 -0.66633934 0.26838499 -0.66171306 0.29816979
+		 -0.65733016 0.33649069 -0.63382965 -0.30537647 -0.61674351;
+	setAttr ".uvtk[3250:3499]" -0.26373774 -0.61548424 -0.22363466 -0.64254361 -0.18540585
+		 -0.66654509 -0.14931002 -0.68650913 -0.11588186 -0.69798821 -0.086114556 -0.7141524
+		 -0.061594099 -0.71296865 -0.042515367 -0.70765978 -0.029578209 -0.71683341 -0.02299504
+		 -0.72374034 0.01367338 -0.69243759 0.028532982 -0.67718285 0.039219528 -0.6604687
+		 0.045526847 -0.64314383 0.047459126 -0.6260857 0.020460904 -0.63220632 0.055872649
+		 -0.58347881 0.04160437 -0.55494887 0.024530619 -0.53432322 0.0042434037 -0.52230918
+		 -0.017829835 -0.51932633 -0.042385697 -0.52547967 -0.063777506 -0.54003352 -0.06708014
+		 -0.54479223 -0.10441971 -0.54648852 -0.11315006 -0.57092601 -0.12272525 -0.62742627
+		 -0.092770398 -0.66954911 -0.059929609 -0.7056607 -0.041922331 -0.72992676 -0.020031214
+		 -0.7526409 0.039322317 -0.77164894 0.057458818 -0.79782856 0.083007634 -0.79556841
+		 0.11435848 -0.77915907 0.15501481 -0.76653016 0.19750053 -0.74917251 0.23794502 -0.74334264
+		 0.27892035 -0.73194379 0.32566404 -0.71250021 0.37520528 -0.68337929 -0.34245139
+		 -0.64634436 -0.29308194 -0.66913044 -0.24517126 -0.69676608 -0.19942401 -0.71895587
+		 -0.15647735 -0.73467755 -0.11721338 -0.73970276 -0.082760498 -0.74795258 -0.053755239
+		 -0.73999643 -0.030910537 -0.72764605 -0.014909551 -0.72966653 -0.006351307 -0.72886384
+		 0.035395026 -0.71227831 0.052388445 -0.69207448 0.064142242 -0.6700561 0.070315242
+		 -0.6472944 0.07094197 -0.66026855 0.061320931 -0.61896396 0.087513775 -0.57269782
+		 0.065052837 -0.53910744 0.038943738 -0.51477695 0.0090791285 -0.50058687 -0.0227741
+		 -0.49706149 -0.056958437 -0.50433272 -0.087612092 -0.52177221 -0.09629339 -0.52636415
+		 -0.13445455 -0.52410448 -0.14626724 -0.55072796 -0.16428983 -0.62033117 -0.10037082
+		 -0.67367613 -0.084486008 -0.71825945 -0.065906942 -0.74793279 -0.045141935 -0.77624935
+		 0.023496211 -0.80114073 0.046577811 -0.81177402 0.079020202 -0.81278729 0.11471355
+		 -0.80255216 0.1550703 -0.80335099 0.19984394 -0.7955603 0.2478652 -0.78950167 0.30178845
+		 -0.77140993 0.35763276 -0.75069463 0.41383243 -0.72260386 -0.37904781 -0.66372567
+		 -0.32303429 -0.70835263 -0.2684837 -0.73551244 -0.21630745 -0.75588918 -0.16741921
+		 -0.7681967 -0.12273273 -0.76885682 -0.082840487 -0.77266055 -0.048638105 -0.75974113
+		 -0.021332033 -0.74210101 -0.0014954358 -0.738208 0.027577952 -0.72911417 0.053304508
+		 -0.72756356 0.072591037 -0.70284164 0.086294346 -0.6757381 0.09304069 -0.64761883
+		 0.09283565 -0.66010034 0.10079308 -0.61353213 0.11324516 -0.58697629 0.084154546
+		 -0.54926634 0.050782651 -0.52184188 0.013193578 -0.50583041 -0.026559711 -0.50185084
+		 -0.068517566 -0.51005828 -0.10679609 -0.53013319 -0.12951982 -0.54779959 -0.11127692
+		 -0.55511534 -0.12059426 -0.58836734 -0.12390882 -0.63068658 -0.11626208 -0.68591654
+		 -0.09874028 -0.72877592 -0.077769578 -0.76160455 -0.047234416 -0.79218 -0.037904978
+		 -0.82005674 0.063990891 -0.81589365 0.10141969 -0.82047969 0.14123201 -0.81433463
+		 0.1857329 -0.81899959 0.23180985 -0.81585371 0.28640962 -0.80933553 0.34211469 -0.79566085
+		 0.40754092 -0.77553779 0.46903461 -0.74821514 -0.41961709 -0.66816765 -0.3575702
+		 -0.73342073 -0.29637426 -0.75894976 -0.24095851 -0.77834189 -0.18832046 -0.78879273
+		 -0.13911831 -0.78663856 -0.098386265 -0.79289335 -0.073414922 -0.78973103 -0.030856058
+		 -0.76756567 0.0068962313 -0.74699247 0.025345821 -0.72853923 0.061115019 -0.73886865
+		 0.083181858 -0.71066749 0.097535029 -0.67960441 0.10253288 -0.64892721 0.10294686
+		 -0.6747514 0.13506392 -0.62689936 0.1301194 -0.54918611 0.09640038 -0.50957227 0.058477521
+		 -0.48012045 0.016035259 -0.46291444 -0.028687418 -0.4586367 -0.075533926 -0.46745878
+		 -0.11842859 -0.48902711 -0.15377206 -0.520455 -0.11937505 -0.54662955 -0.12774581
+		 -0.58916593 -0.12782615 -0.66138411 -0.11768323 -0.70087266 -0.098327756 -0.73901677
+		 -0.072084546 -0.7734946 -0.037030041 -0.80365223 -0.026676774 -0.83026904 0.085317791
+		 -0.80886161 0.12382841 -0.81788707 0.16516346 -0.81571567 0.21183419 -0.82310605
+		 0.26875412 -0.81539857 0.33631378 -0.80192041 0.3831951 -0.79782963 0.4450534 -0.78518403
+		 0.51052862 -0.75825065 -0.41098535 -0.64049542 -0.37695232 -0.74156314 -0.34831995
+		 -0.76555848 -0.29274195 -0.78509992 -0.24083641 -0.79566687 -0.18886739 -0.79234648
+		 -0.20405285 -0.78662556 -0.20509309 -0.78991443 -0.15095419 -0.80545539 -0.066882111
+		 -0.75157028 0.0059547666 -0.72409141 0.053054418 -0.74826056 0.093147643 -0.71790624
+		 0.077185541 -0.68708748 0.094888702 -0.6573869 0.097414918 -0.63440931 0.15712737
+		 -0.58654332 0.13565508 -0.58292723 0.10059592 -0.54262197 0.061257929 -0.51245821
+		 0.017303079 -0.4948329 -0.028970182 -0.49045038 -0.077342749 -0.49948809 -0.12167877
+		 -0.52158117 -0.15980071 -0.55585289 -0.1053918 -0.59856403 -0.11818272 -0.64904004
+		 -0.11509591 -0.71480232 -0.10272878 -0.71496308 -0.081040621 -0.75134724 -0.050075948
+		 -0.78530431 0.05722481 -0.81385273 0.069142282 -0.83681482 0.096051097 -0.79429626
+		 0.13223821 -0.80754417 0.17349726 -0.80740422 0.22090453 -0.8157292 0.28709143 -0.80269361
+		 0.35317034 -0.7911005 0.40262938 -0.78633928 0.45760792 -0.77983397 0.52425575 -0.75303668
+		 -0.44323292 -0.63506144 -0.41521835 -0.73453891 -0.38207802 -0.75777817 -0.32793555
+		 -0.77783704 -0.27828795 -0.78912705 -0.23107126 -0.79004192 -0.26683122 -0.7997399
+		 -0.25738096 -0.79996622 -0.18631196 -0.79761213 -0.10434286 -0.73904854 -0.024344867
+		 -0.71142292 0.029468013 -0.75623411 0.072686784 -0.72692817 0.056430757 -0.69897354
+		 0.076489508 -0.67134327 0.081603535 -0.66789567 0.16415767 -0.61979806 0.13015084
+		 -0.61118597 0.096922517 -0.57104409 0.059204251 -0.54148197 0.016976744 -0.52421212
+		 -0.027528882 -0.51991832 -0.074165285 -0.52877313 -0.11686498 -0.55042201 -0.1535123
+		 -0.58401376 -0.099563181 -0.62826645 -0.093415856 -0.6815607 -0.086711228 -0.7420519
+		 -0.071395636 -0.7346105 -0.046804607 -0.76793545 -0.013395607 -0.79840398 0.027687132
+		 -0.82389349 0.12976623 -0.84187144 0.15438592 -0.77704382 0.18740708 -0.79195249
+		 0.22776043 -0.7911517 0.27499843 -0.79828572 0.34095675 -0.78486216 0.40279919 -0.7760601
+		 0.45482856 -0.76841056 0.50754082 -0.76131517;
+	setAttr ".uvtk[3500:3749]" 0.57232612 -0.73453718 -0.47540578 -0.6164127 -0.45211539
+		 -0.71581358 -0.41846603 -0.73928446 -0.3661218 -0.75965691 -0.3185614 -0.77136564
+		 -0.27474412 -0.77432394 -0.2922281 -0.78013396 -0.27828074 -0.77183205 -0.20867078
+		 -0.79371899 -0.13745624 -0.80057114 -0.061451189 -0.78930062 -0.0080406833 -0.76434398
+		 0.037947983 -0.7393229 0.021564163 -0.71502054 0.047556579 -0.69084138 0.055890165
+		 -0.69837064 0.15644644 -0.64981961 -1.4233458 0.083348736 -1.43681502 0.096338645
+		 -1.21209037 0.26430431 -1.20521963 0.24591345 -1.40988493 0.068102345 -1.1950078
+		 0.2266953 -1.39648771 0.051156744 -1.18249226 0.20687348 -1.38303173 0.03308104 -1.16842651
+		 0.1865039 -1.36927199 0.014326438 -1.1546793 0.16510335 -1.35534298 -0.0049990863
+		 -1.14059365 0.1434755 -1.34140635 -0.024765953 -1.12621164 0.12165882 -1.32763529
+		 -0.044746086 -1.11134362 0.099546507 -1.31165552 -0.064007685 -1.093583941 0.078452751
+		 -1.29377484 -0.083641931 -1.074689627 0.058664277 -1.27777803 -0.10455899 -1.059433937
+		 0.038948283 -1.2615279 -0.12467764 -1.04644835 0.01841341 -1.24807453 -0.14603172
+		 -1.032287955 -0.0011399835 -1.23531151 -0.16710053 -1.019292831 -0.021832392 -1.22635031
+		 -0.18872188 -1.0073008537 -0.045272514 -1.218472 -0.20834117 -0.99460739 -0.067506477
+		 -1.20966864 -0.22592573 -0.98083651 -0.0856006 -1.20250893 -0.24286859 -0.96657932
+		 -0.099609837 -1.44991148 0.10685985 -0.95180714 -0.1089022 -1.22596741 0.26262647
+		 -1.21842289 0.2423023 -1.20759058 0.22168869 -1.19469941 0.20104043 -1.1806525 0.18035597
+		 -1.16670835 0.15902352 -1.15253806 0.13735172 -1.13807154 0.11546318 -1.12339354
+		 0.093451545 -1.10710144 0.072379127 -1.08845675 0.05221723 -1.072415829 0.031283423
+		 -1.056955934 0.010345176 -1.042001963 -0.010543272 -1.028679967 -0.032936439 -1.016917348
+		 -0.057211623 -1.0039018393 -0.078429446 -0.98925167 -0.096562609 -0.9736442 -0.11173533
+		 -0.95701253 -0.12209384 -1.24139547 0.26163733 -1.23283291 0.23906603 -1.22117996
+		 0.21692821 -1.20778978 0.1953209 -1.1934458 0.17411059 -1.17921305 0.15255591 -1.16483617
+		 0.13076214 -1.15017509 0.10874517 -1.13524449 0.086576417 -1.12007022 0.064613774
+		 -1.10284317 0.043670699 -1.085924625 0.022352174 -1.06898272 0.0010595471 -1.053628206
+		 -0.020885453 -1.039959431 -0.0440294 -1.027518272 -0.068104848 -1.013625622 -0.089389369
+		 -0.99788713 -0.1087337 -0.980712 -0.12561654 -0.96160489 -0.13760917 -1.25781059
+		 0.26053292 -1.24790502 0.23553051 -1.23530197 0.21186769 -1.22133458 0.18928234 -1.20670021
+		 0.16743764 -1.19221807 0.14553344 -1.1774869 0.12365149 -1.16251791 0.10151877 -1.14724147
+		 0.079170004 -1.13192844 0.056586221 -1.11559534 0.034707204 -1.098966837 0.012795642
+		 -1.082285166 -0.0091793984 -1.066976428 -0.031895861 -1.052425027 -0.054982647 -1.038905025
+		 -0.078378543 -1.023709416 -0.10025315 -1.0070433617 -0.12126021 -0.98832119 -0.14034723
+		 -0.96649843 -0.15481208 -1.27448487 0.25864235 -1.26303267 0.23127681 -1.24945557
+		 0.2062671 -1.2349124 0.18281518 -1.2200191 0.1603521 -1.20505655 0.13825572 -1.19022441
+		 0.1161346 -1.17496145 0.093907401 -1.15933871 0.071456984 -1.1435436 0.048766181
+		 -1.12712193 0.026394948 -1.11090827 0.0038994104 -1.094952822 -0.018708274 -1.07957232
+		 -0.041562423 -1.064445257 -0.064452276 -1.049959779 -0.087882027 -1.034284353 -0.11088578
+		 -1.016849279 -0.1334828 -0.99681038 -0.15499477 -0.97250116 -0.17273431 -1.29070854
+		 0.25561282 -1.27770019 0.22617164 -1.26320803 0.20013084 -1.24812722 0.17603078 -1.23301864
+		 0.15303248 -1.2174015 0.1309595 -1.20270681 0.10842513 -1.1872623 0.086100325 -1.17137027
+		 0.063602045 -1.15521812 0.040870771 -1.1387229 0.018221453 -1.12244463 -0.0045084208
+		 -1.10657668 -0.027258262 -1.091274023 -0.050145552 -1.076002359 -0.073256776 -1.061161995
+		 -0.097165987 -1.045184731 -0.12094675 -1.027202249 -0.14491485 -1.0062310696 -0.16879545
+		 -0.98006862 -0.19035135 -1.30593276 0.2514011 -1.29156053 0.22029844 -1.27624393
+		 0.19360009 -1.2606523 0.16910744 -1.24556673 0.14557876 -1.22956133 0.1234978 -1.2148571
+		 0.10065721 -1.19918835 0.078326806 -1.18312621 0.055792049 -1.16672194 0.033061579
+		 -1.15016425 0.010251179 -1.1338495 -0.012622759 -1.11805975 -0.035495147 -1.10279155
+		 -0.058400974 -1.087280035 -0.081549272 -1.072276115 -0.10589598 -1.056175232 -0.1302204
+		 -1.037876368 -0.15527503 -1.016417742 -0.18125503 -0.98928857 -0.20677982 -1.31991434
+		 0.24615309 -1.30447674 0.21383514 -1.2884053 0.18684278 -1.27233708 0.16218632 -1.25738144
+		 0.1381986 -1.24155557 0.11585994 -1.22648311 0.093060657 -1.21059942 0.070755139
+		 -1.19445848 0.048164919 -1.17790246 0.02544184 -1.16125703 0.0025673062 -1.14488876
+		 -0.020371422 -1.1291281 -0.043295428 -1.11388373 -0.066178665 -1.098335385 -0.090014324
+		 -1.083098412 -0.1139627 -1.067044139 -0.13862716 -1.048647404 -0.16449146 -1.027136922
+		 -0.19217752 -1.000012397766 -0.22142182 -1.3335917 0.23988843 -1.31648254 0.20713191
+		 -1.29972363 0.17995618 -1.28405166 0.15469874 -1.26812506 0.1312273 -1.25289059 0.10839738
+		 -1.23736095 0.085831925 -1.2214936 0.063418821 -1.20535088 0.040753499 -1.18874645
+		 0.018022075 -1.17196202 -0.0048259944 -1.15552318 -0.027758703 -1.13975394 -0.050666913
+		 -1.12454796 -0.073490009 -1.10862446 -0.098464534 -1.093871355 -0.12139444 -1.077719688
+		 -0.14624272 -1.059415579 -0.1726722 -1.03824544 -0.20162384 -1.012058139 -0.23401611
+		 -1.34632516 0.23399188 -1.3279593 0.19990575 -1.31042194 0.17286821 -1.29616344 0.14652765
+		 -1.27838659 0.12431283 -1.26334882 0.10131623 -1.24780226 0.078753218 -1.23203135
+		 0.05620499 -1.21594667 0.033462688 -1.19940245 0.010703281 -1.1824131 -0.012025341
+		 -1.16590881 -0.034892067 -1.15011644 -0.057730898 -1.13494027 -0.080567583 -1.11813104
+		 -0.10614608 -1.10445297 -0.12839179 -1.088308692 -0.15327863 -1.070280313 -0.18004648
+		 -1.04980135 -0.20981024 -1.025377989 -0.24456976 -1.35692716 0.22831431 -1.33905578
+		 0.19198737 -1.32122517 0.16532356 -1.30806041 0.1380177 -1.28872192 0.1170591 -1.27356541
+		 0.094184563 -1.25813651 0.071546361 -1.24249172 0.048898295 -1.22649825 0.026106462
+		 -1.2100358 0.0033413917 -1.19288182 -0.019189402 -1.17629695 -0.041910753;
+	setAttr ".uvtk[3750:3999]" -1.16056156 -0.064668402 -1.14544964 -0.087546334
+		 -1.12745094 -0.1128615 -1.11508548 -0.1352372 -1.099082112 -0.16005079 -1.081465721
+		 -0.18694471 -1.061960936 -0.21712421 -1.040272355 -0.25254768 -1.36655951 0.22145984
+		 -1.34997749 0.1834431 -1.33215415 0.15700504 -1.31877065 0.12987514 -1.29927874 0.10930322
+		 -1.2841115 0.086585924 -1.26869702 0.063997552 -1.25317192 0.041311488 -1.23727202
+		 0.018512741 -1.22084928 -0.004181847 -1.20360684 -0.026496574 -1.18621552 -0.048527762
+		 -1.17131686 -0.071668789 -1.15643454 -0.094555125 -1.13836277 -0.11920707 -1.12635279
+		 -0.14205645 -1.11045074 -0.1666746 -1.093386531 -0.1934229 -1.075173855 -0.22356825
+		 -1.056295753 -0.25847393 -1.37815773 0.20992777 -1.36093831 0.17339708 -1.34313178
+		 0.14792579 -1.32827187 0.12221764 -1.3102113 0.10098679 -1.29494119 0.078512475 -1.27965617
+		 0.055985108 -1.26423097 0.033332869 -1.24841142 0.010578647 -1.23199177 -0.011984989
+		 -1.21463954 -0.034011647 -1.19717968 -0.05576615 -1.18180871 -0.078312263 -1.16812706
+		 -0.10164975 -1.15165389 -0.12572162 -1.13850677 -0.14887021 -1.12267828 -0.1731572
+		 -1.10631728 -0.19945322 -1.089691162 -0.22876959 -1.074306488 -0.26313287 -1.3911556
+		 0.1920954 -1.37170124 0.1615451 -1.35382044 0.13784382 -1.33817911 0.11387886 -1.32142591
+		 0.092018679 -1.30616426 0.069829658 -1.29097986 0.04749544 -1.27563882 0.024965927
+		 -1.25988817 0.0023077875 -1.24343574 -0.020103082 -1.22643054 -0.042103574 -1.2094841
+		 -0.063762113 -1.19355154 -0.08557789 -1.18018103 -0.10878961 -1.16611254 -0.13239138
+		 -1.15125906 -0.15548901 -1.13583636 -0.17936711 -1.12034345 -0.20490436 -1.10544097
+		 -0.23284774 -1.094284534 -0.26556236 -1.40233159 0.17184655 -1.38172019 0.1490991
+		 -1.36444354 0.12679343 -1.3486917 0.10417877 -1.33280933 0.082373604 -1.31755292
+		 0.060645476 -1.30246496 0.038628951 -1.28720915 0.016318008 -1.27153659 -0.0061938018
+		 -1.25506616 -0.028467104 -1.23824024 -0.050330028 -1.22195899 -0.071776018 -1.2067101
+		 -0.093446895 -1.19318807 -0.11601804 -1.17968965 -0.13910477 -1.16466713 -0.16182862
+		 -1.14979494 -0.18511312 -1.13533294 -0.20960025 -1.12229311 -0.2358797 -1.11415792
+		 -0.26508069 -1.41022849 0.15479657 -1.39123249 0.13567053 -1.37459159 0.11499219
+		 -1.35913861 0.093604401 -1.34390879 0.07233043 -1.32879472 0.051151052 -1.31382847
+		 0.029561535 -1.29868507 0.0075667053 -1.283149 -0.014750287 -1.2667861 -0.036856517
+		 -1.24949479 -0.058355138 -1.23370123 -0.079189703 -1.21945405 -0.10045563 -1.20611179
+		 -0.12252484 -1.19319153 -0.14567028 -1.17845583 -0.16778193 -1.16426253 -0.19025384
+		 -1.15095603 -0.21341638 -1.1397171 -0.237572 -1.13363767 -0.26305872 -1.41698813
+		 0.1386067 -1.39984512 0.12174036 -1.38408101 0.10274996 -1.36911583 0.082662359 -1.35446703
+		 0.062137172 -1.33960998 0.041575894 -1.32481599 0.020504013 -1.30984354 -0.0010757297
+		 -1.29458761 -0.023180231 -1.27807558 -0.044812128 -1.26007295 -0.065690622 -1.24431133
+		 -0.08542417 -1.23175168 -0.10714875 -1.21872783 -0.12873589 -1.20633411 -0.15166889
+		 -1.19223773 -0.17325334 -1.17882991 -0.19479679 -1.16671991 -0.21647237 -1.15703225
+		 -0.2383353 -1.15208173 -0.26027215 -1.42325306 0.12293737 -1.40778017 0.10794567
+		 -1.39294457 0.090541437 -1.3785553 0.071704522 -1.36439335 0.052045241 -1.34986424
+		 0.032146499 -1.33530784 0.011660799 -1.32058096 -0.0093792528 -1.30553555 -0.030962989
+		 -1.28900838 -0.052181706 -1.27053165 -0.072189435 -1.25483358 -0.091580674 -1.24297559
+		 -0.11322783 -1.23104858 -0.13548921 -1.2185092 -0.15738676 -1.2056005 -0.17848955
+		 -1.1930263 -0.1990032 -1.18204558 -0.21918057 -1.17354727 -0.23890464 -1.16892028
+		 -0.25784361 -1.42965746 0.10868566 -1.41545486 0.094988152 -1.40142035 0.078872159
+		 -1.38757443 0.061121657 -1.37381315 0.042304859 -1.35964549 0.023042843 -1.34539211
+		 0.0031676441 -1.33102703 -0.017233595 -1.31661344 -0.038089499 -1.30083656 -0.058740482
+		 -1.28283501 -0.078571543 -1.26705813 -0.098754212 -1.25249696 -0.11884819 -1.23959029
+		 -0.14014737 -1.22780859 -0.16214232 -1.21696103 -0.18351011 -1.20640266 -0.20340876
+		 -1.19642663 -0.22216479 -1.18874741 -0.24018876 -1.18389475 -0.25701356 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319679
+		 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679
+		 0 0.33319676 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319676 0 0.33319673 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319673 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676
+		 0 0.33319673 0 0.33319676 0 0.33319673 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319673 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676;
+	setAttr ".uvtk[4000:4249]" 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319679
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673
+		 0 0.33319673 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676
+		 0 0.33319679 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319673
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319679;
+	setAttr ".uvtk[4250:4499]" 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319673 0 0.33319676
+		 0 0.33319676 0 0.33319673 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319676 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319676 0 0.33319676
+		 0 0.33319676 0 0.33319673 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319679
+		 0 0.33319676 0 0.33319676 0 0.33319679 0 0.33319676 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673;
+	setAttr ".uvtk[4500:4749]" 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673;
+	setAttr ".uvtk[4750:4999]" 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673;
+	setAttr ".uvtk[5000:5249]" 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679;
+	setAttr ".uvtk[5250:5499]" 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673;
+	setAttr ".uvtk[5500:5749]" 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673;
+	setAttr ".uvtk[5750:5999]" 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679;
+	setAttr ".uvtk[6000:6249]" 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673;
+	setAttr ".uvtk[6250:6499]" 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673;
+	setAttr ".uvtk[6500:6643]" 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679
+		 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319673
+		 0 0.33319679 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673
+		 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319673 0 0.33319679 0 0.33319679 0 0.33319679 0 0.33319673 0 0.33319679
+		 0 0.33319673 0 0.33319679 0 0.33319673 0 0.33319679 -1.44377911 0.11909787 -1.19718099
+		 -0.25872219 -1.439376 0.13392459 -1.43572211 0.15112178 -1.43171477 0.16999964 -1.42644894
+		 0.18963325 -1.41914964 0.20908631 -1.40900111 0.22770406 -1.39682961 0.24339166 -1.38368082
+		 0.25620165 -1.36939156 0.26707342 -1.35408592 0.27610534 -1.33736014 0.28232217 -1.3193723
+		 0.28637677 -1.3004427 0.28825027 -1.28118193 0.28809148 -1.26235485 0.28637913 -1.24469256
+		 0.2839714 -1.2287159 0.28199446 -1.20936131 -0.2627992 -1.45786095 0.096682951 -1.2145822
+		 0.28149134 -1.44489837 0.085821316 -1.21507168 -0.24697594 -1.22222531 -0.23060237
+		 -1.2302016 -0.2137063 -1.23656321 -0.19508027 -1.2442553 -0.17393498 -1.25678635
+		 -0.1525716 -1.27205443 -0.13182805 -1.28721476 -0.10993408 -1.30415165 -0.08828418
+		 -1.32269239 -0.069303498 -1.33851039 -0.05156903 -1.3518312 -0.032414481 -1.36544251
+		 -0.013131544 -1.37911475 0.0057754666 -1.39270449 0.024090424 -1.40580642 0.041828856
+		 -1.41878498 0.058300748 -1.43179631 0.073083147 -0.47716451 -0.58220738 -0.50720978
+		 -0.5444681 -0.44570571 -0.60870212 -0.41276091 -0.62247175 -0.37866205 -0.62275344
+		 -0.3439374 -0.61019903 -0.30868304 -0.58645052 -0.2628586 -0.58116359 -0.1937969
+		 -0.51243389 -0.15220696 -0.48175395 0.14940286 -0.46514493;
+createNode polyPlane -n "polyPlane1";
+	rename -uid "17332787-464F-5110-B4FD-A69AFD16200E";
+	setAttr ".sw" 5;
+	setAttr ".sh" 5;
+	setAttr ".cuv" 2;
+createNode polyExtrudeEdge -n "polyExtrudeEdge1";
+	rename -uid "298D42BF-4562-6352-1E86-B38A0F41A0B7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+	setAttr ".ix" -type "matrix" 1.4910575107235979 0 0 0 0 1.4910575107235979 0 0 0 0 1.9963603036189725 0
+		 0.18518938441879534 0 -0.63658850893960917 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -1.3659286 0 0.64393121 ;
+	setAttr ".rs" 36747;
+	setAttr ".lt" -type "double3" -1.457167719820518e-16 0.26688378749302849 -3.7804401733890925e-18 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -2.0787762804493686 0 0.55223094747632706 ;
+	setAttr ".cbx" -type "double3" -0.65308111865551388 0 0.73563147166114129 ;
+createNode polyTweak -n "polyTweak4";
+	rename -uid "4398A064-423D-4EB2-960F-41AAA1BCB065";
+	setAttr ".uopa" yes;
+	setAttr -s 16 ".tk";
+	setAttr ".tk[0]" -type "float3" -1.0183624 0 0.095493436 ;
+	setAttr ".tk[1]" -type "float3" -0.2621986 0 0.1873609 ;
+	setAttr ".tk[2]" -type "float3" 0 0 0.026343031 ;
+	setAttr ".tk[3]" -type "float3" 0 0 0.026343029 ;
+	setAttr ".tk[4]" -type "float3" 0 0 0.062564686 ;
+	setAttr ".tk[5]" -type "float3" 0 0 0.062564686 ;
+	setAttr ".tk[6]" -type "float3" -0.98480403 0 5.5511151e-17 ;
+	setAttr ".tk[12]" -type "float3" -0.94285637 0 2.7755576e-17 ;
+	setAttr ".tk[18]" -type "float3" -0.73731154 0 2.7755576e-17 ;
+	setAttr ".tk[24]" -type "float3" -0.4730399 0 5.5511151e-17 ;
+	setAttr ".tk[30]" -type "float3" -1.1175871e-07 0 -0.017805077 ;
+	setAttr ".tk[31]" -type "float3" 0 0 -0.077076837 ;
+	setAttr ".tk[32]" -type "float3" 0 0 -0.10341978 ;
+	setAttr ".tk[33]" -type "float3" 0 0 -0.10341978 ;
+	setAttr ".tk[34]" -type "float3" 0 0 -0.077076837 ;
+	setAttr ".tk[35]" -type "float3" 0 0 -0.017805077 ;
+createNode polyExtrudeEdge -n "polyExtrudeEdge2";
+	rename -uid "1BE66094-4A70-0571-D0D1-BC8FD4B3FFA6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[62]";
+	setAttr ".ix" -type "matrix" 1.4910575107235979 0 0 0 0 1.4910575107235979 0 0 0 0 1.9963603036189725 0
+		 0.18518938441879534 0 -0.63658850893960917 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -1.3999799 -3.7804404e-18 0.90863371 ;
+	setAttr ".rs" 45826;
+	setAttr ".lt" -type "double3" 4.7184478546569153e-16 0.26361329658438098 -3.7341338234446144e-18 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -2.0240594313897762 -3.7804404430272442e-18 0.82835209312685143 ;
+	setAttr ".cbx" -type "double3" -0.77590056724591094 -3.7804404430272442e-18 0.98891536814045866 ;
+createNode polyTweak -n "polyTweak5";
+	rename -uid "9C1E7A7D-4317-83D4-E1CA-93AAC0619F1A";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk[36:37]" -type "float3"  0.059533477 0 0.0057197213
+		 -0.059533775 0 -0.0057197213;
+createNode polyExtrudeEdge -n "polyExtrudeEdge3";
+	rename -uid "1D755A02-4931-937A-292F-E1941CD2F44F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+	setAttr ".ix" -type "matrix" 1.4910575107235979 0 0 0 0 1.4910575107235979 0 0 0 0 1.9963603036189725 0
+		 0.18518938441879534 0 -0.63658850893960917 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 1.832889 0 0.76068485 ;
+	setAttr ".rs" 37796;
+	setAttr ".lt" -type "double3" 0.14203401218477321 0.37285779938641028 -4.1539296936223149e-16 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 1.3018182638126279 0 0.44459499232368527 ;
+	setAttr ".cbx" -type "double3" 2.3639595889462957 0 1.0767746762724162 ;
+createNode polyTweak -n "polyTweak6";
+	rename -uid "7F9D59E2-47E9-9260-F83A-2AAB7D55F45C";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".tk";
+	setAttr ".tk[5]" -type "float3" 0.24888384 0 0.29567876 ;
+	setAttr ".tk[11]" -type "float3" 0.96122485 0 0.24157733 ;
+	setAttr ".tk[17]" -type "float3" 0.80177993 0 -2.7755576e-17 ;
+	setAttr ".tk[23]" -type "float3" 0.65600139 0 -2.7755576e-17 ;
+	setAttr ".tk[29]" -type "float3" 0.34622288 0 -0.020414976 ;
+	setAttr ".tk[38]" -type "float3" 0.17962632 0 0.25610948 ;
+	setAttr ".tk[39]" -type "float3" -0.24796052 0 0.36314505 ;
+createNode polyExtrudeEdge -n "polyExtrudeEdge4";
+	rename -uid "54C83710-4B7B-E393-2ABC-35986CA2C1DD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[68]";
+	setAttr ".ix" -type "matrix" 1.4910575107235979 0 0 0 0 1.4910575107235979 0 0 0 0 1.9963603036189725 0
+		 0.18518938441879534 0 -0.63658850893960917 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 1.9015379 -4.1539292e-16 1.1537293 ;
+	setAttr ".rs" 54475;
+	setAttr ".lt" -type "double3" 0.14486397953900837 0.28125044709138025 -6.2833498091094402e-17 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 1.370467171534161 -4.1539293724708759e-16 0.83763956478232549 ;
+	setAttr ".cbx" -type "double3" 2.4326086744157349 -4.1539293724708759e-16 1.4698190107463627 ;
+createNode polyExtrudeEdge -n "polyExtrudeEdge5";
+	rename -uid "2AB675B1-4B3D-9A1C-410F-18BA4D8281C2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[71]";
+	setAttr ".ix" -type "matrix" 1.4910575107235979 0 0 0 0 1.4910575107235979 0 0 0 0 1.9963603036189725 0
+		 0.18518938441879534 0 -0.63658850893960917 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 1.9209036 -7.9156166e-16 1.4695013 ;
+	setAttr ".rs" 47598;
+	setAttr ".lt" -type "double3" 0.074468889133717242 0.33483680486800138 -1.1226344824814458e-16 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 1.4435547111036759 -7.9156166495556877e-16 1.1853867256453734 ;
+	setAttr ".cbx" -type "double3" 2.3982523148057457 -7.9156166495556877e-16 1.7536157577234088 ;
+createNode polyTweak -n "polyTweak7";
+	rename -uid "B5276E3D-44F7-987B-F85E-53A532DD8829";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk[42:43]" -type "float3"  0.036030471 0 -0.016017079
+		 -0.036028504 0 0.016016424;
+createNode polyExtrudeFace -n "polyExtrudeFace7";
+	rename -uid "2E9B1D85-4E8E-E90C-C9ED-C5BF71D0481B";
+	setAttr ".ics" -type "componentList" 1 "f[0:29]";
+	setAttr ".ix" -type "matrix" 1.4910575107235979 0 0 0 0 1.4910575107235979 0 0 0 0 1.9963603036189725 0
+		 0.18518938441879534 0 -0.63658850893960917 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.17691655 -6.7583229e-16 0.067055359 ;
+	setAttr ".rs" 60057;
+	setAttr ".lt" -type "double3" 0 0 1 ;
+	setAttr ".d" 2;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".tk" 0.0030000000260770321;
+	setAttr ".cbn" -type "double3" -2.078776102701462 -1.3516645619992227e-15 -1.8412318056098438 ;
+	setAttr ".cbx" -type "double3" 2.4326092076594548 0 1.9753425268699991 ;
+createNode polyTweak -n "polyTweak8";
+	rename -uid "5F8575FC-40CD-1040-8E87-93BA6E1ABE7B";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk[44:45]" -type "float3"  0.14413327 0 -0.064073563
+		 -0.14413369 0 0.064073443;
+createNode polyBevel3 -n "polyBevel3";
+	rename -uid "D32F19D4-420D-1D6E-1500-D19FA65D1D8E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 26 "e[84:85]" "e[88:89]" "e[94:95]" "e[100:101]" "e[106:107]" "e[116:117]" "e[126:127]" "e[133:134]" "e[143:144]" "e[150:151]" "e[160:161]" "e[168:171]" "e[175:176]" "e[180:181]" "e[185]" "e[189:192]" "e[195:196]" "e[200:201]" "e[204:205]" "e[208:211]" "e[214:215]" "e[219:220]" "e[223:224]" "e[228:229]" "e[232:233]" "e[236:239]";
+	setAttr ".ix" -type "matrix" 1.4910575107235979 0 0 0 0 1.4910575107235979 0 0 0 0 1.9963603036189725 0
+		 0.18518938441879534 0 -0.63658850893960917 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".sg" 4;
+	setAttr ".d" 0.0205;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyExtrudeFace -n "pasted__polyExtrudeFace13";
+	rename -uid "73794051-4DD4-0890-178B-2A9335E2B384";
+	setAttr ".ics" -type "componentList" 1 "f[40]";
+	setAttr ".ix" -type "matrix" 1.8609642483955449 0 0 0 0 0.042201542597833215 0 0
+		 0 0 1.6367957222681333 0 5.784958392728341 3.6103039173464779 -19.695011487608316 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 5.7756538 4.2456799 -19.040295 ;
+	setAttr ".rs" 48339;
+	setAttr ".lt" -type "double3" 1.7763568394002505e-15 3.1319644674356315e-18 -0.02557443068169718 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 5.0219634457688898 3.7430910657375254 -19.04029382308908 ;
+	setAttr ".cbx" -type "double3" 6.5293441031787705 4.7482684394434402 -19.04029382308908 ;
+createNode polySplit -n "pasted__polySplit9";
+	rename -uid "1D9A0CFC-42AC-059F-37A2-E3AF5A271997";
+	setAttr -s 13 ".e[0:12]"  0.1 0.1 0.89999998 0.89999998 0.1 0.89999998
+		 0.1 0.1 0.89999998 0.1 0.1 0.1 0.1;
+	setAttr -s 13 ".d[0:12]"  -2147483648 -2147483647 -2147483602 -2147483601 -2147483626 -2147483599 
+		-2147483615 -2147483607 -2147483596 -2147483646 -2147483645 -2147483631 -2147483648;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "pasted__polySplit8";
+	rename -uid "62386B22-4622-3876-2BA7-B5BE7F6F5769";
+	setAttr -s 13 ".e[0:12]"  0.89999998 0.89999998 0.1 0.1 0.89999998
+		 0.1 0.89999998 0.89999998 0.1 0.89999998 0.89999998 0.89999998 0.89999998;
+	setAttr -s 13 ".d[0:12]"  -2147483648 -2147483647 -2147483605 -2147483613 -2147483626 -2147483622 
+		-2147483615 -2147483607 -2147483629 -2147483646 -2147483645 -2147483631 -2147483648;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "pasted__polySplit7";
+	rename -uid "D294D0B6-4287-486E-25D5-0F9D94F2C9EE";
+	setAttr -s 5 ".e[0:4]"  0.1 0.1 0.1 0.1 0.1;
+	setAttr -s 5 ".d[0:4]"  -2147483628 -2147483623 -2147483625 -2147483627 -2147483628;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "pasted__polySplit6";
+	rename -uid "CA047B8C-4931-BAFB-64E2-ABB29364BF2B";
+	setAttr -s 5 ".e[0:4]"  0.89999998 0.89999998 0.89999998 0.89999998
+		 0.89999998;
+	setAttr -s 5 ".d[0:4]"  -2147483628 -2147483623 -2147483625 -2147483627 -2147483628;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyExtrudeFace -n "pasted__polyExtrudeFace12";
+	rename -uid "B7FACB9A-40B2-3C89-4148-EAB190B2391F";
+	setAttr ".ics" -type "componentList" 1 "f[1]";
+	setAttr ".ix" -type "matrix" 1.8609642483955449 0 0 0 0 0.042201542597833215 0 0
+		 0 0 1.6367957222681333 0 6.4415873033524775 3.6103039173464779 -19.695011487608316 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 6.4415874 3.6314046 -18.958454 ;
+	setAttr ".rs" 56175;
+	setAttr ".lt" -type "double3" 0 0 1.2409599431856759 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 5.511105179154705 3.6314046886453943 -19.040293237725312 ;
+	setAttr ".cbx" -type "double3" 7.3720694275502501 3.6314046886453943 -18.876613626474249 ;
+createNode polySplit -n "pasted__polySplit5";
+	rename -uid "A008B409-4C5C-B058-C7C0-F9AE6F9C7CA7";
+	setAttr -s 5 ".e[0:4]"  0.1 0.89999998 0.89999998 0.1 0.1;
+	setAttr -s 5 ".d[0:4]"  -2147483642 -2147483638 -2147483637 -2147483641 -2147483642;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyCube -n "pasted__polyCube8";
+	rename -uid "A19CBF98-410E-7596-439F-4C95A38A7C1B";
+	setAttr ".cuv" 4;
+createNode polySplit -n "polySplit4";
+	rename -uid "A70AC493-4F2B-D2D0-DB2E-BE9375BC6775";
+	setAttr -s 15 ".e[0:14]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5;
+	setAttr -s 15 ".d[0:14]"  -2147483602 -2147483579 -2147483580 -2147483569 -2147483570 -2147483571 
+		-2147483596 -2147483573 -2147483552 -2147483549 -2147483574 -2147483599 -2147483576 -2147483601 -2147483602;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit5";
+	rename -uid "BD2F3BA6-4034-F5FC-73D6-A6A600941D88";
+	setAttr -s 15 ".e[0:14]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5;
+	setAttr -s 15 ".d[0:14]"  -2147483602 -2147483547 -2147483546 -2147483545 -2147483544 -2147483543 
+		-2147483596 -2147483541 -2147483540 -2147483539 -2147483538 -2147483599 -2147483536 -2147483601 -2147483602;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit6";
+	rename -uid "A85B946B-4C5B-0E1D-9818-BA8C506AA968";
+	setAttr -s 15 ".e[0:14]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5;
+	setAttr -s 15 ".d[0:14]"  -2147483580 -2147483579 -2147483548 -2147483535 -2147483576 -2147483537 
+		-2147483574 -2147483549 -2147483552 -2147483573 -2147483542 -2147483571 -2147483570 -2147483569 -2147483580;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit7";
+	rename -uid "CC6E5C0E-45BC-AC8B-1BC9-2BAB999924B9";
+	setAttr -s 15 ".e[0:14]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5;
+	setAttr -s 15 ".d[0:14]"  -2147483547 -2147483520 -2147483507 -2147483536 -2147483509 -2147483538 
+		-2147483539 -2147483540 -2147483541 -2147483514 -2147483543 -2147483544 -2147483545 -2147483546 -2147483547;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit8";
+	rename -uid "A8DD8073-4715-DFDB-3716-E2B3141C5AD8";
+	setAttr -s 15 ".e[0:14]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5;
+	setAttr -s 15 ".d[0:14]"  -2147483602 -2147483519 -2147483518 -2147483517 -2147483516 -2147483515 
+		-2147483596 -2147483513 -2147483512 -2147483511 -2147483510 -2147483599 -2147483508 -2147483601 -2147483602;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit9";
+	rename -uid "01CCDB2A-41D8-56F9-E5C6-64A6DF576C15";
+	setAttr -s 15 ".e[0:14]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5;
+	setAttr -s 15 ".d[0:14]"  -2147483548 -2147483491 -2147483492 -2147483479 -2147483480 -2147483481 
+		-2147483542 -2147483483 -2147483484 -2147483485 -2147483486 -2147483537 -2147483488 -2147483535 -2147483548;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit10";
+	rename -uid "E7317326-4B71-CBC8-2BD9-A2BFDEA95F25";
+	setAttr -s 15 ".e[0:14]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5;
+	setAttr -s 15 ".d[0:14]"  -2147483580 -2147483579 -2147483490 -2147483489 -2147483576 -2147483487 
+		-2147483574 -2147483549 -2147483552 -2147483573 -2147483482 -2147483571 -2147483570 -2147483569 -2147483580;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit11";
+	rename -uid "09E232E6-4413-8433-CF0E-0EAE49821B16";
+	setAttr -s 23 ".e[0:22]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
+	setAttr -s 23 ".d[0:22]"  -2147483638 -2147483636 -2147483560 -2147483356 -2147483468 -2147483389 
+		-2147483529 -2147483441 -2147483501 -2147483417 -2147483584 -2147483633 -2147483637 -2147483582 -2147483419 -2147483503 -2147483439 -2147483531 
+		-2147483391 -2147483466 -2147483354 -2147483558 -2147483638;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit12";
+	rename -uid "B858EE28-4D17-75AF-9B7D-878CAB279DD5";
+	setAttr -s 23 ".e[0:22]"  0.80000001 0.2 0.2 0.2 0.2 0.80000001 0.80000001
+		 0.2 0.80000001 0.80000001 0.2 0.2 0.80000001 0.80000001 0.2 0.2 0.80000001 0.2 0.2
+		 0.80000001 0.80000001 0.80000001 0.80000001;
+	setAttr -s 23 ".d[0:22]"  -2147483636 -2147483352 -2147483331 -2147483332 -2147483333 -2147483391 
+		-2147483531 -2147483336 -2147483503 -2147483419 -2147483339 -2147483340 -2147483633 -2147483584 -2147483343 -2147483344 -2147483441 -2147483346 
+		-2147483347 -2147483468 -2147483356 -2147483560 -2147483636;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit13";
+	rename -uid "253EB02A-44B8-1AC7-84CD-6DA9AAE4D3BD";
+	setAttr -s 23 ".e[0:22]"  0.69999999 0.30000001 0.30000001 0.30000001
+		 0.30000001 0.69999999 0.69999999 0.30000001 0.69999999 0.69999999 0.30000001 0.30000001
+		 0.69999999 0.69999999 0.30000001 0.30000001 0.69999999 0.30000001 0.30000001 0.69999999
+		 0.69999999 0.69999999 0.69999999;
+	setAttr -s 23 ".d[0:22]"  -2147483636 -2147483307 -2147483306 -2147483305 -2147483304 -2147483391 
+		-2147483531 -2147483301 -2147483503 -2147483419 -2147483298 -2147483297 -2147483633 -2147483584 -2147483294 -2147483293 -2147483441 -2147483291 
+		-2147483290 -2147483468 -2147483356 -2147483560 -2147483636;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit14";
+	rename -uid "D2508821-4A0A-8745-126F-A18D5CE570EF";
+	setAttr -s 23 ".e[0:22]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
+	setAttr -s 23 ".d[0:22]"  -2147483636 -2147483263 -2147483262 -2147483261 -2147483260 -2147483391 
+		-2147483531 -2147483257 -2147483503 -2147483419 -2147483254 -2147483253 -2147483633 -2147483584 -2147483250 -2147483249 -2147483441 -2147483247 
+		-2147483246 -2147483468 -2147483356 -2147483560 -2147483636;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit15";
+	rename -uid "DC619A39-4EF8-E0E6-8540-1DAA269AF3D2";
+	setAttr -s 23 ".e[0:22]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
+	setAttr -s 23 ".d[0:22]"  -2147483638 -2147483351 -2147483350 -2147483349 -2147483348 -2147483389 
+		-2147483529 -2147483345 -2147483501 -2147483417 -2147483342 -2147483341 -2147483637 -2147483582 -2147483338 -2147483337 -2147483439 -2147483335 
+		-2147483334 -2147483466 -2147483354 -2147483558 -2147483638;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit16";
+	rename -uid "61C04172-4B62-4E64-D437-569983248F2C";
+	setAttr -s 23 ".e[0:22]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
+	setAttr -s 23 ".d[0:22]"  -2147483351 -2147483176 -2147483155 -2147483156 -2147483157 -2147483334 
+		-2147483335 -2147483160 -2147483337 -2147483338 -2147483163 -2147483164 -2147483341 -2147483342 -2147483167 -2147483168 -2147483345 -2147483170 
+		-2147483171 -2147483348 -2147483349 -2147483350 -2147483351;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit17";
+	rename -uid "D90FD408-4D92-F686-37DD-2798A0F62405";
+	setAttr -s 23 ".e[0:22]"  0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+		 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
+	setAttr -s 23 ".d[0:22]"  -2147483638 -2147483175 -2147483174 -2147483173 -2147483172 -2147483389 
+		-2147483529 -2147483169 -2147483501 -2147483417 -2147483166 -2147483165 -2147483637 -2147483582 -2147483162 -2147483161 -2147483439 -2147483159 
+		-2147483158 -2147483466 -2147483354 -2147483558 -2147483638;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit18";
+	rename -uid "1B6737E1-4081-5E75-6733-8F8F8282E5B4";
+	setAttr -s 23 ".e[0:22]"  0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.89999998
+		 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.1 0.1
+		 0.89999998 0.89999998 0.89999998 0.89999998;
+	setAttr -s 23 ".d[0:22]"  -2147483351 -2147483131 -2147483130 -2147483129 -2147483128 -2147483334 
+		-2147483335 -2147483125 -2147483337 -2147483338 -2147483122 -2147483121 -2147483341 -2147483342 -2147483118 -2147483117 -2147483345 -2147483115 
+		-2147483114 -2147483348 -2147483349 -2147483350 -2147483351;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit19";
+	rename -uid "22D2C5AE-499E-FC3B-849F-C793C4A2EA66";
+	setAttr -s 23 ".e[0:22]"  0.1 0.89999998 0.89999998 0.89999998 0.89999998
+		 0.1 0.1 0.89999998 0.1 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.89999998 0.1
+		 0.89999998 0.89999998 0.1 0.1 0.1 0.1;
+	setAttr -s 23 ".d[0:22]"  -2147483351 -2147483043 -2147483042 -2147483041 -2147483040 -2147483334 
+		-2147483335 -2147483037 -2147483337 -2147483338 -2147483034 -2147483033 -2147483341 -2147483342 -2147483030 -2147483029 -2147483345 -2147483027 
+		-2147483026 -2147483348 -2147483349 -2147483350 -2147483351;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit20";
+	rename -uid "531F44A8-4AEF-E3ED-7CFE-59873677290A";
+	setAttr -s 23 ".e[0:22]"  0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.89999998
+		 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.1 0.1
+		 0.89999998 0.89999998 0.89999998 0.89999998;
+	setAttr -s 23 ".d[0:22]"  -2147483352 -2147483308 -2147483287 -2147483288 -2147483289 -2147483347 
+		-2147483346 -2147483292 -2147483344 -2147483343 -2147483295 -2147483296 -2147483340 -2147483339 -2147483299 -2147483300 -2147483336 -2147483302 
+		-2147483303 -2147483333 -2147483332 -2147483331 -2147483352;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit21";
+	rename -uid "26F641DD-4947-31EF-8A97-ABABB135F282";
+	setAttr -s 23 ".e[0:22]"  0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.89999998
+		 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.1 0.1
+		 0.89999998 0.89999998 0.89999998 0.89999998;
+	setAttr -s 23 ".d[0:22]"  -2147483307 -2147483264 -2147483243 -2147483244 -2147483245 -2147483290 
+		-2147483291 -2147483248 -2147483293 -2147483294 -2147483251 -2147483252 -2147483297 -2147483298 -2147483255 -2147483256 -2147483301 -2147483258 
+		-2147483259 -2147483304 -2147483305 -2147483306 -2147483307;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit22";
+	rename -uid "75019F63-41E4-3ABB-B54A-E0887B24C1DF";
+	setAttr -s 23 ".e[0:22]"  0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.89999998
+		 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.1 0.1
+		 0.89999998 0.89999998 0.89999998 0.89999998;
+	setAttr -s 23 ".d[0:22]"  -2147483263 -2147483220 -2147483199 -2147483200 -2147483201 -2147483246 
+		-2147483247 -2147483204 -2147483249 -2147483250 -2147483207 -2147483208 -2147483253 -2147483254 -2147483211 -2147483212 -2147483257 -2147483214 
+		-2147483215 -2147483260 -2147483261 -2147483262 -2147483263;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit23";
+	rename -uid "E5F5663B-49DE-C7B2-5D60-7E8B8FDD134B";
+	setAttr -s 23 ".e[0:22]"  0.1 0.89999998 0.89999998 0.89999998 0.89999998
+		 0.1 0.1 0.89999998 0.1 0.1 0.89999998 0.89999998 0.1 0.1 0.89999998 0.89999998 0.1
+		 0.89999998 0.89999998 0.1 0.1 0.1 0.1;
+	setAttr -s 23 ".d[0:22]"  -2147483636 -2147483219 -2147483218 -2147483217 -2147483216 -2147483391 
+		-2147483531 -2147483213 -2147483503 -2147483419 -2147483210 -2147483209 -2147483633 -2147483584 -2147483206 -2147483205 -2147483441 -2147483203 
+		-2147483202 -2147483468 -2147483356 -2147483560 -2147483636;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit24";
+	rename -uid "7FD95A53-41D4-76BC-2F76-BB84A07A0A10";
+	setAttr -s 41 ".e[0:40]"  0.1 0.89999998 0.89999998 0.1 0.89999998
+		 0.1 0.1 0.1 0.1 0.89999998 0.89999998 0.89999998 0.1 0.89999998 0.1 0.89999998 0.1
+		 0.1 0.89999998 0.89999998 0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.89999998 0.1 0.1
+		 0.1 0.89999998 0.89999998 0.1 0.89999998 0.1 0.89999998 0.1 0.1 0.1 0.1 0.1;
+	setAttr -s 41 ".d[0:40]"  -2147483547 -2147483463 -2147483462 -2147483536 -2147483460 -2147483538 
+		-2147483539 -2147483540 -2147483541 -2147483455 -2147482786 -2147483182 -2147482840 -2147483226 -2147482884 -2147483270 -2147482928 -2147483324 
+		-2147482962 -2147483006 -2147483094 -2147483148 -2147483060 -2147483543 -2147483544 -2147483050 -2147483138 -2147483104 -2147483016 -2147482972 
+		-2147483314 -2147482918 -2147483280 -2147482874 -2147483236 -2147482830 -2147483192 -2147482796 -2147483545 -2147483546 -2147483547;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit25";
+	rename -uid "E7F5D42B-47FA-B1BF-CB05-55AD29B77A15";
+	setAttr -s 41 ".e[0:40]"  0.89999998 0.1 0.1 0.1 0.1 0.1 0.89999998
+		 0.1 0.89999998 0.1 0.89999998 0.89999998 0.1 0.1 0.1 0.89999998 0.89999998 0.1 0.1
+		 0.1 0.1 0.89999998 0.89999998 0.89999998 0.1 0.1 0.89999998 0.1 0.89999998 0.1 0.89999998
+		 0.89999998 0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.1 0.89999998 0.89999998;
+	setAttr -s 41 ".d[0:40]"  -2147483520 -2147483464 -2147483451 -2147483452 -2147482795 -2147483191 
+		-2147482831 -2147483235 -2147482875 -2147483279 -2147482919 -2147483315 -2147482971 -2147483015 -2147483103 -2147483139 -2147483051 -2147483453 
+		-2147483454 -2147483059 -2147483147 -2147483095 -2147483007 -2147482963 -2147483323 -2147482927 -2147483271 -2147482883 -2147483227 -2147482839 
+		-2147483183 -2147482787 -2147483514 -2147483456 -2147483457 -2147483458 -2147483459 -2147483509 -2147483461 -2147483507 -2147483520;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit26";
+	rename -uid "8D6F7340-446B-2C3E-34CE-AAA280586650";
+	setAttr -s 41 ".e[0:40]"  0.1 0.89999998 0.89999998 0.1 0.89999998
+		 0.1 0.1 0.1 0.1 0.89999998 0.89999998 0.89999998 0.1 0.89999998 0.1 0.89999998 0.1
+		 0.1 0.89999998 0.89999998 0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.89999998 0.1 0.1
+		 0.1 0.89999998 0.89999998 0.1 0.89999998 0.1 0.89999998 0.1 0.1 0.1 0.1 0.1;
+	setAttr -s 41 ".d[0:40]"  -2147483519 -2147483436 -2147483423 -2147483508 -2147483425 -2147483510 
+		-2147483511 -2147483512 -2147483513 -2147483430 -2147482788 -2147483184 -2147482838 -2147483228 -2147482882 -2147483272 -2147482926 -2147483322 
+		-2147482964 -2147483008 -2147483096 -2147483146 -2147483058 -2147483515 -2147483516 -2147483052 -2147483140 -2147483102 -2147483014 -2147482970 
+		-2147483316 -2147482920 -2147483278 -2147482876 -2147483234 -2147482832 -2147483190 -2147482794 -2147483517 -2147483518 -2147483519;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit27";
+	rename -uid "D3D94891-48F5-231A-EF3A-4397C370193C";
+	setAttr -s 41 ".e[0:40]"  0.89999998 0.1 0.1 0.1 0.1 0.1 0.89999998
+		 0.1 0.89999998 0.1 0.89999998 0.89999998 0.1 0.1 0.1 0.89999998 0.89999998 0.1 0.1
+		 0.1 0.1 0.89999998 0.89999998 0.89999998 0.1 0.1 0.89999998 0.1 0.89999998 0.1 0.89999998
+		 0.89999998 0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.1 0.89999998 0.89999998;
+	setAttr -s 41 ".d[0:40]"  -2147483602 -2147483435 -2147483434 -2147483433 -2147482793 -2147483189 
+		-2147482833 -2147483233 -2147482877 -2147483277 -2147482921 -2147483317 -2147482969 -2147483013 -2147483101 -2147483141 -2147483053 -2147483432 
+		-2147483431 -2147483057 -2147483145 -2147483097 -2147483009 -2147482965 -2147483321 -2147482925 -2147483273 -2147482881 -2147483229 -2147482837 
+		-2147483185 -2147482789 -2147483596 -2147483429 -2147483428 -2147483427 -2147483426 -2147483599 -2147483424 -2147483601 -2147483602;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit28";
+	rename -uid "8F284A52-4E5E-DDE1-A054-C99CDC9C32EB";
+	setAttr -s 39 ".e[0:38]"  0.89999998 0.1 0.1 0.89999998 0.1 0.89999998
+		 0.89999998 0.1 0.1 0.1 0.1 0.1 0.89999998 0.1 0.89999998 0.1 0.89999998 0.89999998
+		 0.1 0.1 0.1 0.89999998 0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.89999998 0.89999998
+		 0.1 0.1 0.89999998 0.1 0.89999998 0.1 0.89999998 0.89999998 0.89999998;
+	setAttr -s 39 ".d[0:38]"  -2147483629 -2147483597 -2147483598 -2147483622 -2147483600 -2147483613 
+		-2147483605 -2147483603 -2147483604 -2147483593 -2147482792 -2147483188 -2147482834 -2147483232 -2147482878 -2147483276 -2147482922 -2147483318 
+		-2147482968 -2147483012 -2147483100 -2147483142 -2147483054 -2147483594 -2147483595 -2147483056 -2147483144 -2147483098 -2147483010 -2147482966 
+		-2147483320 -2147482924 -2147483274 -2147482880 -2147483230 -2147482836 -2147483186 -2147482790 -2147483629;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit29";
+	rename -uid "D7B6BE9E-4268-6433-588E-F9B3CD82B4A8";
+	setAttr -s 41 ".e[0:40]"  0.1 0.1 0.89999998 0.89999998 0.1 0.89999998
+		 0.1 0.1 0.1 0.1 0.89999998 0.89999998 0.89999998 0.1 0.89999998 0.1 0.89999998 0.1
+		 0.1 0.89999998 0.89999998 0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.89999998 0.1 0.1
+		 0.1 0.89999998 0.89999998 0.1 0.89999998 0.1 0.89999998 0.1 0.1 0.1 0.1;
+	setAttr -s 41 ".d[0:40]"  -2147483492 -2147483491 -2147483408 -2147483395 -2147483488 -2147483397 
+		-2147483486 -2147483485 -2147483484 -2147483483 -2147483402 -2147482784 -2147483180 -2147482842 -2147483224 -2147482886 -2147483268 -2147482930 
+		-2147483326 -2147482960 -2147483004 -2147483092 -2147483150 -2147483062 -2147483481 -2147483480 -2147483048 -2147483136 -2147483106 -2147483018 
+		-2147482974 -2147483312 -2147482916 -2147483282 -2147482872 -2147483238 -2147482828 -2147483194 -2147482798 -2147483479 -2147483492;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit30";
+	rename -uid "B9AF954D-48AA-C69F-3718-21A9F335FA5E";
+	setAttr -s 41 ".e[0:40]"  0.89999998 0.1 0.1 0.1 0.1 0.1 0.89999998
+		 0.1 0.89999998 0.1 0.89999998 0.89999998 0.1 0.1 0.1 0.89999998 0.89999998 0.1 0.1
+		 0.1 0.1 0.89999998 0.89999998 0.89999998 0.1 0.1 0.89999998 0.1 0.89999998 0.1 0.89999998
+		 0.89999998 0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.1 0.89999998 0.89999998;
+	setAttr -s 41 ".d[0:40]"  -2147483548 -2147483407 -2147483406 -2147483405 -2147482797 -2147483193 
+		-2147482829 -2147483237 -2147482873 -2147483281 -2147482917 -2147483313 -2147482973 -2147483017 -2147483105 -2147483137 -2147483049 -2147483404 
+		-2147483403 -2147483061 -2147483149 -2147483093 -2147483005 -2147482961 -2147483325 -2147482929 -2147483269 -2147482885 -2147483225 -2147482841 
+		-2147483181 -2147482785 -2147483542 -2147483401 -2147483400 -2147483399 -2147483398 -2147483537 -2147483396 -2147483535 -2147483548;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit31";
+	rename -uid "4FB83899-4369-3FD3-A3DA-EA9C8369BDD4";
+	setAttr -s 41 ".e[0:40]"  0.89999998 0.1 0.1 0.1 0.1 0.1 0.89999998
+		 0.1 0.89999998 0.1 0.89999998 0.89999998 0.1 0.1 0.1 0.89999998 0.89999998 0.1 0.1
+		 0.1 0.1 0.89999998 0.89999998 0.89999998 0.1 0.1 0.89999998 0.1 0.89999998 0.1 0.89999998
+		 0.89999998 0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.1 0.89999998 0.89999998;
+	setAttr -s 41 ".d[0:40]"  -2147483490 -2147483379 -2147483380 -2147483367 -2147482799 -2147483195 
+		-2147482827 -2147483239 -2147482871 -2147483283 -2147482915 -2147483311 -2147482975 -2147483019 -2147483107 -2147483135 -2147483047 -2147483368 
+		-2147483369 -2147483063 -2147483151 -2147483091 -2147483003 -2147482959 -2147483327 -2147482931 -2147483267 -2147482887 -2147483223 -2147482843 
+		-2147483179 -2147482783 -2147483482 -2147483371 -2147483372 -2147483373 -2147483374 -2147483487 -2147483376 -2147483489 -2147483490;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit32";
+	rename -uid "E6A61BE3-4C47-1070-3E86-EC80A29AAFD8";
+	setAttr -s 41 ".e[0:40]"  0.1 0.1 0.89999998 0.89999998 0.1 0.89999998
+		 0.1 0.1 0.1 0.1 0.89999998 0.89999998 0.89999998 0.1 0.89999998 0.1 0.89999998 0.1
+		 0.1 0.89999998 0.89999998 0.89999998 0.1 0.1 0.1 0.1 0.89999998 0.89999998 0.1 0.1
+		 0.1 0.89999998 0.89999998 0.1 0.89999998 0.1 0.89999998 0.1 0.1 0.1 0.1;
+	setAttr -s 41 ".d[0:40]"  -2147483580 -2147483579 -2147483378 -2147483377 -2147483576 -2147483375 
+		-2147483574 -2147483549 -2147483552 -2147483573 -2147483370 -2147482782 -2147483178 -2147482844 -2147483222 -2147482888 -2147483266 -2147482932 
+		-2147483328 -2147482958 -2147483002 -2147483090 -2147483152 -2147483064 -2147483571 -2147483570 -2147483046 -2147483134 -2147483108 -2147483020 
+		-2147482976 -2147483310 -2147482914 -2147483284 -2147482870 -2147483240 -2147482826 -2147483196 -2147482800 -2147483569 -2147483580;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit33";
+	rename -uid "603727E4-45F0-18E2-E973-428F275856BB";
+	setAttr ".e[0]"  0.69980401;
+	setAttr ".d[0]"  -2147482677;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyExtrudeFace -n "polyExtrudeFace8";
+	rename -uid "454B6968-4195-4738-62BE-D38AAEF1BABC";
+	setAttr ".ics" -type "componentList" 34 "f[185]" "f[187]" "f[189]" "f[205]" "f[207]" "f[209]" "f[211]" "f[275]" "f[283]" "f[285]" "f[287]" "f[289]" "f[336:337]" "f[339]" "f[341]" "f[424:425]" "f[427]" "f[429]" "f[431]" "f[433]" "f[444]" "f[448]" "f[450:452]" "f[454:455]" "f[524]" "f[528]" "f[530]" "f[643]" "f[647]" "f[649]" "f[651]" "f[653:654]" "f[763]" "f[767]";
+	setAttr ".ix" -type "matrix" 1.8609642483955449 0 0 0 0 0.042201542597833215 0 0
+		 0 0 1.6367957222681333 0 0.49911116260214605 0.097884805272503428 0.65460482733804781 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.49911159 0.11898559 0.65452266 ;
+	setAttr ".rs" 43189;
+	setAttr ".lt" -type "double3" 0 -1.1102230246251565e-16 0.017312683243999483 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.43137051790717451 0.11898559669468368 0.020346406910644044 ;
+	setAttr ".cbx" -type "double3" 1.4295937304883704 0.11898559669468368 1.2886989068882666 ;
+createNode polyCube -n "polyCube4";
+	rename -uid "2F686DCC-4B7F-4DBF-E94D-D08899B34912";
+	setAttr ".cuv" 4;
+createNode polySphere -n "pasted__polySphere6";
+	rename -uid "4B7CF394-4EDA-2974-BE7B-B6917D4429FD";
+createNode polyMapDel -n "polyMapDel5";
+	rename -uid "692793E6-4C14-9FDB-4D2C-38B8A99E6137";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+createNode polyPlanarProj -n "polyPlanarProj3";
+	rename -uid "05430F51-49C3-3732-CEB4-729233FA298C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:399]";
+	setAttr ".ix" -type "matrix" 4.9048919541071756 0 0 0 0 0.066714434966503894 0 0
+		 0 0 7.8858301689679955 0 5.4672516877929267 3.5221700140716563 10.83925763398079 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 5.467252254486084 3.5221700668334961 10.839256286621094 ;
+	setAttr ".ro" -type "double3" -13.199999675729494 20.000000841227269 -7.6350195444239768e-08 ;
+	setAttr ".ps" -type "double2" 10.628316446541248 3.4553929085531694 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 1.8271801471710205 -0.12806002795696259 -0.33299025893211365 -0.3329835832118988
+		 2.7895435313599379e-17 1.5963582992553711 -0.22835543751716614 -0.22835086286067963
+		 -0.66503918170928955 -0.35184201598167419 -0.91488319635391235 -0.91486489772796631
+		 -0.2931210994720459 -0.57338356971740723 34.026348114013672 34.225666046142578;
+	setAttr ".prgt" 651;
+	setAttr ".ptop" 772;
+createNode polyTweak -n "polyTweak9";
+	rename -uid "EC683EF6-4D51-588B-B50D-69A0D8D516F1";
+	setAttr ".uopa" yes;
+	setAttr -s 21 ".tk";
+	setAttr ".tk[3]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[23]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[43]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[63]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[83]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[103]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[123]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[143]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[163]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[183]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[203]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[223]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[243]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[263]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[283]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[303]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[323]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[343]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[363]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[380]" -type "float3" 0 3.0517578e-05 0 ;
+	setAttr ".tk[381]" -type "float3" 0 3.0517578e-05 0 ;
+createNode polyTweakUV -n "polyTweakUV7";
+	rename -uid "4F7793C7-431E-37DC-17E5-6E9E2469837D";
+	setAttr ".uopa" yes;
+createNode polyMapCut -n "polyMapCut10";
+	rename -uid "250B002A-4265-1687-9CEA-76819026FB65";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[160:179]";
+createNode polyTweakUV -n "polyTweakUV8";
+	rename -uid "708A97F8-4F81-CAC1-535B-74A461A849DC";
+	setAttr ".uopa" yes;
+	setAttr -s 402 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424185 0 -0.16424188 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 -0.1615026 0.58833599 -0.21339041 0.51883328 -0.10871255 0.65378642
+		 -0.060967982 0.70648152 -0.020376801 0.73978752 0.014959574 0.74940783 0.048317015
+		 0.73534048 0.082411319 0.69896114 0.12120092 0.64355743 0.16774231 0.5765667 0.21952724
+		 0.50972116 0.2636857 0.45496255 0.2788561 0.41882598 0.24303961 0.40037251 0.14775595
+		 0.39261818 0.01040706 0.38800591 -0.1276511 0.38404378 -0.22464585 0.38807273 -0.26359826
+		 0.41063148 -0.25320166 0.45597911 -0.16914296 0.58823389 -0.2215302 0.51910573 -0.11596066
+		 0.65264285 -0.067098677 0.70316535 -0.023341894 0.73427546 0.015962958 0.74390286
+		 0.051820964 0.73119265 0.087230355 0.69592142 0.12704939 0.64105475 0.17486462 0.57424957
+		 0.22836563 0.50761938 0.27451253 0.45358315 0.29121122 0.41921884 0.25480533 0.40385699
+		 0.15495636 0.39903033 0.010742784 0.3945592 -0.13278031 0.38871396 -0.23273772 0.39074028
+		 -0.27260453 0.41191816 -0.26195395 0.45655981 -0.16781926 0.58622265 -0.21918416
+		 0.51800805 -0.11539769 0.64978093 -0.067052186 0.69967294 -0.023662627 0.73043114
+		 0.01537329 0.73997378 0.051050544 0.72741795 0.086306959 0.69259131 0.12581158 0.63847458
+		 0.17293884 0.57260913 0.22528273 0.50684607 0.27000642 0.4533188 0.28557658 0.41896281
+		 0.24916643 0.4031831 0.1510586 0.39788055 0.0099596679 0.39332774 -0.13046855 0.38792121
+		 -0.22865194 0.3905192 -0.26831561 0.41191587 -0.25847733 0.45622098 -0.16361487 0.58194083
+		 -0.21195358 0.51654887 -0.11349559 0.64289165 -0.066742182 0.69083995 -0.024522185
+		 0.72052968 0.013614416 0.72979707 0.048714131 0.71771502 0.083459735 0.68427467 0.12196225
+		 0.63246679 0.16700909 0.56949246 0.21595015 0.50644112 0.25657436 0.45462272 0.26898992
+		 0.42056057 0.23272279 0.40385556 0.13979745 0.39736468 0.0078143179 0.39263302 -0.12362272
+		 0.38836935 -0.21657836 0.39235803 -0.25553131 0.41410166 -0.24797112 0.45717537 -0.15645975
+		 0.57560492 -0.19997913 0.5148325 -0.11011267 0.63228512 -0.066034913 0.67703736 -0.025769174
+		 0.70494175 0.010876238 0.71372527 0.044945627 0.70242757 0.078726232 0.67127776 0.11548048
+		 0.62324256 0.15712649 0.56496507;
+	setAttr ".uvtk[250:401]" 0.20071286 0.50635046 0.23508874 0.45744461 0.24293566
+		 0.4241375 0.20728637 0.40632182 0.12257102 0.39826596 0.0046194494 0.3933481 -0.11293966
+		 0.39069206 -0.19761813 0.39653751 -0.23517591 0.41852468 -0.23094201 0.45943767 -0.14621806
+		 0.56755918 -0.18346709 0.51300412 -0.10498482 0.61847687 -0.064667404 0.65887785
+		 -0.027151883 0.68427855 0.0074139237 0.69234729 0.039912999 0.68213093 0.072127253
+		 0.65410948 0.10630301 0.61114967 0.14335188 0.55913484 0.18009503 0.5064801 0.20686652
+		 0.46166569 0.20959985 0.42979634 0.17545192 0.41112512 0.1013605 0.40158546 0.0008417666
+		 0.39659113 -0.099407494 0.39568752 -0.17337799 0.40338334 -0.20863044 0.42520124
+		 -0.20815992 0.46299705 -0.13271552 0.55822939 -0.16270632 0.51122802 -0.097728729
+		 0.60211807 -0.062223375 0.63713622 -0.028300107 0.65933383 0.0035268068 0.666448
+		 0.033784866 0.65759695 0.063651145 0.63344103 0.094334483 0.59663898 0.1257804 0.55214536
+		 0.15478663 0.50671655 0.17353377 0.467123 0.17154031 0.43760714 0.14011379 0.4188033
+		 0.078318805 0.40832067 -0.0030067265 0.40346563 -0.084133744 0.40412766 -0.14572263
+		 0.41318727 -0.17756915 0.43410805 -0.18061054 0.46781689 -0.1157614 0.54807562 -0.13807213
+		 0.50966072 -0.087852299 0.58393288 -0.058133304 0.61269152 -0.02872473 0.63104916
+		 -0.00046747923 0.63698471 0.026685923 0.62975454 0.053230494 0.61006695 0.079453349
+		 0.58023614 0.10455593 0.54417408 0.12560713 0.5069505 0.13685624 0.47363251 0.13134149
+		 0.44758716 0.10402066 0.42977712 0.05540821 0.41925144 -0.0064606965 0.41481864 -0.068170249
+		 0.41659001 -0.1165114 0.42612994 -0.14376646 0.44516665 -0.14941883 0.4738282 -0.095183313
+		 0.53754199 -0.11002576 0.50842482 -0.0747931 0.56466019 -0.051712632 0.58648574 -0.027845144
+		 0.60049021 -0.0042412281 0.60506368 0.018671572 0.59964597 0.040729046 0.58485758
+		 0.061526239 0.56251019 0.079886824 0.53543073 0.09346208 0.5071013 0.098577082 0.4810136
+		 0.091333061 0.45968634 0.069465727 0.44425985 0.034174651 0.43479317 -0.0091727674
+		 0.43108669 -0.052391052 0.43334964 -0.087384641 0.44223046 -0.10891712 0.45823222
+		 -0.11576879 0.48092365 -0.070875108 0.52701223 -0.079114914 0.50758719 -0.057983398
+		 0.54500628 -0.042223871 0.55949461 -0.02503866 0.5688194 -0.0074768066 0.57190436
+		 0.0097250342 0.56838989 0.025948942 0.55870724 0.040437162 0.54404056 0.052065611
+		 0.52615446 0.05929935 0.50713742 0.060282886 0.48911172 0.053404599 0.47377825 0.038129777
+		 0.46220738 0.015664697 0.45493761 -0.010934174 0.45224398 -0.037432909 0.45433265
+		 -0.059625685 0.46133012 -0.074497402 0.47309053 -0.08082813 0.48895329 -0.042852342
+		 0.5167768 -0.045971036 0.50714374 -0.036931276 0.52561033 -0.028956056 0.53269362
+		 -0.019701838 0.53725541 -0.0099024177 0.53879261 -0.00023275614 0.53713912 0.0086634755
+		 0.53249156 0.016132206 0.52538252 0.021489561 0.51660395 0.024068058 0.5070889 0.023309201
+		 0.49781382 0.018916547 0.4896585 0.011053145 0.48331511 0.00044816732 0.47927254
+		 -0.01164943 0.47783393 -0.023683727 0.47912776 -0.03410548 0.48309559 -0.041679561
+		 0.48946524 -0.045684755 0.49772686 0 -0.16424187 -0.011311114 0.50703323 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187 0 -0.16424187
+		 0 -0.16424187;
+createNode polyMapCut -n "polyMapCut11";
+	rename -uid "8ABA1EEC-49F5-BCD1-1170-C2A9AF856549";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 9 "e[393]" "e[413]" "e[433]" "e[453]" "e[473]" "e[493]" "e[513]" "e[533]" "e[753]";
+createNode polyTweakUV -n "polyTweakUV9";
+	rename -uid "EA78291B-4EBE-9AFE-AC2A-2192A1380B12";
+	setAttr ".uopa" yes;
+	setAttr -s 411 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.13817829 0.19506362 0.14884222 0.17698359
+		 0.11881101 0.17287444 0.095646501 0.20825134 0.16251296 0.15950216 0.14703 0.13893734
+		 0.17766982 0.14423318 0.17694509 0.10939041 0.19283503 0.13257329 0.20571816 0.086773217
+		 0.20670789 0.12559734 0.23122305 0.073070899 0.21822572 0.12397583 0.25201708 0.069582686
+		 0.22656679 0.12791277 0.26716366 0.076805219 0.23112619 0.13711126 0.27598712 0.094342604
+		 0.23149663 0.1507726 0.27785382 0.12085678 0.22748369 0.16763906 0.2720879 0.15407464
+		 0.21917138 0.18608457 0.258118 0.19088148 0.20702317 0.20426007 0.23589259 0.22754039
+		 0.19197652 0.220287 0.2064707 0.26009977 0.1754719 0.23249103 0.17243576 0.28481972
+		 0.15930825 0.23956703 0.13792104 0.29892033 0.14543283 0.24081844 0.10785645 0.30094564
+		 0.13556999 0.23618317 0.086756229 0.2909708 0.13090473 0.22622515 0.077547967 0.27045417
+		 0.13188124 0.21203214 0.080961466 0.24186482 0.092665017 0.16913898 0.0558393 0.22065403
+		 0.13562632 0.12005448 0.17945331 0.077419683 0.22016555 0.044704035 0.25521111 0.0246685
+		 0.28325814 0.019194007 0.30376127 0.029113695 0.31641331 0.054067791 0.32061112 0.092392206
+		 0.31512272 0.1410519 0.29819813 0.19565848 0.26834333 0.25065923 0.22574061 0.29987651
+		 0.17364076 0.33722872 0.11890769 0.35814649 0.070609033 0.3603912 0.037200689 0.34442756
+		 0.023810625 0.31298125 0.031087101 0.27016574 0.070485175 0.16580363 0.01961267 0.2319642
+		 0.12771428 0.10312133 0.18423241 0.048764795 0.23517662 0.0069554746 0.27787668 -0.018883906
+		 0.31142733 -0.026344433 0.33599412 -0.014247671 0.35195345 0.017163292 0.35899478
+		 0.066061109 0.35541651 0.12888664 0.33801877 0.20023909 0.30312297 0.27292508 0.24901497
+		 0.33850926 0.17892262 0.38830429 0.10269803 0.41567081 0.034674704 0.41755581 -0.011641324
+		 0.39510056 -0.028637648 0.35267115 -0.016281486 0.29621637 0.05220294 0.16287582
+		 -0.012290597 0.24190013 0.12260723 0.088351145 0.1902954 0.023795381 0.24977583 -0.025967181
+		 0.29847014 -0.056954399 0.33606759 -0.066291459 0.36359975 -0.052473024 0.38230675
+		 -0.01558727 0.39238194 0.042488679 0.39182895 0.11787307 0.37596515 0.20442472 0.33847445
+		 0.2935656 0.27487707 0.37469748 0.18759733 0.43637419 0.089517891 0.46965176 0.0011602044
+		 0.47064811 -0.05803436 0.44146055 -0.077912331 0.38840628 -0.059650481 0.31934738
+		 0.0376544 0.16035099 -0.039245605 0.25021297 0.11959898 0.075912252 0.19670266 0.0028176606
+		 0.26306343 -0.053634286 0.31631446 -0.08900018 0.3567844 -0.1000092 0.38639057 -0.084867373
+		 0.40728509 -0.043501601 0.42028582 0.022229657 0.42329296 0.1082769 0.41029415 0.2080079
+		 0.37222534 0.31176019 0.30130306 0.40699625 0.198448 0.47953099 0.079372138 0.51800489
+		 -0.028725982 0.51772273 -0.10002297 0.48195076 -0.12200445 0.41912585 -0.097561061
+		 0.33895832 0.026631057 0.15821834 -0.060744226 0.25669345 0.11802846 0.065935448
+		 0.2026183 -0.013920292 0.27425659 -0.075690441 0.33082712 -0.11456804 0.37324834
+		 -0.12696518 0.40423453 -0.1108509 0.42677894 -0.066007569 0.44233841 0.0057571381
+		 0.44885808 0.10032944 0.43926311 0.21078837 0.40196943 0.3266916 0.32582152 0.43389836
+		 0.20981389 0.51572788 0.072062373 0.55850089 -0.053730547 0.556777 -0.13555318 0.5150649
+		 -0.15891331 0.44387102 -0.12866557 0.35453537 0.018924415 0.15646692 -0.076394737
+		 0.26117799 0.11733168 0.058519512 0.20735359 -0.026224926 0.28271914 -0.091854312
+		 0.34153765 -0.13329828 0.38519803 -0.14673701 0.41704008 -0.1299644 0.44073108 -0.082650557
+		 0.45827371 -0.006547913 0.46773234 0.094222039 0.46128204 0.21259202 0.42533255 0.33761558
+		 0.34581506 0.45396784 0.2198126 0.54295927 0.067249209 0.58895862 -0.07265377 0.58591449
+		 -0.16265845 0.53945434 -0.18681186 0.46183583 -0.15180695 0.36566848 -0.33977148
+		 -0.45344093 -0.33862805 -0.43910873 -0.3375949 -0.46589863 -0.33244601 -0.4754051
+		 -0.3247965 -0.48116934 -0.31539693 -0.48267865 -0.30505538 -0.47994393 -0.29450405
+		 -0.47310758 -0.28477985 -0.46252468 -0.27711487 -0.44909102 -0.27253032 -0.43433267
+		 -0.27138725 -0.42000085 -0.27356377 -0.4075436 -0.27871245 -0.39803734 -0.28636175
+		 -0.39227319 -0.29576111 -0.39076376 -0.30610248 -0.39349842 -0.3166537 -0.40033454
+		 -0.32637784 -0.4109171 -0.33404303 -0.42435044 -0.33935416 -0.4536112 -0.33827507
+		 -0.43928581 -0.33709079 -0.46595442 -0.33195457 -0.47518378 -0.32459471 -0.48066062
+		 -0.31559154 -0.48217183 -0.30544347 -0.47961468 -0.2949129 -0.47291672 -0.2851502
+		 -0.46238646 -0.27745512 -0.44894314 -0.27288333 -0.43415561 -0.27180457 -0.41983062
+		 -0.27406788 -0.40748781 -0.27920389 -0.39825866 -0.28656355 -0.39278185 -0.29556653
+		 -0.39127058 -0.30571443 -0.39382765 -0.31624484 -0.40052542 -0.32600752 -0.41105536
+		 -0.33370277 -0.42449835 -0.33894151 -0.45337796 -0.33787048 -0.4392384 -0.33671308
+		 -0.46556765 -0.33164191 -0.47468954 -0.32436365 -0.48010808 -0.31545579 -0.48160613
+		 -0.30542159 -0.4790768 -0.29502282 -0.47245598 -0.28539124 -0.46205813 -0.27780125
+		 -0.44879314 -0.27328792 -0.43420306 -0.27221724 -0.42006385 -0.27444559 -0.40787458
+		 -0.27951658 -0.3987529 -0.2867946 -0.39333439 -0.29570228 -0.39183635 -0.3057363
+		 -0.39436555 -0.31613496 -0.40098611 -0.3257665 -0.41138372 -0.33335668 -0.42464834
+		 -0.33772507 -0.4526917 -0.33668032 -0.43909881 -0.33559611 -0.46442848 -0.33071533
+		 -0.47323084 -0.32367581 -0.47847784 -0.31504545 -0.47993439 -0.30535239 -0.47748661
+		 -0.29534507 -0.47109669 -0.28609955 -0.4610911 -0.27881846 -0.44835195 -0.27447808
+		 -0.43434274 -0.27343366 -0.42075017 -0.27556255 -0.40901375 -0.28044316 -0.40021157
+		 -0.28748247 -0.39496464 -0.29611266 -0.39350802 -0.30580556 -0.39595574 -0.31581274
+		 -0.40234545 -0.32505822 -0.41235077 -0.3323395 -0.42508966 -0.33572719 -0.45158118
+		 -0.33472916 -0.43887958 -0.33375573 -0.46257648 -0.32918423 -0.47085309 -0.3225444
+		 -0.47581387 -0.3143836 -0.477198 -0.30525619 -0.47488528 -0.29588842 -0.4688769 -0.28726885
+		 -0.45951286 -0.2804876 -0.44762802;
+	setAttr ".uvtk[250:410]" -0.27642924 -0.43456209 -0.27543151 -0.42186075 -0.27740294
+		 -0.41086572 -0.28197426 -0.40258926 -0.28861392 -0.39762855 -0.29677454 -0.39624441
+		 -0.30590183 -0.39855707 -0.31526944 -0.40456527 -0.32388902 -0.4139291 -0.33067042
+		 -0.4258137 -0.33298948 -0.45009351 -0.33206195 -0.43859968 -0.33122361 -0.46007833
+		 -0.32707062 -0.4676322 -0.32099184 -0.47218931 -0.31350076 -0.47346658 -0.30515945
+		 -0.47134238 -0.29666108 -0.46586066 -0.28888315 -0.45736989 -0.28277227 -0.44663692
+		 -0.27909645 -0.43484214 -0.27816916 -0.42334852 -0.27993503 -0.41336387 -0.2840879
+		 -0.40581018 -0.2901665 -0.40125313 -0.29765743 -0.39997584 -0.30599862 -0.4021 -0.31449687
+		 -0.40758154 -0.32227477 -0.41607213 -0.3283858 -0.42680493 -0.32957175 -0.4482882
+		 -0.32874116 -0.43828142 -0.32804921 -0.45701924 -0.32441378 -0.46366417 -0.31905288
+		 -0.46769893 -0.31243202 -0.46883309 -0.30508983 -0.46695164 -0.29766741 -0.4621335
+		 -0.29091668 -0.45472369 -0.28562114 -0.44540054 -0.28241727 -0.43516058 -0.28158689
+		 -0.42515391 -0.2831094 -0.41642302 -0.28674477 -0.40977821 -0.2921055 -0.40574351
+		 -0.29872623 -0.40460932 -0.3060683 -0.40649074 -0.31349063 -0.41130877 -0.32024136
+		 -0.41871846 -0.325537 -0.42804146 -0.3255519 -0.44623131 -0.32484564 -0.43794718
+		 -0.32430175 -0.45349512 -0.32127228 -0.45905843 -0.31677571 -0.46245548 -0.31121421
+		 -0.46341139 -0.30506974 -0.46182659 -0.29890329 -0.45779765 -0.29333156 -0.45164734
+		 -0.28896841 -0.4439469 -0.28631279 -0.43549496 -0.28560668 -0.42721093 -0.28685683
+		 -0.41994721 -0.28988624 -0.41438398 -0.29438269 -0.41098696 -0.2999441 -0.41003102
+		 -0.30608845 -0.41161579 -0.31225485 -0.41564471 -0.31782657 -0.42179489 -0.32218984
+		 -0.4294953 -0.32102543 -0.44398919 -0.32046932 -0.43761578 -0.32006958 -0.44960594
+		 -0.31772262 -0.45393339 -0.31422025 -0.45658755 -0.30988514 -0.45733431 -0.30511224
+		 -0.45609596 -0.3003518 -0.45296696 -0.29607654 -0.44822231 -0.29273456 -0.44231012
+		 -0.29068911 -0.43582651 -0.29013306 -0.42945313 -0.29108894 -0.42383647 -0.29343587
+		 -0.41950902 -0.29693818 -0.41685489 -0.30127317 -0.41610813 -0.30604607 -0.41734648
+		 -0.31080645 -0.42047542 -0.31508172 -0.42522001 -0.31842375 -0.4311322 -0.31610355
+		 -0.44162318 -0.3157194 -0.43729955 -0.31545776 -0.44545081 -0.31385532 -0.44841447
+		 -0.31145433 -0.45023793 -0.30848193 -0.45075077 -0.30521917 -0.44990051 -0.30198067
+		 -0.44776177 -0.29908627 -0.4445349 -0.2968277 -0.44053024 -0.295439 -0.43614286 -0.29505491
+		 -0.43181926 -0.2957007 -0.42799163 -0.29730314 -0.425028 -0.2997041 -0.42320454 -0.30267647
+		 -0.4226917 -0.3059392 -0.42354196 -0.30917764 -0.42568067 -0.31207204 -0.42890754
+		 -0.31433064 -0.4329122 -0.31091031 -0.43918574 -0.31071413 -0.43700233 -0.31058478
+		 -0.44112515 -0.30977136 -0.44263196 -0.30854952 -0.44356096 -0.30703732 -0.44382238
+		 -0.30538118 -0.4433901 -0.30374265 -0.44230518 -0.30228281 -0.44067267 -0.30114555
+		 -0.43865189 -0.3004443 -0.43644017 -0.30024815 -0.43425676 -0.30057365 -0.43231732
+		 -0.30138707 -0.43081054 -0.30260891 -0.42988151 -0.30412108 -0.42962012 -0.30577722
+		 -0.4300524 -0.30741575 -0.43113732 -0.30887559 -0.43276983 -0.31001285 -0.43479061
+		 0.1824736 0.18141539 -0.30557922 -0.43672127 -0.16609228 0.37206507 -0.085916102
+		 0.26355326 -0.20422274 0.47241688 -0.17968822 0.55405152 -0.084482968 0.60356116
+		 0.064555883 0.60751826 0.22667593 0.55951738 0.35893294 0.46601254 0.44028816 0.34393945
+		 0.47506827 0.21328829 0.47931749 0.090100765 0.46791136 -0.014404304 0.44911328 -0.093099982
+		 0.42474729 -0.1418754 0.3924439 -0.15901867 0.34810179 -0.14492978 0.28798306 -0.10192197
+		 0.21039754 -0.033956714 0.11708117 0.053735226 0.014361739 0.1550902 0.19198284 0.22029963
+		 0.34575826 0.45383033 0.35887155 0.46586299 0.32577068 0.43377686 0.30125925 0.40689397
+		 0.27484095 0.37461597 0.24898672 0.33844817 0.22572017 0.29983425 0.20645764 0.26007372;
+createNode polyMapDel -n "polyMapDel6";
+	rename -uid "03D86285-41B1-0E2A-6E83-70A9DB145012";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "f[0:159]" "f[360:379]";
+createNode place2dTexture -n "place2dTexture1";
+	rename -uid "14138BE2-4C20-EC19-635F-93AC928FEFAE";
+createNode file -n "file1";
+	rename -uid "3A5C9DFA-4B09-7C99-5AEA-D0AB60E3DADB";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Table Textures/Tabletop_initialShadingGroup_Roughness.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file2";
+	rename -uid "31ADC0C9-4F0B-9FD2-FBE6-84BDBAD99943";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Table Textures/Tabletop_initialShadingGroup_Normal.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file3";
+	rename -uid "AFC8E0D1-484F-C393-5F2C-F39A5B7DF52F";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Table Textures/Tabletop_initialShadingGroup_Metallic.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file4";
+	rename -uid "81E7EC4D-4936-95A9-6A2C-C2A5B3DB5FF3";
+	setAttr ".ail" yes;
+	setAttr ".ao" -0.5;
+	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Table Textures/Tabletop_initialShadingGroup_Height.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file5";
+	rename -uid "1183096A-4BAF-8632-C091-959343CFDB43";
+	setAttr ".ftn" -type "string" "C:/Users/sarah/OneDrive/Documents/Audacity/Table Textures/Tabletop_initialShadingGroup_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode aiStandardSurface -n "aiStandardSurface1";
+	rename -uid "0DB893E4-4CEE-1354-0BF6-E289C2C2C1F2";
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "set1";
+	rename -uid "3E1EB73E-41D8-A6CC-AF26-C6AD9148FC8E";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo5";
+	rename -uid "1D45025C-48E3-A127-A29F-869E1212B810";
+createNode bump2d -n "bump2d1";
+	rename -uid "C25316DE-427A-0730-C44C-189C9691105C";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode displacementShader -n "displacementShader1";
+	rename -uid "A5B448AF-48AA-5D48-C001-A6A02E97A5DA";
+createNode multiplyDivide -n "multiplyDivide1";
+	rename -uid "13CEB0AC-4216-E06D-4C7D-D8A47999C09C";
+createNode aiOptions -s -n "defaultArnoldRenderOptions";
+	rename -uid "1CD2B37C-42F0-7692-48CB-2C8B2C0EEEFC";
+	setAttr ".version" -type "string" "5.5.3";
+createNode aiAOVFilter -s -n "defaultArnoldFilter";
+	rename -uid "415C30B2-424C-5C62-88CE-0DB60EBF19ED";
+	setAttr ".ai_translator" -type "string" "gaussian";
+createNode aiAOVDriver -s -n "defaultArnoldDriver";
+	rename -uid "50BC4B5D-4C69-9551-57C9-0F803F564CAF";
+	setAttr ".ai_translator" -type "string" "exr";
+createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
+	rename -uid "7C9E3584-438B-B601-BF0A-08974643B129";
+	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
+createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
+	rename -uid "AF9F5927-45F5-C18C-0B6B-A2B0822BD560";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "D4776906-41E9-00E5-DC27-8E94D6F924CF";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -236.37812975909137 -615.476166019365 ;
+	setAttr ".tgi[0].vh" -type "double2" 799.47334547893604 44.04761729732396 ;
+createNode lambert -n "lambert5";
+	rename -uid "5BDF8B42-432F-3A00-B37F-A093D86724B6";
+	setAttr ".c" -type "float3" 0.0601 0.0601 0.0601 ;
+createNode shadingEngine -n "lambert5SG";
+	rename -uid "71CCE10A-401E-701E-7D00-24B2CBC691D1";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
+createNode materialInfo -n "materialInfo6";
+	rename -uid "848B8FD7-42B2-C15B-926B-9186D78BF946";
+createNode blinn -n "blinn1";
+	rename -uid "B8F85E3D-4D09-C5EC-D6F0-EE98E92E3954";
+	setAttr ".c" -type "float3" 0.025641026 0.025641026 0.025641026 ;
+createNode shadingEngine -n "blinn1SG";
+	rename -uid "B5FE5725-4680-C690-C515-71BEB17D7767";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo7";
+	rename -uid "01C868C3-457B-0EBF-2CF5-839A34FB209D";
+createNode groupId -n "groupId91";
+	rename -uid "5C84FD9E-4338-9188-D751-D68CC0FEBC08";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts37";
+	rename -uid "1F73D08B-41BA-4EBE-0EAB-26B3FA003C81";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 18 "f[0:39]" "f[41:57]" "f[59:71]" "f[73:84]" "f[86:97]" "f[99:113]" "f[115:127]" "f[129:140]" "f[142:439]" "f[441:507]" "f[509:519]" "f[521:587]" "f[589:594]" "f[596:638]" "f[640:705]" "f[707:745]" "f[747:758]" "f[760:941]";
+	setAttr ".irc" -type "componentList" 17 "f[40]" "f[58]" "f[72]" "f[85]" "f[98]" "f[114]" "f[128]" "f[141]" "f[440]" "f[508]" "f[520]" "f[588]" "f[595]" "f[639]" "f[706]" "f[746]" "f[759]";
+createNode groupId -n "groupId92";
+	rename -uid "68779856-4EA7-14F6-A7D2-A09F872F2C9D";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId93";
+	rename -uid "662E5478-4B6B-6E91-613D-0EB4DDF34E27";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts38";
+	rename -uid "AF812E69-4412-DEBA-F86E-EE995E065EDE";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 17 "f[40]" "f[58]" "f[72]" "f[85]" "f[98]" "f[114]" "f[128]" "f[141]" "f[440]" "f[508]" "f[520]" "f[588]" "f[595]" "f[639]" "f[706]" "f[746]" "f[759]";
 select -ne :time1;
-	setAttr ".o" 67;
-	setAttr ".unw" 67;
+	setAttr ".o" 63;
+	setAttr ".unw" 63;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -18239,13 +23232,17 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 6 ".st";
+	setAttr -s 9 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 9 ".s";
+	setAttr -s 13 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+	setAttr -s 2 ".u";
 select -ne :defaultRenderingList1;
+select -ne :defaultTextureList1;
+	setAttr -s 5 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -18253,11 +23250,12 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 69 ".dsm";
+	setAttr -s 71 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 62 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -18399,11 +23397,12 @@ connectAttr ":initialShadingGroup.mwc" "pasted__pasted__pasted__pasted__pasted__
 		;
 connectAttr "groupId24.id" "pasted__pasted__pasted__pasted__pasted__pSphereShape1.ciog.cog[0].cgid"
 		;
-connectAttr "groupParts21.og" "group3_pasted__pSphere1Shape.i";
+connectAttr "polyTweakUV6.out" "group3_pasted__pSphere1Shape.i";
 connectAttr "groupId41.id" "group3_pasted__pSphere1Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "group3_pasted__pSphere1Shape.iog.og[0].gco"
 		;
 connectAttr "groupId42.id" "group3_pasted__pSphere1Shape.ciog.cog[0].cgid";
+connectAttr "polyTweakUV6.uvtk[0]" "group3_pasted__pSphere1Shape.uvst[0].uvtw";
 connectAttr "groupId47.id" "pSphereShape2.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pSphereShape2.iog.og[0].gco";
 connectAttr "groupParts24.og" "pSphereShape2.i";
@@ -18487,18 +23486,46 @@ connectAttr "groupId89.id" "polySurface2Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurface2Shape.iog.og[0].gco";
 connectAttr "groupId90.id" "polySurface2Shape.ciog.cog[0].cgid";
 connectAttr "polyTweakUV3.uvtk[0]" "polySurface2Shape.uvst[0].uvtw";
+connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape1.ws";
+connectAttr ":topShape.msg" "imagePlaneShape1.ltc";
+connectAttr "polyBevel3.out" "pPlaneShape1.i";
+connectAttr "groupParts38.og" "pasted__pCubeShape7.i";
+connectAttr "groupId91.id" "pasted__pCubeShape7.iog.og[0].gid";
+connectAttr "lambert5SG.mwc" "pasted__pCubeShape7.iog.og[0].gco";
+connectAttr "groupId93.id" "pasted__pCubeShape7.iog.og[1].gid";
+connectAttr "blinn1SG.mwc" "pasted__pCubeShape7.iog.og[1].gco";
+connectAttr "groupId92.id" "pasted__pCubeShape7.ciog.cog[0].cgid";
+connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape2.ws";
+connectAttr ":topShape.msg" "imagePlaneShape2.ltc";
+connectAttr "polyCube4.out" "pCubeShape4.i";
+connectAttr "polyMapDel6.out" "|group23|pasted__pSphere1|pasted__pSphereShape1.i"
+		;
+connectAttr "polyTweakUV9.uvtk[0]" "|group23|pasted__pSphere1|pasted__pSphereShape1.uvst[0].uvtw"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "set1.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "set1.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "pasted__polyTorus1.out" "deleteComponent1.ig";
@@ -18746,14 +23773,254 @@ connectAttr "polyMapCut4.out" "polyMapCut5.ip";
 connectAttr "polyMapCut5.out" "polyMapCut6.ip";
 connectAttr "polyMapCut6.out" "polyMapCut7.ip";
 connectAttr "polyMapCut7.out" "polyTweakUV3.ip";
+connectAttr "groupParts21.og" "polyTweakUV4.ip";
+connectAttr "polyTweakUV4.out" "polyMapDel3.ip";
+connectAttr "polyMapDel3.out" "polyMapDel4.ip";
+connectAttr "polyMapDel4.out" "polyPlanarProj2.ip";
+connectAttr "group3_pasted__pSphere1Shape.wm" "polyPlanarProj2.mp";
+connectAttr "polyPlanarProj2.out" "polyMapCut8.ip";
+connectAttr "polyMapCut8.out" "polyTweakUV5.ip";
+connectAttr "polyTweakUV5.out" "polyMapCut9.ip";
+connectAttr "polyMapCut9.out" "polyTweakUV6.ip";
+connectAttr "polyTweak4.out" "polyExtrudeEdge1.ip";
+connectAttr "pPlaneShape1.wm" "polyExtrudeEdge1.mp";
+connectAttr "polyPlane1.out" "polyTweak4.ip";
+connectAttr "polyTweak5.out" "polyExtrudeEdge2.ip";
+connectAttr "pPlaneShape1.wm" "polyExtrudeEdge2.mp";
+connectAttr "polyExtrudeEdge1.out" "polyTweak5.ip";
+connectAttr "polyTweak6.out" "polyExtrudeEdge3.ip";
+connectAttr "pPlaneShape1.wm" "polyExtrudeEdge3.mp";
+connectAttr "polyExtrudeEdge2.out" "polyTweak6.ip";
+connectAttr "polyExtrudeEdge3.out" "polyExtrudeEdge4.ip";
+connectAttr "pPlaneShape1.wm" "polyExtrudeEdge4.mp";
+connectAttr "polyTweak7.out" "polyExtrudeEdge5.ip";
+connectAttr "pPlaneShape1.wm" "polyExtrudeEdge5.mp";
+connectAttr "polyExtrudeEdge4.out" "polyTweak7.ip";
+connectAttr "polyTweak8.out" "polyExtrudeFace7.ip";
+connectAttr "pPlaneShape1.wm" "polyExtrudeFace7.mp";
+connectAttr "polyExtrudeEdge5.out" "polyTweak8.ip";
+connectAttr "polyExtrudeFace7.out" "polyBevel3.ip";
+connectAttr "pPlaneShape1.wm" "polyBevel3.mp";
+connectAttr "pasted__polySplit9.out" "pasted__polyExtrudeFace13.ip";
+connectAttr "pasted__pCubeShape7.wm" "pasted__polyExtrudeFace13.mp";
+connectAttr "pasted__polySplit8.out" "pasted__polySplit9.ip";
+connectAttr "pasted__polySplit7.out" "pasted__polySplit8.ip";
+connectAttr "pasted__polySplit6.out" "pasted__polySplit7.ip";
+connectAttr "pasted__polyExtrudeFace12.out" "pasted__polySplit6.ip";
+connectAttr "pasted__polySplit5.out" "pasted__polyExtrudeFace12.ip";
+connectAttr "pasted__pCubeShape7.wm" "pasted__polyExtrudeFace12.mp";
+connectAttr "pasted__polyCube8.out" "pasted__polySplit5.ip";
+connectAttr "pasted__polyExtrudeFace13.out" "polySplit4.ip";
+connectAttr "polySplit4.out" "polySplit5.ip";
+connectAttr "polySplit5.out" "polySplit6.ip";
+connectAttr "polySplit6.out" "polySplit7.ip";
+connectAttr "polySplit7.out" "polySplit8.ip";
+connectAttr "polySplit8.out" "polySplit9.ip";
+connectAttr "polySplit9.out" "polySplit10.ip";
+connectAttr "polySplit10.out" "polySplit11.ip";
+connectAttr "polySplit11.out" "polySplit12.ip";
+connectAttr "polySplit12.out" "polySplit13.ip";
+connectAttr "polySplit13.out" "polySplit14.ip";
+connectAttr "polySplit14.out" "polySplit15.ip";
+connectAttr "polySplit15.out" "polySplit16.ip";
+connectAttr "polySplit16.out" "polySplit17.ip";
+connectAttr "polySplit17.out" "polySplit18.ip";
+connectAttr "polySplit18.out" "polySplit19.ip";
+connectAttr "polySplit19.out" "polySplit20.ip";
+connectAttr "polySplit20.out" "polySplit21.ip";
+connectAttr "polySplit21.out" "polySplit22.ip";
+connectAttr "polySplit22.out" "polySplit23.ip";
+connectAttr "polySplit23.out" "polySplit24.ip";
+connectAttr "polySplit24.out" "polySplit25.ip";
+connectAttr "polySplit25.out" "polySplit26.ip";
+connectAttr "polySplit26.out" "polySplit27.ip";
+connectAttr "polySplit27.out" "polySplit28.ip";
+connectAttr "polySplit28.out" "polySplit29.ip";
+connectAttr "polySplit29.out" "polySplit30.ip";
+connectAttr "polySplit30.out" "polySplit31.ip";
+connectAttr "polySplit31.out" "polySplit32.ip";
+connectAttr "polySplit32.out" "polySplit33.ip";
+connectAttr "polySplit33.out" "polyExtrudeFace8.ip";
+connectAttr "pasted__pCubeShape7.wm" "polyExtrudeFace8.mp";
+connectAttr "pasted__polySphere6.out" "polyMapDel5.ip";
+connectAttr "polyTweak9.out" "polyPlanarProj3.ip";
+connectAttr "|group23|pasted__pSphere1|pasted__pSphereShape1.wm" "polyPlanarProj3.mp"
+		;
+connectAttr "polyMapDel5.out" "polyTweak9.ip";
+connectAttr "polyPlanarProj3.out" "polyTweakUV7.ip";
+connectAttr "polyTweakUV7.out" "polyMapCut10.ip";
+connectAttr "polyMapCut10.out" "polyTweakUV8.ip";
+connectAttr "polyTweakUV8.out" "polyMapCut11.ip";
+connectAttr "polyMapCut11.out" "polyTweakUV9.ip";
+connectAttr "polyTweakUV9.out" "polyMapDel6.ip";
+connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file1.ws";
+connectAttr "place2dTexture1.o" "file1.uv";
+connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "place2dTexture1.c" "file1.c";
+connectAttr "place2dTexture1.tf" "file1.tf";
+connectAttr "place2dTexture1.rf" "file1.rf";
+connectAttr "place2dTexture1.mu" "file1.mu";
+connectAttr "place2dTexture1.mv" "file1.mv";
+connectAttr "place2dTexture1.s" "file1.s";
+connectAttr "place2dTexture1.wu" "file1.wu";
+connectAttr "place2dTexture1.wv" "file1.wv";
+connectAttr "place2dTexture1.re" "file1.re";
+connectAttr "place2dTexture1.of" "file1.of";
+connectAttr "place2dTexture1.r" "file1.ro";
+connectAttr "place2dTexture1.n" "file1.n";
+connectAttr "place2dTexture1.vt1" "file1.vt1";
+connectAttr "place2dTexture1.vt2" "file1.vt2";
+connectAttr "place2dTexture1.vt3" "file1.vt3";
+connectAttr "place2dTexture1.vc1" "file1.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file2.ws";
+connectAttr "place2dTexture1.o" "file2.uv";
+connectAttr "place2dTexture1.ofs" "file2.fs";
+connectAttr "place2dTexture1.c" "file2.c";
+connectAttr "place2dTexture1.tf" "file2.tf";
+connectAttr "place2dTexture1.rf" "file2.rf";
+connectAttr "place2dTexture1.mu" "file2.mu";
+connectAttr "place2dTexture1.mv" "file2.mv";
+connectAttr "place2dTexture1.s" "file2.s";
+connectAttr "place2dTexture1.wu" "file2.wu";
+connectAttr "place2dTexture1.wv" "file2.wv";
+connectAttr "place2dTexture1.re" "file2.re";
+connectAttr "place2dTexture1.of" "file2.of";
+connectAttr "place2dTexture1.r" "file2.ro";
+connectAttr "place2dTexture1.n" "file2.n";
+connectAttr "place2dTexture1.vt1" "file2.vt1";
+connectAttr "place2dTexture1.vt2" "file2.vt2";
+connectAttr "place2dTexture1.vt3" "file2.vt3";
+connectAttr "place2dTexture1.vc1" "file2.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file3.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file3.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file3.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file3.ws";
+connectAttr "place2dTexture1.o" "file3.uv";
+connectAttr "place2dTexture1.ofs" "file3.fs";
+connectAttr "place2dTexture1.c" "file3.c";
+connectAttr "place2dTexture1.tf" "file3.tf";
+connectAttr "place2dTexture1.rf" "file3.rf";
+connectAttr "place2dTexture1.mu" "file3.mu";
+connectAttr "place2dTexture1.mv" "file3.mv";
+connectAttr "place2dTexture1.s" "file3.s";
+connectAttr "place2dTexture1.wu" "file3.wu";
+connectAttr "place2dTexture1.wv" "file3.wv";
+connectAttr "place2dTexture1.re" "file3.re";
+connectAttr "place2dTexture1.of" "file3.of";
+connectAttr "place2dTexture1.r" "file3.ro";
+connectAttr "place2dTexture1.n" "file3.n";
+connectAttr "place2dTexture1.vt1" "file3.vt1";
+connectAttr "place2dTexture1.vt2" "file3.vt2";
+connectAttr "place2dTexture1.vt3" "file3.vt3";
+connectAttr "place2dTexture1.vc1" "file3.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file4.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file4.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file4.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file4.ws";
+connectAttr "place2dTexture1.o" "file4.uv";
+connectAttr "place2dTexture1.ofs" "file4.fs";
+connectAttr "place2dTexture1.c" "file4.c";
+connectAttr "place2dTexture1.tf" "file4.tf";
+connectAttr "place2dTexture1.rf" "file4.rf";
+connectAttr "place2dTexture1.mu" "file4.mu";
+connectAttr "place2dTexture1.mv" "file4.mv";
+connectAttr "place2dTexture1.s" "file4.s";
+connectAttr "place2dTexture1.wu" "file4.wu";
+connectAttr "place2dTexture1.wv" "file4.wv";
+connectAttr "place2dTexture1.re" "file4.re";
+connectAttr "place2dTexture1.of" "file4.of";
+connectAttr "place2dTexture1.r" "file4.ro";
+connectAttr "place2dTexture1.n" "file4.n";
+connectAttr "place2dTexture1.vt1" "file4.vt1";
+connectAttr "place2dTexture1.vt2" "file4.vt2";
+connectAttr "place2dTexture1.vt3" "file4.vt3";
+connectAttr "place2dTexture1.vc1" "file4.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file5.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file5.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file5.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file5.ws";
+connectAttr "place2dTexture1.o" "file5.uv";
+connectAttr "place2dTexture1.ofs" "file5.fs";
+connectAttr "place2dTexture1.c" "file5.c";
+connectAttr "place2dTexture1.tf" "file5.tf";
+connectAttr "place2dTexture1.rf" "file5.rf";
+connectAttr "place2dTexture1.mu" "file5.mu";
+connectAttr "place2dTexture1.mv" "file5.mv";
+connectAttr "place2dTexture1.s" "file5.s";
+connectAttr "place2dTexture1.wu" "file5.wu";
+connectAttr "place2dTexture1.wv" "file5.wv";
+connectAttr "place2dTexture1.re" "file5.re";
+connectAttr "place2dTexture1.of" "file5.of";
+connectAttr "place2dTexture1.r" "file5.ro";
+connectAttr "place2dTexture1.n" "file5.n";
+connectAttr "place2dTexture1.vt1" "file5.vt1";
+connectAttr "place2dTexture1.vt2" "file5.vt2";
+connectAttr "place2dTexture1.vt3" "file5.vt3";
+connectAttr "place2dTexture1.vc1" "file5.vc1";
+connectAttr "file1.oa" "aiStandardSurface1.specular_roughness";
+connectAttr "bump2d1.o" "aiStandardSurface1.n";
+connectAttr "file3.oa" "aiStandardSurface1.metalness";
+connectAttr "multiplyDivide1.o" "aiStandardSurface1.base_color";
+connectAttr "aiStandardSurface1.out" "set1.ss";
+connectAttr "displacementShader1.d" "set1.ds";
+connectAttr "|group23|pasted__pSphere1|pasted__pSphereShape1.iog" "set1.dsm" -na
+		;
+connectAttr "set1.msg" "materialInfo5.sg";
+connectAttr "aiStandardSurface1.msg" "materialInfo5.m";
+connectAttr "file1.msg" "materialInfo5.t" -na;
+connectAttr "file2.oa" "bump2d1.bv";
+connectAttr "file4.oa" "displacementShader1.d";
+connectAttr "file5.oc" "multiplyDivide1.i1";
+connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
+		;
+connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
+		 -na;
+connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
+connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "lambert5.oc" "lambert5SG.ss";
+connectAttr "pasted__pCubeShape7.iog.og[0]" "lambert5SG.dsm" -na;
+connectAttr "pasted__pCubeShape7.ciog.cog[0]" "lambert5SG.dsm" -na;
+connectAttr "groupId91.msg" "lambert5SG.gn" -na;
+connectAttr "groupId92.msg" "lambert5SG.gn" -na;
+connectAttr "lambert5SG.msg" "materialInfo6.sg";
+connectAttr "lambert5.msg" "materialInfo6.m";
+connectAttr "blinn1.oc" "blinn1SG.ss";
+connectAttr "groupId93.msg" "blinn1SG.gn" -na;
+connectAttr "pasted__pCubeShape7.iog.og[1]" "blinn1SG.dsm" -na;
+connectAttr "blinn1SG.msg" "materialInfo7.sg";
+connectAttr "blinn1.msg" "materialInfo7.m";
+connectAttr "polyExtrudeFace8.out" "groupParts37.ig";
+connectAttr "groupId91.id" "groupParts37.gi";
+connectAttr "groupParts37.og" "groupParts38.ig";
+connectAttr "groupId93.id" "groupParts38.gi";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert1SG.pa" ":renderPartition.st" -na;
+connectAttr "set1.pa" ":renderPartition.st" -na;
+connectAttr "lambert5SG.pa" ":renderPartition.st" -na;
+connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "Glass_Jar.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
 connectAttr "inside_lid.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiStandardSurface1.msg" ":defaultShaderList1.s" -na;
+connectAttr "displacementShader1.msg" ":defaultShaderList1.s" -na;
+connectAttr "lambert5.msg" ":defaultShaderList1.s" -na;
+connectAttr "blinn1.msg" ":defaultShaderList1.s" -na;
+connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
 connectAttr "|group3|pasted__pSphere1|transform20|pasted__pSphereShape1.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "|group3|pasted__pSphere1|transform20|pasted__pSphereShape1.ciog.cog[0]" ":initialShadingGroup.dsm"
@@ -18859,6 +24126,8 @@ connectAttr "|group19|pasted__group18|pasted__pasted__pCylinder6|transform27|pas
 		 -na;
 connectAttr "polySurface2Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurface2Shape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
