@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/THE SCENES/NewGame.unity
     guid: 553018cb41dbd4ff58a8f4ff1311345b
+  - enabled: 1
+    path: Assets/THE SCENES/Start.unity
+    guid: 8a1dc277b256813469fbfb4f0499cabd
+  - enabled: 1
+    path: Assets/THE SCENES/level one.unity
+    guid: 4ed6b4252f49f3e4ab9b26543b0e9fd5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

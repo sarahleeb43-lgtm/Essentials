@@ -6531,6 +6531,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1683467321130913650, guid: 8624a34deec3720489ffbafb4486300b, type: 3}
   m_PrefabInstance: {fileID: 8538885973944068282}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &777079021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777079012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178e605d587f7794bb1e816fb43af017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 1
+  gravity: -9.81
 --- !u!1 &782176063
 GameObject:
   m_ObjectHideFlags: 0
@@ -7212,6 +7227,7 @@ GameObject:
   - component: {fileID: 1012765161}
   - component: {fileID: 1012765160}
   - component: {fileID: 1012765162}
+  - component: {fileID: 1012765163}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -7289,6 +7305,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataObj: {fileID: 0}
+--- !u!143 &1012765163
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012765157}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1038012834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2903914636318821118, guid: 8624a34deec3720489ffbafb4486300b, type: 3}
@@ -9972,14 +10013,22 @@ PrefabInstance:
       propertyPath: key2
       value: 276
       objectReference: {fileID: 0}
+    - target: {fileID: 8874413189358008526, guid: 8624a34deec3720489ffbafb4486300b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3577935632298566103, guid: 8624a34deec3720489ffbafb4486300b, type: 3}
+    - {fileID: 8874413189358008526, guid: 8624a34deec3720489ffbafb4486300b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1447396925880377163, guid: 8624a34deec3720489ffbafb4486300b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 777079017}
+    - targetCorrespondingSourceObject: {fileID: 1447396925880377163, guid: 8624a34deec3720489ffbafb4486300b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777079021}
     - targetCorrespondingSourceObject: {fileID: 158399036551665749, guid: 8624a34deec3720489ffbafb4486300b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1673719000}
